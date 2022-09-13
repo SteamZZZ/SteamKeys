@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SteamKeysApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SteamKeysApp"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="home_black_24dp.svg"
+            Route="MainPage" />
+        <ShellContent
+            Title="Favorites"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="star_black_24dp.svg"
+            Route="MainPage" />
+        <ShellContent
+            Title="Info"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="info_black_24dp.svg"
+            Route="MainPage" />
+        <ShellContent
+            Title="Profile"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="account_circle_black_24dp.svg"
+            Route="MainPage" />
+    </TabBar>
+</Shell>
