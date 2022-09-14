@@ -1743,7 +1743,7 @@ namespace TryParseSteam.GameDSTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [GAME_LIST] ([GL_NAME], [GL_IMAGE_PATH], [GL_PRICE], [GL_AVAILABILITY], [GL_PRICE_RU], [GL_PRICE_KZ], [GL_PRICE_TR], [GL_STEAM_ID], [GL_STEAM_BUNDLE_ID], [GL_STEAM_REF]) VALUES (@GL_NAME, @GL_IMAGE_PATH, @GL_PRICE, @GL_AVAILABILITY, @GL_PRICE_RU, @GL_PRICE_KZ, @GL_PRICE_TR, @GL_STEAM_ID, @GL_STEAM_BUNDLE_ID, @GL_STEAM_REF);
-SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL_PRICE_KZ, GL_PRICE_TR, GL_STEAM_ID, GL_STEAM_BUNDLE_ID, GL_STEAM_REF FROM GAME_LIST WHERE (GL_ID = SCOPE_IDENTITY())";
+SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL_PRICE_KZ, GL_PRICE_TR, GL_STEAM_ID, GL_STEAM_BUNDLE_ID, GL_STEAM_REF FROM dbo.GAME_LIST WHERE (GL_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1758,7 +1758,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [GAME_LIST] SET [GL_NAME] = @GL_NAME, [GL_IMAGE_PATH] = @GL_IMAGE_PATH, [GL_PRICE] = @GL_PRICE, [GL_AVAILABILITY] = @GL_AVAILABILITY, [GL_PRICE_RU] = @GL_PRICE_RU, [GL_PRICE_KZ] = @GL_PRICE_KZ, [GL_PRICE_TR] = @GL_PRICE_TR, [GL_STEAM_ID] = @GL_STEAM_ID, [GL_STEAM_BUNDLE_ID] = @GL_STEAM_BUNDLE_ID, [GL_STEAM_REF] = @GL_STEAM_REF WHERE (([GL_ID] = @Original_GL_ID) AND ([GL_NAME] = @Original_GL_NAME) AND ([GL_PRICE] = @Original_GL_PRICE) AND ((@IsNull_GL_AVAILABILITY = 1 AND [GL_AVAILABILITY] IS NULL) OR ([GL_AVAILABILITY] = @Original_GL_AVAILABILITY)) AND ((@IsNull_GL_PRICE_RU = 1 AND [GL_PRICE_RU] IS NULL) OR ([GL_PRICE_RU] = @Original_GL_PRICE_RU)) AND ((@IsNull_GL_PRICE_KZ = 1 AND [GL_PRICE_KZ] IS NULL) OR ([GL_PRICE_KZ] = @Original_GL_PRICE_KZ)) AND ((@IsNull_GL_PRICE_TR = 1 AND [GL_PRICE_TR] IS NULL) OR ([GL_PRICE_TR] = @Original_GL_PRICE_TR)) AND ((@IsNull_GL_STEAM_ID = 1 AND [GL_STEAM_ID] IS NULL) OR ([GL_STEAM_ID] = @Original_GL_STEAM_ID)) AND ((@IsNull_GL_STEAM_BUNDLE_ID = 1 AND [GL_STEAM_BUNDLE_ID] IS NULL) OR ([GL_STEAM_BUNDLE_ID] = @Original_GL_STEAM_BUNDLE_ID)) AND ((@IsNull_GL_STEAM_REF = 1 AND [GL_STEAM_REF] IS NULL) OR ([GL_STEAM_REF] = @Original_GL_STEAM_REF)));
-SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL_PRICE_KZ, GL_PRICE_TR, GL_STEAM_ID, GL_STEAM_BUNDLE_ID, GL_STEAM_REF FROM GAME_LIST WHERE (GL_ID = @GL_ID)";
+SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL_PRICE_KZ, GL_PRICE_TR, GL_STEAM_ID, GL_STEAM_BUNDLE_ID, GL_STEAM_REF FROM dbo.GAME_LIST WHERE (GL_ID = @GL_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GL_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GL_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1794,7 +1794,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString;
+            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.STEAM_PARSINGConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1806,14 +1806,14 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._commandCollection[0].CommandText = "select * from GAME_LIST";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[1].CommandText = "SELECT GL_AVAILABILITY, GL_ID, GL_IMAGE_PATH, GL_NAME, GL_PRICE, GL_PRICE_KZ, GL_" +
                 "PRICE_RU, GL_PRICE_TR, GL_STEAM_BUNDLE_ID, GL_STEAM_ID, GL_STEAM_REF FROM GAME_L" +
                 "IST WHERE (GL_NAME LIKE \'%\' + @name + \'%\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "GL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[2].CommandText = "SELECT GL_AVAILABILITY, GL_ID, GL_IMAGE_PATH, GL_NAME, GL_PRICE, GL_PRICE_KZ, GL_" +
                 "PRICE_RU, GL_PRICE_TR, GL_STEAM_BUNDLE_ID, GL_STEAM_ID, GL_STEAM_REF FROM GAME_L" +
                 "IST WHERE (GL_PRICE = @price)";
@@ -1998,7 +1998,8 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_GL_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("Original_GL_STEAM_REF");
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
@@ -2075,7 +2076,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((GL_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("GL_STEAM_REF");
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((string)(GL_STEAM_REF));
@@ -2172,7 +2173,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((GL_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("GL_STEAM_REF");
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(GL_STEAM_REF));
@@ -2234,7 +2235,8 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             if ((Original_GL_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("Original_GL_STEAM_REF");
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
@@ -2432,7 +2434,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GAME_LIST_TEMP] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_STEAM_BUNDLE_ID], [GLT_NAME], [GLT_IMAGE_PATH], [GLT_STEAM_REF]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_STEAM_BUNDLE_ID, @GLT_NAME, @GLT_IMAGE_PATH, @GLT_STEAM_REF);
-SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF FROM GAME_LIST_TEMP WHERE (GLT_ID = SCOPE_IDENTITY())";
+SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF FROM dbo.GAME_LIST_TEMP WHERE (GLT_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2443,7 +2445,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP] SET [GLT_PRICE] = @GLT_PRICE, [GLT_STEAM_ID] = @GLT_STEAM_ID, [GLT_STEAM_BUNDLE_ID] = @GLT_STEAM_BUNDLE_ID, [GLT_NAME] = @GLT_NAME, [GLT_IMAGE_PATH] = @GLT_IMAGE_PATH, [GLT_STEAM_REF] = @GLT_STEAM_REF WHERE (([GLT_ID] = @Original_GLT_ID) AND ([GLT_PRICE] = @Original_GLT_PRICE) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)) AND ((@IsNull_GLT_STEAM_BUNDLE_ID = 1 AND [GLT_STEAM_BUNDLE_ID] IS NULL) OR ([GLT_STEAM_BUNDLE_ID] = @Original_GLT_STEAM_BUNDLE_ID)) AND ((@IsNull_GLT_NAME = 1 AND [GLT_NAME] IS NULL) OR ([GLT_NAME] = @Original_GLT_NAME)) AND ((@IsNull_GLT_STEAM_REF = 1 AND [GLT_STEAM_REF] IS NULL) OR ([GLT_STEAM_REF] = @Original_GLT_STEAM_REF)));
-SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF FROM GAME_LIST_TEMP WHERE (GLT_ID = @GLT_ID)";
+SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF FROM dbo.GAME_LIST_TEMP WHERE (GLT_ID = @GLT_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2468,7 +2470,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString;
+            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.STEAM_PARSINGConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2480,27 +2482,27 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
             this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[1].CommandText = "dbo.CLEAR_TEMP_TABLE";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[2].CommandText = "dbo.INSERT_NEW_GAMES";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[3].CommandText = "dbo.UPDATE_KZ_PRICES";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[4].CommandText = "dbo.UPDATE_RU_PRICES";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
             this._commandCollection[5].CommandText = "dbo.UPDATE_TR_PRICES";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2583,14 +2585,16 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Original_GLT_NAME == null)) {
-                throw new global::System.ArgumentNullException("Original_GLT_NAME");
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_GLT_NAME));
             }
             if ((Original_GLT_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("Original_GLT_STEAM_REF");
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
@@ -2631,19 +2635,19 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((GLT_NAME == null)) {
-                throw new global::System.ArgumentNullException("GLT_NAME");
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(GLT_NAME));
             }
             if ((GLT_IMAGE_PATH == null)) {
-                throw new global::System.ArgumentNullException("GLT_IMAGE_PATH");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(GLT_IMAGE_PATH));
             }
             if ((GLT_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("GLT_STEAM_REF");
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(GLT_STEAM_REF));
@@ -2683,19 +2687,19 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((GLT_NAME == null)) {
-                throw new global::System.ArgumentNullException("GLT_NAME");
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(GLT_NAME));
             }
             if ((GLT_IMAGE_PATH == null)) {
-                throw new global::System.ArgumentNullException("GLT_IMAGE_PATH");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(GLT_IMAGE_PATH));
             }
             if ((GLT_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("GLT_STEAM_REF");
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(GLT_STEAM_REF));
@@ -2719,14 +2723,16 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_GLT_NAME == null)) {
-                throw new global::System.ArgumentNullException("Original_GLT_NAME");
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_GLT_NAME));
             }
             if ((Original_GLT_STEAM_REF == null)) {
-                throw new global::System.ArgumentNullException("Original_GLT_STEAM_REF");
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));

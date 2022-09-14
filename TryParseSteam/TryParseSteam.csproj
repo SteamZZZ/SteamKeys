@@ -64,7 +64,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constructors.cs" />
     <Compile Include="DataBaseManager.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -78,24 +77,6 @@
       <DependentUpon>GameDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="GameItem.cs" />
-    <Compile Include="GameModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GameModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GameModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GameModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GameModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GameModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="GAME_LIST.cs">
-      <DependentUpon>GameModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="PageReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,10 +89,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="GameModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GameModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="GameDS.xsc">
       <DependentUpon>GameDS.xsd</DependentUpon>
     </None>
@@ -122,9 +99,6 @@
     </None>
     <None Include="GameDS.xss">
       <DependentUpon>GameDS.xsd</DependentUpon>
-    </None>
-    <None Include="GameModel.edmx.diagram">
-      <DependentUpon>GameModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -139,18 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="GameModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GameModel.Context.cs</LastGenOutput>
-      <DependentUpon>GameModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="GameModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameModel.edmx</DependentUpon>
-      <LastGenOutput>GameModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
