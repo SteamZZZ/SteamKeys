@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using LogicObjects;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Concurrent;
@@ -12,6 +14,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TryParseSteam.LogicObjects;
 
 namespace TryParseSteam
 {
@@ -30,37 +33,41 @@ namespace TryParseSteam
             {
                 case eProxyRegion.NONE:
                     proxy = null;
-                    _proxyType = eProxyRegion.NONE;
+                    
                     break;
                 case eProxyRegion.USA:
                     proxy = new WebProxy(new Uri("http://80.73.244.40:59244"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-                    _proxyType = eProxyRegion.USA;
+                    
 
                     break;
                 case eProxyRegion.KZ:
                     proxy = new WebProxy(new Uri("http://45.152.214.36:52900"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-                    _proxyType = eProxyRegion.KZ;
+                    
                     break;
                 case eProxyRegion.TUR:
                     proxy = new WebProxy(new Uri("http://45.149.131.12:48563"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-                    _proxyType = eProxyRegion.TUR;
+                    
                     break;
             }
 
-            ReadAllProxy();
-            ParseString();
-            plainText.Clear();
+            //ReadAllProxy();
+            ////ParseString();
+            //plainText.Clear();
 
 
         }
-        eProxyRegion _proxyType = eProxyRegion.NONE;
+
+        string onlyNamesUrl = "http://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=STEAMKEY&format=json";
         string url = "https://store.steampowered.com/search/results/?page=1&count=100&sort_by=_ASC&ignore_preferences=1";
         ConcurrentBag<GameItem> _items = new ConcurrentBag<GameItem>();
         WebProxy proxy = new WebProxy(new Uri("http://80.73.244.40:59244"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-
+        NameList _simpleList = null;
         public ConcurrentBag<GameItem> Items { get => _items; set => _items = value; }
+        public List<App> SimpleList { get => _simpleList!=null? _simpleList.applist.apps:null;  }
+        public string ResultJsonIDs { get => _json; set => _json = value; }
+        public string[] ResultPrices { get => _resultPrices; set => _resultPrices = value; }
 
-        private void ReadAllProxy()
+        public void ReadAllNamesProxy()
         {
             try
             {
@@ -82,45 +89,80 @@ namespace TryParseSteam
                 Debug.WriteLine(ex.Message);
             }
         }
+        string[] _resultPrices;
+        public void ReadAllPrices(string[] querryArray)
+        {
+            try
+            {
+                using (HttpClientHandler hdl = new HttpClientHandler
+                {
+                    Proxy = proxy,
+                    AllowAutoRedirect = false
+                    ,
+                    AutomaticDecompression = System.Net.DecompressionMethods.Deflate
+                    | System.Net.DecompressionMethods.GZip
+                    | System.Net.DecompressionMethods.None
+                })
+                {
+                    using (var clnt = new HttpClient(hdl) { Timeout = TimeSpan.FromMinutes(5) })
+                    {
+                        _resultPrices = new string[querryArray.Length];
+                        Parallel.For(0, querryArray.Length, i => 
+                        {
 
+                            using (HttpResponseMessage resp = clnt.GetAsync(querryArray[i]).Result)
+                            {
+                                if (resp.IsSuccessStatusCode)
+                                {
+                                    var html = resp.Content.ReadAsStringAsync().Result;
+                                    if (!string.IsNullOrEmpty(html))
+                                    {
+                                        _resultPrices[i] = html;
+                                        Debug.WriteLine(i);
+                                    }
+                                }
+                                else
+                                {
+                                    throw new Exception("Bad request");
+                                }
+                            }
+
+                        });
+                        //for(int i= 0;i < querryArray.Length;i++)
+                        //{
+
+                        //}
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
 
         private void ProcessHttpClient(HttpClientHandler hdl)
         {
             using (var clnt = new HttpClient(hdl) { Timeout = TimeSpan.FromMinutes(5) })
             {
-                using (HttpResponseMessage resp = clnt.GetAsync(url).Result)
+                using (HttpResponseMessage resp = clnt.GetAsync(onlyNamesUrl).Result)
                 {
                     if (resp.IsSuccessStatusCode)
                     {
-                        ReadHeadPage(resp);
+                        ReadJson(resp);
                     }
                 }
             }
         }
-        
+        string _json = "";
 
-        private void ReadHeadPage(HttpResponseMessage resp)
+        private void ReadJson(HttpResponseMessage resp)
         {
             var html = resp.Content.ReadAsStringAsync().Result;
             if (!string.IsNullOrEmpty(html))
             {
-                HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-                doc.LoadHtml(html);
-                int pagesNumber =Convert.ToInt32( doc.DocumentNode.Descendants().Where(x => x.HasClass("search_pagination_right")).FirstOrDefault().Descendants("a").ToList()[2].InnerText);
-                //dynamic res = JObject.Parse(html);
-                //string parsedJson = res.results_html;
-                //int itemCount = res.total_count;
-                //int allPagesCount = itemCount / 100;
-
-                Stopwatch sw = new Stopwatch();
-                sw.Start();
-                Parallel.For(1, pagesNumber + 1, currentPage => ReadPageProxyAsText("https://store.steampowered.com/search/results/?page="+currentPage+"&count=100&sort_by=_ASC&ignore_preferences=1", currentPage));
-                sw.Stop();
-                //MessageBox.Show("COUNT PARSED: " + _items.Count.ToString() + Environment.NewLine
-                //    + "COUNT INITIAL: " + itemCount.ToString() + Environment.NewLine
-                //    + "ELAPSED TIME: " + sw.Elapsed);
-
-                
+                _json = html;
             }
         }
         LinkedList<string> plainText = new LinkedList<string>();
@@ -153,20 +195,12 @@ namespace TryParseSteam
                                 {
                                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                                     doc.LoadHtml(html);
-                                    //dynamic res = JObject.Parse(html);
-                                    //{"success":1
-                                    //int succ = res.success;
-                                    //var resss= 
                                     string parsedJson = doc.DocumentNode.Descendants().Where(x => x.HasClass("ignore_preferences")).FirstOrDefault().Descendants("div").ToList()[2].InnerHtml; ;
                                     lock (locker)
                                     {
                                         plainText.AddLast(parsedJson);
                                     }
 
-                                    //doc.LoadHtml(parsedJson);
-                                    //IEnumerable<HtmlNode> nodes = doc.DocumentNode.Descendants("a");
-
-                                    //AddItemsToList(nodes);
                                 }
                                 else
                                 {

@@ -1,21 +1,25 @@
-﻿using System;
+﻿using LogicObjects;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TryParseSteam;
+using TryParseSteam.LogicObjects;
 
-namespace TryParseSteam
+namespace ServerObjects
 {
     public class DataBaseManager
     {
-
+        object locker = new object();
         public void UpdateKzPrices(ConcurrentBag<GameItem> _items)
         {
-            GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
             adapter.ClearBeforeFill = true;
             GameDS.GAME_LIST_TEMPDataTable table = new GameDS.GAME_LIST_TEMPDataTable();
             //int ret = adapter.Fill(table);
@@ -45,7 +49,7 @@ namespace TryParseSteam
 
         public void UpdateTrPrices(ConcurrentBag<GameItem> _items)
         {
-            GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
             adapter.ClearBeforeFill = true;
             GameDS.GAME_LIST_TEMPDataTable table = new GameDS.GAME_LIST_TEMPDataTable();
             //int ret = adapter.Fill(table);
@@ -75,7 +79,7 @@ namespace TryParseSteam
 
         public void UpdateRuPrices(ConcurrentBag<GameItem> _items)
         {
-            GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
             adapter.ClearBeforeFill = true;
             GameDS.GAME_LIST_TEMPDataTable table = new GameDS.GAME_LIST_TEMPDataTable();
             //int ret = adapter.Fill(table);
@@ -102,45 +106,57 @@ namespace TryParseSteam
             adapter.UPDATE_RU_PRICES();
             adapter.CLEAR_TEMP_TABLE();
         }
-        public void InsertAllDB(ConcurrentBag<GameItem> _items)
+        SteamEntities model = new SteamEntities();
+
+        public void InsertAllDB(string json)
         {
-            GameDSTableAdapters.GAME_LISTTableAdapter adapter = new GameDSTableAdapters.GAME_LISTTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter();
             adapter.ClearBeforeFill = true;
             GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
-            //adapter.FillByPrice(table, 888888);
-            GameDS.GAME_LISTRow row = null;
 
-            foreach (var item in _items)
-            {
+            adapter.JSON_PARSE_ID_LIST(json);
 
-                double price = 0.0;
-
-                if (Regex.IsMatch(item.Price, "[0-9]+[.[0-9]+]?"))
-                {
-                    var match = Regex.Match(item.Price, "[0-9]+[.[0-9]+]?").Value;
-                    price = Math.Round(Convert.ToDouble(match, CultureInfo.InvariantCulture), 3);
-                }
-
-                //app_id = 
-                //bundle_id = 
-
-                row = table.NewGAME_LISTRow();
-                row.GL_IMAGE_PATH = item.ImageLink;
-                row.GL_NAME = item.Name;
-                row.GL_PRICE = price;
-                row.GL_STEAM_ID = item.App_id;
-                row.GL_STEAM_BUNDLE_ID = item.Bundle_id;
-                row.GL_STEAM_REF = item.App_id == 0 ? "https://store.steampowered.com/bundle/" + item.Bundle_id : "https://store.steampowered.com/app/" + item.App_id;
-                table.AddGAME_LISTRow(row);
-
-            }
-
-            adapter.Update(table);
         }
 
+        public string[] CreatePriceQuerry(int countPerQuerry=1000)
+        {
+            //string resultQuerry = "https://store.steampowered.com/api/appdetails?appids=";
+            TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter();
+            adapter.ClearBeforeFill = true;
+            GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
+            adapter.Fill(table);
+
+            int queeryCount = table.Count / countPerQuerry;
+            int sum = countPerQuerry * queeryCount;
+            int difference = table.Count - sum;
+
+            string[] querryArray = new string[queeryCount];
+
+            for(int i = 0; i < querryArray.Length; i++)
+            {
+                querryArray[i] = "https://store.steampowered.com/api/appdetails?appids=";
+            }
+
+            for (int i = 0; i < queeryCount; i++)
+            {
+                for(int row=i*countPerQuerry;row< (i+1) * countPerQuerry+(i==queeryCount-1?difference:0); row++)
+                {
+                    GameDS.GAME_LISTRow currentRow = table[row];
+                    querryArray[i] += currentRow.GL_STEAM_ID + ",";
+                }
+                querryArray[i] += "&filters=price_overview";
+            }
+
+            //foreach(GameDS.GAME_LISTRow row in table)
+            //{
+            //    resultQuerry += row.GL_STEAM_ID + ",";
+            //}
+
+            return querryArray;// + "&filters=price_overview";
+        }
         public void UpdateItems(ConcurrentBag<GameItem> _items)
         {
-            GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
             adapter.ClearBeforeFill = true;
             GameDS.GAME_LIST_TEMPDataTable table = new GameDS.GAME_LIST_TEMPDataTable();
             //adapter.FillByPrice(table, 888888);

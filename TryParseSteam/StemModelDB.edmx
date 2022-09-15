@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище u1286676_STEAM_PARSINGModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GAME_LIST">
+          <Key>
+            <PropertyRef Name="GL_ID" />
+          </Key>
+          <Property Name="GL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GL_NAME" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="GL_IMAGE_PATH" Type="varchar(max)" />
+          <Property Name="GL_PRICE" Type="float" Nullable="false" />
+          <Property Name="GL_AVAILABILITY" Type="bit" />
+          <Property Name="GL_PRICE_RU" Type="float" />
+          <Property Name="GL_PRICE_KZ" Type="float" />
+          <Property Name="GL_PRICE_TR" Type="float" />
+          <Property Name="GL_STEAM_ID" Type="int" />
+          <Property Name="GL_STEAM_BUNDLE_ID" Type="int" />
+          <Property Name="GL_STEAM_REF" Type="varchar" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="GAME_LIST_TEMP">
+          <Key>
+            <PropertyRef Name="GLT_ID" />
+          </Key>
+          <Property Name="GLT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GLT_PRICE" Type="float" Nullable="false" />
+          <Property Name="GLT_STEAM_ID" Type="int" />
+          <Property Name="GLT_STEAM_BUNDLE_ID" Type="int" />
+          <Property Name="GLT_NAME" Type="nvarchar" MaxLength="500" />
+          <Property Name="GLT_IMAGE_PATH" Type="varchar(max)" />
+          <Property Name="GLT_STEAM_REF" Type="varchar" MaxLength="400" />
+        </EntityType>
+        <EntityContainer Name="Хранилище u1286676_STEAM_PARSINGModelContainer">
+          <EntitySet Name="GAME_LIST" EntityType="Self.GAME_LIST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GAME_LIST_TEMP" EntityType="Self.GAME_LIST_TEMP" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="u1286676_STEAM_PARSINGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GAME_LIST">
+          <Key>
+            <PropertyRef Name="GL_ID" />
+          </Key>
+          <Property Name="GL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GL_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GL_IMAGE_PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="GL_PRICE" Type="Double" Nullable="false" />
+          <Property Name="GL_AVAILABILITY" Type="Boolean" />
+          <Property Name="GL_PRICE_RU" Type="Double" />
+          <Property Name="GL_PRICE_KZ" Type="Double" />
+          <Property Name="GL_PRICE_TR" Type="Double" />
+          <Property Name="GL_STEAM_ID" Type="Int32" />
+          <Property Name="GL_STEAM_BUNDLE_ID" Type="Int32" />
+          <Property Name="GL_STEAM_REF" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GAME_LIST_TEMP">
+          <Key>
+            <PropertyRef Name="GLT_ID" />
+          </Key>
+          <Property Name="GLT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GLT_PRICE" Type="Double" Nullable="false" />
+          <Property Name="GLT_STEAM_ID" Type="Int32" />
+          <Property Name="GLT_STEAM_BUNDLE_ID" Type="Int32" />
+          <Property Name="GLT_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="GLT_IMAGE_PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="GLT_STEAM_REF" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SteamEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GAME_LIST" EntityType="Self.GAME_LIST" />
+          <EntitySet Name="GAME_LIST_TEMP" EntityType="Self.GAME_LIST_TEMP" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище u1286676_STEAM_PARSINGModelContainer" CdmEntityContainer="SteamEntities">
+          <EntitySetMapping Name="GAME_LIST">
+            <EntityTypeMapping TypeName="u1286676_STEAM_PARSINGModel.GAME_LIST">
+              <MappingFragment StoreEntitySet="GAME_LIST">
+                <ScalarProperty Name="GL_ID" ColumnName="GL_ID" />
+                <ScalarProperty Name="GL_NAME" ColumnName="GL_NAME" />
+                <ScalarProperty Name="GL_IMAGE_PATH" ColumnName="GL_IMAGE_PATH" />
+                <ScalarProperty Name="GL_PRICE" ColumnName="GL_PRICE" />
+                <ScalarProperty Name="GL_AVAILABILITY" ColumnName="GL_AVAILABILITY" />
+                <ScalarProperty Name="GL_PRICE_RU" ColumnName="GL_PRICE_RU" />
+                <ScalarProperty Name="GL_PRICE_KZ" ColumnName="GL_PRICE_KZ" />
+                <ScalarProperty Name="GL_PRICE_TR" ColumnName="GL_PRICE_TR" />
+                <ScalarProperty Name="GL_STEAM_ID" ColumnName="GL_STEAM_ID" />
+                <ScalarProperty Name="GL_STEAM_BUNDLE_ID" ColumnName="GL_STEAM_BUNDLE_ID" />
+                <ScalarProperty Name="GL_STEAM_REF" ColumnName="GL_STEAM_REF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GAME_LIST_TEMP">
+            <EntityTypeMapping TypeName="u1286676_STEAM_PARSINGModel.GAME_LIST_TEMP">
+              <MappingFragment StoreEntitySet="GAME_LIST_TEMP">
+                <ScalarProperty Name="GLT_ID" ColumnName="GLT_ID" />
+                <ScalarProperty Name="GLT_PRICE" ColumnName="GLT_PRICE" />
+                <ScalarProperty Name="GLT_STEAM_ID" ColumnName="GLT_STEAM_ID" />
+                <ScalarProperty Name="GLT_STEAM_BUNDLE_ID" ColumnName="GLT_STEAM_BUNDLE_ID" />
+                <ScalarProperty Name="GLT_NAME" ColumnName="GLT_NAME" />
+                <ScalarProperty Name="GLT_IMAGE_PATH" ColumnName="GLT_IMAGE_PATH" />
+                <ScalarProperty Name="GLT_STEAM_REF" ColumnName="GLT_STEAM_REF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
