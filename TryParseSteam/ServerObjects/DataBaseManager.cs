@@ -114,7 +114,7 @@ namespace ServerObjects
                 = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_USATableAdapter();
                 adapter.ClearBeforeFill = true;
                 
-                adapter.Timeout = 120;
+                adapter.Timeout = 180;
                 adapter.UPDATE_USA_PRICES_JSON(querryResults[i]);
                 //adapter.Dispose();
             });
@@ -137,7 +137,7 @@ namespace ServerObjects
                 TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_RUTableAdapter adapter 
                 = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_RUTableAdapter();
                 adapter.ClearBeforeFill = true;
-                adapter.Timeout = 120;
+                adapter.Timeout = 180;
                 adapter.UPDATE_RU_PRICES_JSON(querryResults[i]);
                 adapter.Dispose();
 
@@ -163,7 +163,7 @@ namespace ServerObjects
                 TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_KZTableAdapter adapter
     = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_KZTableAdapter();
                 adapter.ClearBeforeFill = true;
-                adapter.Timeout = 120;
+                adapter.Timeout = 180;
                 adapter.UPDATE_KZ_PRICES_JSON(querryResults[i]);
                 adapter.Dispose();
             });
@@ -184,7 +184,7 @@ namespace ServerObjects
                 TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_TRTableAdapter adapter
     = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_TRTableAdapter();
                 adapter.ClearBeforeFill = true;
-                adapter.Timeout = 120;
+                adapter.Timeout = 180;
                 adapter.UPDATE_TR_PRICES_JSON(querryResults[i]);
                 adapter.Dispose();
             });

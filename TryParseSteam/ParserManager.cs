@@ -13,13 +13,14 @@ namespace TryParseSteam
     
     public class ParserManager
     {
-        bool ShowMessages = true;
+        bool ShowMessages = false;
         public ParserManager()
         {
             Start();
         }
         DataBaseManager mngr = new DataBaseManager();
 
+        //string json=new ParserManager().GetJsonString();
         public string GetJsonString()
         {
             GameDSTableAdapters.GAME_LISTTableAdapter adapter = new GameDSTableAdapters.GAME_LISTTableAdapter();
