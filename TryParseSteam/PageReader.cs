@@ -2,6 +2,7 @@
 using LogicObjects;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TryParseSteam.LogicObjects;
@@ -25,6 +27,7 @@ namespace TryParseSteam
         TUR,
         KZ
     }
+
     public class PageReader
     {
         public PageReader(eProxyRegion proxyType)
@@ -52,25 +55,36 @@ namespace TryParseSteam
                     break;
             }
 
-            //ReadAllProxy();
-            ////ParseString();
-            //plainText.Clear();
-
-
         }
+
+        #region Fields
+
+        LinkedList<string> plainText = new LinkedList<string>();
+        object locker = new object();
+        string _json = "";
+        string[] _resultPrices;
         string _currency = "";
-        string steamBuyUrl = "https://steambuy.com/catalog/?platforms=windows&activation=Steam&page=";
+        string steamAccountUrl = "https://steam-account.ru/steam_kluchi_kupit/page/";
+        string steamKeyUrl = "https://steamkey.com/catalog?category=3&page=200";
+        //string steamBuyUrl = "https://steambuy.com/catalog/?platforms=windows&activation=Steam&page=";
         string onlyNamesUrl = "http://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=STEAMKEY&format=json";
         string url = "https://store.steampowered.com/search/results/?page=1&count=100&sort_by=_ASC&ignore_preferences=1";
         ConcurrentBag<GameItem> _items = new ConcurrentBag<GameItem>();
         WebProxy proxy = new WebProxy(new Uri("http://80.73.244.40:59244"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
         NameList _simpleList = null;
+
+        #endregion
+
         public ConcurrentBag<GameItem> Items { get => _items; set => _items = value; }
         public List<App> SimpleList { get => _simpleList!=null? _simpleList.applist.apps:null;  }
         public string ResultJsonIDs { get => _json; set => _json = value; }
         public string[] ResultPrices { get => _resultPrices; set => _resultPrices = value; }
+        public ConcurrentBag<OtherSiteItem> OtherSiteItems { get => _itemsSteamAccount; set => _itemsSteamAccount = value; }
 
-        public void ReadSteambuyPages()
+        ConcurrentBag<OtherSiteItem> _itemsSteamAccount = new ConcurrentBag<OtherSiteItem>();
+        Regex regex = new Regex(@"^[0-9]*(?:\.[0-9]+)?$");
+
+        public void ReadSteamAccountPages()
         {
             try
             {
@@ -86,17 +100,40 @@ namespace TryParseSteam
 
                     using (var clnt = new HttpClient(hdl) { Timeout = TimeSpan.FromMinutes(5) })
                     {
-                        Parallel.For(0, 500, currentPage =>
+                        Parallel.For(0, 50,  (int currentPage, ParallelLoopState state) =>
                         {
-                            using (HttpResponseMessage resp = clnt.GetAsync(steamBuyUrl).Result)
+                            using (HttpResponseMessage resp = clnt.GetAsync(steamAccountUrl + currentPage).Result)
                             {
                                 if (resp.IsSuccessStatusCode)
                                 {
-                                    
+                                    var html = resp.Content.ReadAsStringAsync().Result;
+                                    if (!string.IsNullOrEmpty(html))
+                                    {
+                                        HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                                        doc.LoadHtml(html);
+                                        var nodes = doc.DocumentNode.Descendants().Where(x => x.HasClass("game-item"));
+                                        if (nodes.Count() == 0)
+                                            return;
+                                        foreach(var node in nodes)
+                                        {
+                                            string href = node.Descendants("a").SingleOrDefault().GetAttributeValue("href","");
+                                            string title = node.Descendants("a").SingleOrDefault().GetAttributeValue("title", "no-title");
+                                            string priceStr = node.Descendants().Where(x => x.HasClass("price-span")).SingleOrDefault().InnerText;
+                                            //string priseTrimmed = Regex.Match(priceStr, "[0-9]+[.[0-9]+]?").Value;
+                                            float price = (float)Math.Round(Convert.ToDouble(priceStr.Split(' ')[0], CultureInfo.InvariantCulture), 3) ;
+                                            //float price = (float)Convert.ToDouble(.Value);
+                                            //if(title.Contains("Metal"))
+                                            //{
+                                            //    Debug.WriteLine(currentPage);
+                                            //}
+                                            if(_itemsSteamAccount.Where(x=>x.Name==title).FirstOrDefault()==null)
+                                               _itemsSteamAccount.Add(new OtherSiteItem(title, href, price));
+                                        }
+                                    }
                                 }
                             }
                         });
-
+                        int b = 0;
                     }
                 }
             }
@@ -105,6 +142,31 @@ namespace TryParseSteam
                 Debug.WriteLine(ex.Message);
             }
         }
+
+        public void ReadSteamKeyPages()
+        {
+            _itemsSteamAccount = new ConcurrentBag<OtherSiteItem>();
+            var options = new ChromeOptions();
+            options.AddArguments(new List<string>() { "headless", "disable-gpu" });
+            var chromeDriverService = ChromeDriverService.CreateDefaultService();
+            chromeDriverService.HideCommandPromptWindow = true;
+            var browser = new ChromeDriver(chromeDriverService, options);
+            browser.Navigate().GoToUrl(steamKeyUrl);
+            Thread.Sleep(2000);
+
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc.LoadHtml(browser.PageSource);
+            var nodes = doc.DocumentNode.Descendants().Where(x => x.HasClass("product"));
+            foreach(var node in nodes)
+            {
+                string href = node.Descendants("a").FirstOrDefault().GetAttributeValue("href", "");
+                string title = node.Descendants().Where(x => x.HasClass("product-title")).FirstOrDefault().InnerHtml;
+                string priceStr = node.Descendants().Where(x => x.HasClass("product-price")).FirstOrDefault().InnerHtml;
+                float price = (float)Math.Round(Convert.ToDouble(priceStr.Split(' ')[0], CultureInfo.InvariantCulture), 3);
+                _itemsSteamAccount.Add(new OtherSiteItem(title, href, price));
+            }
+        }
+
         public void ReadAllNamesProxy()
         {
             try
@@ -127,7 +189,7 @@ namespace TryParseSteam
                 Debug.WriteLine(ex.Message);
             }
         }
-        string[] _resultPrices;
+        
         public void ReadAllPrices(string[] querryArray)
         {
             try
@@ -189,18 +251,12 @@ namespace TryParseSteam
                 {
                     if (resp.IsSuccessStatusCode)
                     {
-                        var html = resp.Content.ReadAsStringAsync().Result;
-                        if (!string.IsNullOrEmpty(html))
-                        {
-                            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-                            doc.LoadHtml(html);
-                            var nodes = doc.DocumentNode.Descendants().Where(x => x.HasClass("product-item"));
-                        }
+                        ReadJson(resp);
                     }
                 }
             }
         }
-        string _json = "";
+        
 
         private void ReadJson(HttpResponseMessage resp)
         {
@@ -210,8 +266,7 @@ namespace TryParseSteam
                 _json = html;
             }
         }
-        LinkedList<string> plainText = new LinkedList<string>();
-        object locker = new object();
+
         void ReadPageProxyAsText(string urlPage, int page)
         {
             try
@@ -342,6 +397,7 @@ namespace TryParseSteam
             });
 
         }
+
         void ReadPageProxy(string url, int page)
         {
             try

@@ -31,10 +31,20 @@ namespace TryParseSteam
             return JSONString;
         }
 
+        public void StartSteamkey()
+        {
+            PageReader reader = new PageReader(eProxyRegion.NONE);
+            reader.ReadSteamKeyPages();
+            mngr.InsertSteamKeyItems(reader.OtherSiteItems);
+        }
+
         public void StartSteambuy()
         {
-
+            PageReader reader = new PageReader(eProxyRegion.NONE);
+            reader.ReadSteamAccountPages();
+            mngr.InsertSteamAccountItems(reader.OtherSiteItems);
         }
+
         public void Start()
         {
 
@@ -100,8 +110,6 @@ namespace TryParseSteam
             Debug.WriteLineIf(ShowMessages, "TR PRICES UPDATED");
 
         }
-
-
 
     }
 }
