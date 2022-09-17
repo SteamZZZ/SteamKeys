@@ -26,7 +26,13 @@ namespace TryParseSteam {
         
         private GAME_LISTDataTable tableGAME_LIST;
         
-        private GAME_LIST_TEMPDataTable tableGAME_LIST_TEMP;
+        private GAME_LIST_TEMP_TRDataTable tableGAME_LIST_TEMP_TR;
+        
+        private GAME_LIST_TEMP_KZDataTable tableGAME_LIST_TEMP_KZ;
+        
+        private GAME_LIST_TEMP_RUDataTable tableGAME_LIST_TEMP_RU;
+        
+        private GAME_LIST_TEMP_USADataTable tableGAME_LIST_TEMP_USA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -59,8 +65,17 @@ namespace TryParseSteam {
                 if ((ds.Tables["GAME_LIST"] != null)) {
                     base.Tables.Add(new GAME_LISTDataTable(ds.Tables["GAME_LIST"]));
                 }
-                if ((ds.Tables["GAME_LIST_TEMP"] != null)) {
-                    base.Tables.Add(new GAME_LIST_TEMPDataTable(ds.Tables["GAME_LIST_TEMP"]));
+                if ((ds.Tables["GAME_LIST_TEMP_TR"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_TRDataTable(ds.Tables["GAME_LIST_TEMP_TR"]));
+                }
+                if ((ds.Tables["GAME_LIST_TEMP_KZ"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_KZDataTable(ds.Tables["GAME_LIST_TEMP_KZ"]));
+                }
+                if ((ds.Tables["GAME_LIST_TEMP_RU"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_RUDataTable(ds.Tables["GAME_LIST_TEMP_RU"]));
+                }
+                if ((ds.Tables["GAME_LIST_TEMP_USA"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_USADataTable(ds.Tables["GAME_LIST_TEMP_USA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +109,39 @@ namespace TryParseSteam {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GAME_LIST_TEMPDataTable GAME_LIST_TEMP {
+        public GAME_LIST_TEMP_TRDataTable GAME_LIST_TEMP_TR {
             get {
-                return this.tableGAME_LIST_TEMP;
+                return this.tableGAME_LIST_TEMP_TR;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GAME_LIST_TEMP_KZDataTable GAME_LIST_TEMP_KZ {
+            get {
+                return this.tableGAME_LIST_TEMP_KZ;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GAME_LIST_TEMP_RUDataTable GAME_LIST_TEMP_RU {
+            get {
+                return this.tableGAME_LIST_TEMP_RU;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GAME_LIST_TEMP_USADataTable GAME_LIST_TEMP_USA {
+            get {
+                return this.tableGAME_LIST_TEMP_USA;
             }
         }
         
@@ -170,8 +215,17 @@ namespace TryParseSteam {
                 if ((ds.Tables["GAME_LIST"] != null)) {
                     base.Tables.Add(new GAME_LISTDataTable(ds.Tables["GAME_LIST"]));
                 }
-                if ((ds.Tables["GAME_LIST_TEMP"] != null)) {
-                    base.Tables.Add(new GAME_LIST_TEMPDataTable(ds.Tables["GAME_LIST_TEMP"]));
+                if ((ds.Tables["GAME_LIST_TEMP_TR"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_TRDataTable(ds.Tables["GAME_LIST_TEMP_TR"]));
+                }
+                if ((ds.Tables["GAME_LIST_TEMP_KZ"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_KZDataTable(ds.Tables["GAME_LIST_TEMP_KZ"]));
+                }
+                if ((ds.Tables["GAME_LIST_TEMP_RU"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_RUDataTable(ds.Tables["GAME_LIST_TEMP_RU"]));
+                }
+                if ((ds.Tables["GAME_LIST_TEMP_USA"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMP_USADataTable(ds.Tables["GAME_LIST_TEMP_USA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +266,28 @@ namespace TryParseSteam {
                     this.tableGAME_LIST.InitVars();
                 }
             }
-            this.tableGAME_LIST_TEMP = ((GAME_LIST_TEMPDataTable)(base.Tables["GAME_LIST_TEMP"]));
+            this.tableGAME_LIST_TEMP_TR = ((GAME_LIST_TEMP_TRDataTable)(base.Tables["GAME_LIST_TEMP_TR"]));
             if ((initTable == true)) {
-                if ((this.tableGAME_LIST_TEMP != null)) {
-                    this.tableGAME_LIST_TEMP.InitVars();
+                if ((this.tableGAME_LIST_TEMP_TR != null)) {
+                    this.tableGAME_LIST_TEMP_TR.InitVars();
+                }
+            }
+            this.tableGAME_LIST_TEMP_KZ = ((GAME_LIST_TEMP_KZDataTable)(base.Tables["GAME_LIST_TEMP_KZ"]));
+            if ((initTable == true)) {
+                if ((this.tableGAME_LIST_TEMP_KZ != null)) {
+                    this.tableGAME_LIST_TEMP_KZ.InitVars();
+                }
+            }
+            this.tableGAME_LIST_TEMP_RU = ((GAME_LIST_TEMP_RUDataTable)(base.Tables["GAME_LIST_TEMP_RU"]));
+            if ((initTable == true)) {
+                if ((this.tableGAME_LIST_TEMP_RU != null)) {
+                    this.tableGAME_LIST_TEMP_RU.InitVars();
+                }
+            }
+            this.tableGAME_LIST_TEMP_USA = ((GAME_LIST_TEMP_USADataTable)(base.Tables["GAME_LIST_TEMP_USA"]));
+            if ((initTable == true)) {
+                if ((this.tableGAME_LIST_TEMP_USA != null)) {
+                    this.tableGAME_LIST_TEMP_USA.InitVars();
                 }
             }
         }
@@ -230,8 +302,14 @@ namespace TryParseSteam {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableGAME_LIST = new GAME_LISTDataTable();
             base.Tables.Add(this.tableGAME_LIST);
-            this.tableGAME_LIST_TEMP = new GAME_LIST_TEMPDataTable();
-            base.Tables.Add(this.tableGAME_LIST_TEMP);
+            this.tableGAME_LIST_TEMP_TR = new GAME_LIST_TEMP_TRDataTable();
+            base.Tables.Add(this.tableGAME_LIST_TEMP_TR);
+            this.tableGAME_LIST_TEMP_KZ = new GAME_LIST_TEMP_KZDataTable();
+            base.Tables.Add(this.tableGAME_LIST_TEMP_KZ);
+            this.tableGAME_LIST_TEMP_RU = new GAME_LIST_TEMP_RUDataTable();
+            base.Tables.Add(this.tableGAME_LIST_TEMP_RU);
+            this.tableGAME_LIST_TEMP_USA = new GAME_LIST_TEMP_USADataTable();
+            base.Tables.Add(this.tableGAME_LIST_TEMP_USA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +320,25 @@ namespace TryParseSteam {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeGAME_LIST_TEMP() {
+        private bool ShouldSerializeGAME_LIST_TEMP_TR() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeGAME_LIST_TEMP_KZ() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeGAME_LIST_TEMP_RU() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeGAME_LIST_TEMP_USA() {
             return false;
         }
         
@@ -305,7 +401,16 @@ namespace TryParseSteam {
         public delegate void GAME_LISTRowChangeEventHandler(object sender, GAME_LISTRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void GAME_LIST_TEMPRowChangeEventHandler(object sender, GAME_LIST_TEMPRowChangeEvent e);
+        public delegate void GAME_LIST_TEMP_TRRowChangeEventHandler(object sender, GAME_LIST_TEMP_TRRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void GAME_LIST_TEMP_KZRowChangeEventHandler(object sender, GAME_LIST_TEMP_KZRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void GAME_LIST_TEMP_RURowChangeEventHandler(object sender, GAME_LIST_TEMP_RURowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void GAME_LIST_TEMP_USARowChangeEventHandler(object sender, GAME_LIST_TEMP_USARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -719,7 +824,7 @@ namespace TryParseSteam {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GAME_LIST_TEMPDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMPRow> {
+        public partial class GAME_LIST_TEMP_TRDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_TRRow> {
             
             private global::System.Data.DataColumn columnGLT_ID;
             
@@ -727,18 +832,12 @@ namespace TryParseSteam {
             
             private global::System.Data.DataColumn columnGLT_STEAM_ID;
             
-            private global::System.Data.DataColumn columnGLT_STEAM_BUNDLE_ID;
-            
-            private global::System.Data.DataColumn columnGLT_NAME;
-            
             private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
-            
-            private global::System.Data.DataColumn columnGLT_STEAM_REF;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPDataTable() {
-                this.TableName = "GAME_LIST_TEMP";
+            public GAME_LIST_TEMP_TRDataTable() {
+                this.TableName = "GAME_LIST_TEMP_TR";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -746,7 +845,7 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GAME_LIST_TEMPDataTable(global::System.Data.DataTable table) {
+            internal GAME_LIST_TEMP_TRDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -763,7 +862,7 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected GAME_LIST_TEMPDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GAME_LIST_TEMP_TRDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -794,33 +893,9 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_STEAM_BUNDLE_IDColumn {
-                get {
-                    return this.columnGLT_STEAM_BUNDLE_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_NAMEColumn {
-                get {
-                    return this.columnGLT_NAME;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
                 get {
                     return this.columnGLT_IMAGE_PATH;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_STEAM_REFColumn {
-                get {
-                    return this.columnGLT_STEAM_REF;
                 }
             }
             
@@ -835,58 +910,48 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPRow this[int index] {
+            public GAME_LIST_TEMP_TRRow this[int index] {
                 get {
-                    return ((GAME_LIST_TEMPRow)(this.Rows[index]));
+                    return ((GAME_LIST_TEMP_TRRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowChanging;
+            public event GAME_LIST_TEMP_TRRowChangeEventHandler GAME_LIST_TEMP_TRRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowChanged;
+            public event GAME_LIST_TEMP_TRRowChangeEventHandler GAME_LIST_TEMP_TRRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowDeleting;
+            public event GAME_LIST_TEMP_TRRowChangeEventHandler GAME_LIST_TEMP_TRRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowDeleted;
+            public event GAME_LIST_TEMP_TRRowChangeEventHandler GAME_LIST_TEMP_TRRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddGAME_LIST_TEMPRow(GAME_LIST_TEMPRow row) {
+            public void AddGAME_LIST_TEMP_TRRow(GAME_LIST_TEMP_TRRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPRow AddGAME_LIST_TEMPRow(double GLT_PRICE, int GLT_STEAM_ID, int GLT_STEAM_BUNDLE_ID, string GLT_NAME, string GLT_IMAGE_PATH, string GLT_STEAM_REF) {
-                GAME_LIST_TEMPRow rowGAME_LIST_TEMPRow = ((GAME_LIST_TEMPRow)(this.NewRow()));
+            public GAME_LIST_TEMP_TRRow AddGAME_LIST_TEMP_TRRow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+                GAME_LIST_TEMP_TRRow rowGAME_LIST_TEMP_TRRow = ((GAME_LIST_TEMP_TRRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         GLT_PRICE,
                         GLT_STEAM_ID,
-                        GLT_STEAM_BUNDLE_ID,
-                        GLT_NAME,
-                        GLT_IMAGE_PATH,
-                        GLT_STEAM_REF};
-                rowGAME_LIST_TEMPRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGAME_LIST_TEMPRow);
-                return rowGAME_LIST_TEMPRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPRow FindByGLT_ID(int GLT_ID) {
-                return ((GAME_LIST_TEMPRow)(this.Rows.Find(new object[] {
-                            GLT_ID})));
+                        GLT_IMAGE_PATH};
+                rowGAME_LIST_TEMP_TRRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGAME_LIST_TEMP_TRRow);
+                return rowGAME_LIST_TEMP_TRRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GAME_LIST_TEMPDataTable cln = ((GAME_LIST_TEMPDataTable)(base.Clone()));
+                GAME_LIST_TEMP_TRDataTable cln = ((GAME_LIST_TEMP_TRDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -894,7 +959,7 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GAME_LIST_TEMPDataTable();
+                return new GAME_LIST_TEMP_TRDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -903,10 +968,7 @@ namespace TryParseSteam {
                 this.columnGLT_ID = base.Columns["GLT_ID"];
                 this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
                 this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
-                this.columnGLT_STEAM_BUNDLE_ID = base.Columns["GLT_STEAM_BUNDLE_ID"];
-                this.columnGLT_NAME = base.Columns["GLT_NAME"];
                 this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
-                this.columnGLT_STEAM_REF = base.Columns["GLT_STEAM_REF"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -918,52 +980,41 @@ namespace TryParseSteam {
                 base.Columns.Add(this.columnGLT_PRICE);
                 this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGLT_STEAM_ID);
-                this.columnGLT_STEAM_BUNDLE_ID = new global::System.Data.DataColumn("GLT_STEAM_BUNDLE_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_STEAM_BUNDLE_ID);
-                this.columnGLT_NAME = new global::System.Data.DataColumn("GLT_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_NAME);
                 this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGLT_IMAGE_PATH);
-                this.columnGLT_STEAM_REF = new global::System.Data.DataColumn("GLT_STEAM_REF", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_STEAM_REF);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnGLT_ID}, true));
                 this.columnGLT_ID.AutoIncrement = true;
                 this.columnGLT_ID.AutoIncrementSeed = -1;
                 this.columnGLT_ID.AutoIncrementStep = -1;
                 this.columnGLT_ID.AllowDBNull = false;
                 this.columnGLT_ID.ReadOnly = true;
-                this.columnGLT_ID.Unique = true;
                 this.columnGLT_PRICE.AllowDBNull = false;
-                this.columnGLT_NAME.MaxLength = 500;
                 this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
-                this.columnGLT_STEAM_REF.MaxLength = 400;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPRow NewGAME_LIST_TEMPRow() {
-                return ((GAME_LIST_TEMPRow)(this.NewRow()));
+            public GAME_LIST_TEMP_TRRow NewGAME_LIST_TEMP_TRRow() {
+                return ((GAME_LIST_TEMP_TRRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GAME_LIST_TEMPRow(builder);
+                return new GAME_LIST_TEMP_TRRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GAME_LIST_TEMPRow);
+                return typeof(GAME_LIST_TEMP_TRRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GAME_LIST_TEMPRowChanged != null)) {
-                    this.GAME_LIST_TEMPRowChanged(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMP_TRRowChanged != null)) {
+                    this.GAME_LIST_TEMP_TRRowChanged(this, new GAME_LIST_TEMP_TRRowChangeEvent(((GAME_LIST_TEMP_TRRow)(e.Row)), e.Action));
                 }
             }
             
@@ -971,8 +1022,8 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GAME_LIST_TEMPRowChanging != null)) {
-                    this.GAME_LIST_TEMPRowChanging(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMP_TRRowChanging != null)) {
+                    this.GAME_LIST_TEMP_TRRowChanging(this, new GAME_LIST_TEMP_TRRowChangeEvent(((GAME_LIST_TEMP_TRRow)(e.Row)), e.Action));
                 }
             }
             
@@ -980,8 +1031,8 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GAME_LIST_TEMPRowDeleted != null)) {
-                    this.GAME_LIST_TEMPRowDeleted(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMP_TRRowDeleted != null)) {
+                    this.GAME_LIST_TEMP_TRRowDeleted(this, new GAME_LIST_TEMP_TRRowChangeEvent(((GAME_LIST_TEMP_TRRow)(e.Row)), e.Action));
                 }
             }
             
@@ -989,14 +1040,14 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GAME_LIST_TEMPRowDeleting != null)) {
-                    this.GAME_LIST_TEMPRowDeleting(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMP_TRRowDeleting != null)) {
+                    this.GAME_LIST_TEMP_TRRowDeleting(this, new GAME_LIST_TEMP_TRRowChangeEvent(((GAME_LIST_TEMP_TRRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveGAME_LIST_TEMPRow(GAME_LIST_TEMPRow row) {
+            public void RemoveGAME_LIST_TEMP_TRRow(GAME_LIST_TEMP_TRRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1023,7 +1074,904 @@ namespace TryParseSteam {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GAME_LIST_TEMPDataTable";
+                attribute2.FixedValue = "GAME_LIST_TEMP_TRDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GAME_LIST_TEMP_KZDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_KZRow> {
+            
+            private global::System.Data.DataColumn columnGLT_ID;
+            
+            private global::System.Data.DataColumn columnGLT_PRICE;
+            
+            private global::System.Data.DataColumn columnGLT_STEAM_ID;
+            
+            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZDataTable() {
+                this.TableName = "GAME_LIST_TEMP_KZ";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMP_KZDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected GAME_LIST_TEMP_KZDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_IDColumn {
+                get {
+                    return this.columnGLT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_PRICEColumn {
+                get {
+                    return this.columnGLT_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+                get {
+                    return this.columnGLT_STEAM_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
+                get {
+                    return this.columnGLT_IMAGE_PATH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZRow this[int index] {
+                get {
+                    return ((GAME_LIST_TEMP_KZRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_KZRowChangeEventHandler GAME_LIST_TEMP_KZRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_KZRowChangeEventHandler GAME_LIST_TEMP_KZRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_KZRowChangeEventHandler GAME_LIST_TEMP_KZRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_KZRowChangeEventHandler GAME_LIST_TEMP_KZRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddGAME_LIST_TEMP_KZRow(GAME_LIST_TEMP_KZRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZRow AddGAME_LIST_TEMP_KZRow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+                GAME_LIST_TEMP_KZRow rowGAME_LIST_TEMP_KZRow = ((GAME_LIST_TEMP_KZRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        GLT_PRICE,
+                        GLT_STEAM_ID,
+                        GLT_IMAGE_PATH};
+                rowGAME_LIST_TEMP_KZRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGAME_LIST_TEMP_KZRow);
+                return rowGAME_LIST_TEMP_KZRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GAME_LIST_TEMP_KZDataTable cln = ((GAME_LIST_TEMP_KZDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GAME_LIST_TEMP_KZDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnGLT_ID = base.Columns["GLT_ID"];
+                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
+                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
+                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_ID);
+                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE);
+                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_STEAM_ID);
+                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_IMAGE_PATH);
+                this.columnGLT_ID.AutoIncrement = true;
+                this.columnGLT_ID.AutoIncrementSeed = -1;
+                this.columnGLT_ID.AutoIncrementStep = -1;
+                this.columnGLT_ID.AllowDBNull = false;
+                this.columnGLT_ID.ReadOnly = true;
+                this.columnGLT_PRICE.AllowDBNull = false;
+                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZRow NewGAME_LIST_TEMP_KZRow() {
+                return ((GAME_LIST_TEMP_KZRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GAME_LIST_TEMP_KZRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GAME_LIST_TEMP_KZRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GAME_LIST_TEMP_KZRowChanged != null)) {
+                    this.GAME_LIST_TEMP_KZRowChanged(this, new GAME_LIST_TEMP_KZRowChangeEvent(((GAME_LIST_TEMP_KZRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GAME_LIST_TEMP_KZRowChanging != null)) {
+                    this.GAME_LIST_TEMP_KZRowChanging(this, new GAME_LIST_TEMP_KZRowChangeEvent(((GAME_LIST_TEMP_KZRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GAME_LIST_TEMP_KZRowDeleted != null)) {
+                    this.GAME_LIST_TEMP_KZRowDeleted(this, new GAME_LIST_TEMP_KZRowChangeEvent(((GAME_LIST_TEMP_KZRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GAME_LIST_TEMP_KZRowDeleting != null)) {
+                    this.GAME_LIST_TEMP_KZRowDeleting(this, new GAME_LIST_TEMP_KZRowChangeEvent(((GAME_LIST_TEMP_KZRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveGAME_LIST_TEMP_KZRow(GAME_LIST_TEMP_KZRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GameDS ds = new GameDS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GAME_LIST_TEMP_KZDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GAME_LIST_TEMP_RUDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_RURow> {
+            
+            private global::System.Data.DataColumn columnGLT_ID;
+            
+            private global::System.Data.DataColumn columnGLT_PRICE;
+            
+            private global::System.Data.DataColumn columnGLT_STEAM_ID;
+            
+            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_RUDataTable() {
+                this.TableName = "GAME_LIST_TEMP_RU";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMP_RUDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected GAME_LIST_TEMP_RUDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_IDColumn {
+                get {
+                    return this.columnGLT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_PRICEColumn {
+                get {
+                    return this.columnGLT_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+                get {
+                    return this.columnGLT_STEAM_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
+                get {
+                    return this.columnGLT_IMAGE_PATH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_RURow this[int index] {
+                get {
+                    return ((GAME_LIST_TEMP_RURow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_RURowChangeEventHandler GAME_LIST_TEMP_RURowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_RURowChangeEventHandler GAME_LIST_TEMP_RURowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_RURowChangeEventHandler GAME_LIST_TEMP_RURowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_RURowChangeEventHandler GAME_LIST_TEMP_RURowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddGAME_LIST_TEMP_RURow(GAME_LIST_TEMP_RURow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_RURow AddGAME_LIST_TEMP_RURow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+                GAME_LIST_TEMP_RURow rowGAME_LIST_TEMP_RURow = ((GAME_LIST_TEMP_RURow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        GLT_PRICE,
+                        GLT_STEAM_ID,
+                        GLT_IMAGE_PATH};
+                rowGAME_LIST_TEMP_RURow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGAME_LIST_TEMP_RURow);
+                return rowGAME_LIST_TEMP_RURow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GAME_LIST_TEMP_RUDataTable cln = ((GAME_LIST_TEMP_RUDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GAME_LIST_TEMP_RUDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnGLT_ID = base.Columns["GLT_ID"];
+                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
+                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
+                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_ID);
+                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE);
+                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_STEAM_ID);
+                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_IMAGE_PATH);
+                this.columnGLT_ID.AutoIncrement = true;
+                this.columnGLT_ID.AutoIncrementSeed = -1;
+                this.columnGLT_ID.AutoIncrementStep = -1;
+                this.columnGLT_ID.AllowDBNull = false;
+                this.columnGLT_ID.ReadOnly = true;
+                this.columnGLT_PRICE.AllowDBNull = false;
+                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_RURow NewGAME_LIST_TEMP_RURow() {
+                return ((GAME_LIST_TEMP_RURow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GAME_LIST_TEMP_RURow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GAME_LIST_TEMP_RURow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GAME_LIST_TEMP_RURowChanged != null)) {
+                    this.GAME_LIST_TEMP_RURowChanged(this, new GAME_LIST_TEMP_RURowChangeEvent(((GAME_LIST_TEMP_RURow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GAME_LIST_TEMP_RURowChanging != null)) {
+                    this.GAME_LIST_TEMP_RURowChanging(this, new GAME_LIST_TEMP_RURowChangeEvent(((GAME_LIST_TEMP_RURow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GAME_LIST_TEMP_RURowDeleted != null)) {
+                    this.GAME_LIST_TEMP_RURowDeleted(this, new GAME_LIST_TEMP_RURowChangeEvent(((GAME_LIST_TEMP_RURow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GAME_LIST_TEMP_RURowDeleting != null)) {
+                    this.GAME_LIST_TEMP_RURowDeleting(this, new GAME_LIST_TEMP_RURowChangeEvent(((GAME_LIST_TEMP_RURow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveGAME_LIST_TEMP_RURow(GAME_LIST_TEMP_RURow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GameDS ds = new GameDS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GAME_LIST_TEMP_RUDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GAME_LIST_TEMP_USADataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_USARow> {
+            
+            private global::System.Data.DataColumn columnGLT_ID;
+            
+            private global::System.Data.DataColumn columnGLT_PRICE;
+            
+            private global::System.Data.DataColumn columnGLT_STEAM_ID;
+            
+            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USADataTable() {
+                this.TableName = "GAME_LIST_TEMP_USA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMP_USADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected GAME_LIST_TEMP_USADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_IDColumn {
+                get {
+                    return this.columnGLT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_PRICEColumn {
+                get {
+                    return this.columnGLT_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+                get {
+                    return this.columnGLT_STEAM_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
+                get {
+                    return this.columnGLT_IMAGE_PATH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USARow this[int index] {
+                get {
+                    return ((GAME_LIST_TEMP_USARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_USARowChangeEventHandler GAME_LIST_TEMP_USARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_USARowChangeEventHandler GAME_LIST_TEMP_USARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_USARowChangeEventHandler GAME_LIST_TEMP_USARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event GAME_LIST_TEMP_USARowChangeEventHandler GAME_LIST_TEMP_USARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddGAME_LIST_TEMP_USARow(GAME_LIST_TEMP_USARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USARow AddGAME_LIST_TEMP_USARow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+                GAME_LIST_TEMP_USARow rowGAME_LIST_TEMP_USARow = ((GAME_LIST_TEMP_USARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        GLT_PRICE,
+                        GLT_STEAM_ID,
+                        GLT_IMAGE_PATH};
+                rowGAME_LIST_TEMP_USARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGAME_LIST_TEMP_USARow);
+                return rowGAME_LIST_TEMP_USARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USARow FindByGLT_ID(int GLT_ID) {
+                return ((GAME_LIST_TEMP_USARow)(this.Rows.Find(new object[] {
+                            GLT_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GAME_LIST_TEMP_USADataTable cln = ((GAME_LIST_TEMP_USADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GAME_LIST_TEMP_USADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnGLT_ID = base.Columns["GLT_ID"];
+                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
+                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
+                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_ID);
+                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE);
+                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_STEAM_ID);
+                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_IMAGE_PATH);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnGLT_ID}, true));
+                this.columnGLT_ID.AutoIncrement = true;
+                this.columnGLT_ID.AutoIncrementSeed = -1;
+                this.columnGLT_ID.AutoIncrementStep = -1;
+                this.columnGLT_ID.AllowDBNull = false;
+                this.columnGLT_ID.ReadOnly = true;
+                this.columnGLT_ID.Unique = true;
+                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USARow NewGAME_LIST_TEMP_USARow() {
+                return ((GAME_LIST_TEMP_USARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GAME_LIST_TEMP_USARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GAME_LIST_TEMP_USARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GAME_LIST_TEMP_USARowChanged != null)) {
+                    this.GAME_LIST_TEMP_USARowChanged(this, new GAME_LIST_TEMP_USARowChangeEvent(((GAME_LIST_TEMP_USARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GAME_LIST_TEMP_USARowChanging != null)) {
+                    this.GAME_LIST_TEMP_USARowChanging(this, new GAME_LIST_TEMP_USARowChangeEvent(((GAME_LIST_TEMP_USARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GAME_LIST_TEMP_USARowDeleted != null)) {
+                    this.GAME_LIST_TEMP_USARowDeleted(this, new GAME_LIST_TEMP_USARowChangeEvent(((GAME_LIST_TEMP_USARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GAME_LIST_TEMP_USARowDeleting != null)) {
+                    this.GAME_LIST_TEMP_USARowDeleting(this, new GAME_LIST_TEMP_USARowChangeEvent(((GAME_LIST_TEMP_USARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveGAME_LIST_TEMP_USARow(GAME_LIST_TEMP_USARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GameDS ds = new GameDS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GAME_LIST_TEMP_USADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1339,25 +2287,25 @@ namespace TryParseSteam {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GAME_LIST_TEMPRow : global::System.Data.DataRow {
+        public partial class GAME_LIST_TEMP_TRRow : global::System.Data.DataRow {
             
-            private GAME_LIST_TEMPDataTable tableGAME_LIST_TEMP;
+            private GAME_LIST_TEMP_TRDataTable tableGAME_LIST_TEMP_TR;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GAME_LIST_TEMPRow(global::System.Data.DataRowBuilder rb) : 
+            internal GAME_LIST_TEMP_TRRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGAME_LIST_TEMP = ((GAME_LIST_TEMPDataTable)(this.Table));
+                this.tableGAME_LIST_TEMP_TR = ((GAME_LIST_TEMP_TRDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int GLT_ID {
                 get {
-                    return ((int)(this[this.tableGAME_LIST_TEMP.GLT_IDColumn]));
+                    return ((int)(this[this.tableGAME_LIST_TEMP_TR.GLT_IDColumn]));
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP.GLT_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLT_IDColumn] = value;
                 }
             }
             
@@ -1365,10 +2313,10 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public double GLT_PRICE {
                 get {
-                    return ((double)(this[this.tableGAME_LIST_TEMP.GLT_PRICEColumn]));
+                    return ((double)(this[this.tableGAME_LIST_TEMP_TR.GLT_PRICEColumn]));
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP.GLT_PRICEColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLT_PRICEColumn] = value;
                 }
             }
             
@@ -1377,47 +2325,14 @@ namespace TryParseSteam {
             public int GLT_STEAM_ID {
                 get {
                     try {
-                        return ((int)(this[this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn]));
+                        return ((int)(this[this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_TR\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_STEAM_BUNDLE_ID {
-                get {
-                    try {
-                        return ((int)(this[this.tableGAME_LIST_TEMP.GLT_STEAM_BUNDLE_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_BUNDLE_ID\' в таблице \'GAME_LIST_TEMP\' равно DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP.GLT_STEAM_BUNDLE_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GLT_NAME {
-                get {
-                    try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP.GLT_NAMEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_NAME\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP.GLT_NAMEColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn] = value;
                 }
             }
             
@@ -1426,91 +2341,339 @@ namespace TryParseSteam {
             public string GLT_IMAGE_PATH {
                 get {
                     try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP.GLT_IMAGE_PATHColumn]));
+                        return ((string)(this[this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_TR\' равно DBNull." +
+                                "", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP.GLT_IMAGE_PATHColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GLT_STEAM_REF {
-                get {
-                    try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP.GLT_STEAM_REFColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_REF\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP.GLT_STEAM_REFColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsGLT_STEAM_IDNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn);
+                return this.IsNull(this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetGLT_STEAM_IDNull() {
-                this[this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_STEAM_BUNDLE_IDNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_STEAM_BUNDLE_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_STEAM_BUNDLE_IDNull() {
-                this[this.tableGAME_LIST_TEMP.GLT_STEAM_BUNDLE_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_NAMENull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_NAMEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_NAMENull() {
-                this[this.tableGAME_LIST_TEMP.GLT_NAMEColumn] = global::System.Convert.DBNull;
+                this[this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsGLT_IMAGE_PATHNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_IMAGE_PATHColumn);
+                return this.IsNull(this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetGLT_IMAGE_PATHNull() {
-                this[this.tableGAME_LIST_TEMP.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+                this[this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GAME_LIST_TEMP_KZRow : global::System.Data.DataRow {
+            
+            private GAME_LIST_TEMP_KZDataTable tableGAME_LIST_TEMP_KZ;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMP_KZRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGAME_LIST_TEMP_KZ = ((GAME_LIST_TEMP_KZDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_STEAM_REFNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_STEAM_REFColumn);
+            public int GLT_ID {
+                get {
+                    return ((int)(this[this.tableGAME_LIST_TEMP_KZ.GLT_IDColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_KZ.GLT_IDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_STEAM_REFNull() {
-                this[this.tableGAME_LIST_TEMP.GLT_STEAM_REFColumn] = global::System.Convert.DBNull;
+            public double GLT_PRICE {
+                get {
+                    return ((double)(this[this.tableGAME_LIST_TEMP_KZ.GLT_PRICEColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_KZ.GLT_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLT_STEAM_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_KZ\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GLT_IMAGE_PATH {
+                get {
+                    try {
+                        return ((string)(this[this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_KZ\' равно DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_IMAGE_PATHNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_IMAGE_PATHNull() {
+                this[this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GAME_LIST_TEMP_RURow : global::System.Data.DataRow {
+            
+            private GAME_LIST_TEMP_RUDataTable tableGAME_LIST_TEMP_RU;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMP_RURow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGAME_LIST_TEMP_RU = ((GAME_LIST_TEMP_RUDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLT_ID {
+                get {
+                    return ((int)(this[this.tableGAME_LIST_TEMP_RU.GLT_IDColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_RU.GLT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double GLT_PRICE {
+                get {
+                    return ((double)(this[this.tableGAME_LIST_TEMP_RU.GLT_PRICEColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_RU.GLT_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLT_STEAM_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_RU\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GLT_IMAGE_PATH {
+                get {
+                    try {
+                        return ((string)(this[this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_RU\' равно DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_IMAGE_PATHNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_IMAGE_PATHNull() {
+                this[this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GAME_LIST_TEMP_USARow : global::System.Data.DataRow {
+            
+            private GAME_LIST_TEMP_USADataTable tableGAME_LIST_TEMP_USA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMP_USARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGAME_LIST_TEMP_USA = ((GAME_LIST_TEMP_USADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLT_ID {
+                get {
+                    return ((int)(this[this.tableGAME_LIST_TEMP_USA.GLT_IDColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_USA.GLT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double GLT_PRICE {
+                get {
+                    try {
+                        return ((double)(this[this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_PRICE\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLT_STEAM_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GLT_IMAGE_PATH {
+                get {
+                    try {
+                        return ((string)(this[this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_PRICENull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_PRICENull() {
+                this[this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_IMAGE_PATHNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_IMAGE_PATHNull() {
+                this[this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1552,22 +2715,124 @@ namespace TryParseSteam {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class GAME_LIST_TEMPRowChangeEvent : global::System.EventArgs {
+        public class GAME_LIST_TEMP_TRRowChangeEvent : global::System.EventArgs {
             
-            private GAME_LIST_TEMPRow eventRow;
+            private GAME_LIST_TEMP_TRRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPRowChangeEvent(GAME_LIST_TEMPRow row, global::System.Data.DataRowAction action) {
+            public GAME_LIST_TEMP_TRRowChangeEvent(GAME_LIST_TEMP_TRRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMPRow Row {
+            public GAME_LIST_TEMP_TRRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class GAME_LIST_TEMP_KZRowChangeEvent : global::System.EventArgs {
+            
+            private GAME_LIST_TEMP_KZRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZRowChangeEvent(GAME_LIST_TEMP_KZRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class GAME_LIST_TEMP_RURowChangeEvent : global::System.EventArgs {
+            
+            private GAME_LIST_TEMP_RURow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_RURowChangeEvent(GAME_LIST_TEMP_RURow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_RURow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class GAME_LIST_TEMP_USARowChangeEvent : global::System.EventArgs {
+            
+            private GAME_LIST_TEMP_USARow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USARowChangeEvent(GAME_LIST_TEMP_USARow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_USARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1800,7 +3065,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[11];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "select * from GAME_LIST";
@@ -1821,17 +3086,51 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "GL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "dbo.INSERT_GAME";
+            this._commandCollection[3].CommandText = "dbo.GET_JSON_LIST";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SteamId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "u1286676_Deallocate.JSON_PARSE_ID_LIST";
+            this._commandCollection[4].CommandText = "dbo.INSERT_GAME";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SteamId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "u1286676_Deallocate.JSON_PARSE_ID_LIST";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "dbo.UPDATE_KZ_PRICES_JSON";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "u1286676_Deallocate.UPDATE_REGION_PRICES";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "dbo.UPDATE_RU_PRICES_JSON";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "dbo.UPDATE_TR_PRICES_JSON";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[10].Connection = this.Connection;
+            this._commandCollection[10].CommandText = "dbo.UPDATE_USA_PRICES_JSON";
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2303,8 +3602,36 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int INSERT_GAME(string Name, global::System.Nullable<int> SteamId) {
+        public virtual object GET_JSON_LIST() {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int INSERT_GAME(string Name, global::System.Nullable<int> SteamId) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((Name == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -2338,7 +3665,141 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int JSON_PARSE_ID_LIST(string json) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_KZ_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_REGION_PRICES() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_RU_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_TR_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_USA_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
             if ((json == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -2372,7 +3833,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GAME_LIST_TEMPTableAdapter : global::System.ComponentModel.Component {
+    public partial class GAME_LIST_TEMP_TRTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2386,7 +3847,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public GAME_LIST_TEMPTableAdapter() {
+        public GAME_LIST_TEMP_TRTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2483,61 +3944,867 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "GAME_LIST_TEMP";
+            tableMapping.DataSetTable = "GAME_LIST_TEMP_TR";
             tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
             tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
             tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
-            tableMapping.ColumnMappings.Add("GLT_STEAM_BUNDLE_ID", "GLT_STEAM_BUNDLE_ID");
-            tableMapping.ColumnMappings.Add("GLT_NAME", "GLT_NAME");
             tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
-            tableMapping.ColumnMappings.Add("GLT_STEAM_REF", "GLT_STEAM_REF");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP] WHERE (([GLT_ID] = @Original_GLT_ID) AND ([GLT_PRICE] = @Original_GLT_PRICE) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)) AND ((@IsNull_GLT_STEAM_BUNDLE_ID = 1 AND [GLT_STEAM_BUNDLE_ID] IS NULL) OR ([GLT_STEAM_BUNDLE_ID] = @Original_GLT_STEAM_BUNDLE_ID)) AND ((@IsNull_GLT_NAME = 1 AND [GLT_NAME] IS NULL) OR ([GLT_NAME] = @Original_GLT_NAME)) AND ((@IsNull_GLT_STEAM_REF = 1 AND [GLT_STEAM_REF] IS NULL) OR ([GLT_STEAM_REF] = @Original_GLT_STEAM_REF)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_BUNDLE_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_BUNDLE_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_BUNDLE_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_BUNDLE_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GAME_LIST_TEMP] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_STEAM_BUNDLE_ID], [GLT_NAME], [GLT_IMAGE_PATH], [GLT_STEAM_REF]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_STEAM_BUNDLE_ID, @GLT_NAME, @GLT_IMAGE_PATH, @GLT_STEAM_REF);
-SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF FROM dbo.GAME_LIST_TEMP WHERE (GLT_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_TR] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PA" +
+                "TH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_BUNDLE_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_BUNDLE_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.STEAM_PARSINGConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_TR]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.UPDATE_TR_PRICES_JSON";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GameDS.GAME_LIST_TEMP_TRDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GameDS.GAME_LIST_TEMP_TRDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            GameDS.GAME_LIST_TEMP_TRDataTable dataTable = new GameDS.GAME_LIST_TEMP_TRDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GameDS.GAME_LIST_TEMP_TRDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GameDS dataSet) {
+            return this.Adapter.Update(dataSet, "GAME_LIST_TEMP_TR");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
+            if ((GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_IMAGE_PATH == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_TR_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GAME_LIST_TEMP_KZTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public GAME_LIST_TEMP_KZTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GAME_LIST_TEMP_KZ";
+            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
+            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
+            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
+            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_KZ] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PA" +
+                "TH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.STEAM_PARSINGConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_KZ]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.UPDATE_KZ_PRICES_JSON";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GameDS.GAME_LIST_TEMP_KZDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GameDS.GAME_LIST_TEMP_KZDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            GameDS.GAME_LIST_TEMP_KZDataTable dataTable = new GameDS.GAME_LIST_TEMP_KZDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GameDS.GAME_LIST_TEMP_KZDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GameDS dataSet) {
+            return this.Adapter.Update(dataSet, "GAME_LIST_TEMP_KZ");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
+            if ((GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_IMAGE_PATH == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_KZ_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GAME_LIST_TEMP_RUTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public GAME_LIST_TEMP_RUTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GAME_LIST_TEMP_RU";
+            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
+            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
+            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
+            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_RU] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PA" +
+                "TH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TryParseSteam.Properties.Settings.Default.STEAM_PARSINGConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_RU]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.UPDATE_RU_PRICES_JSON";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GameDS.GAME_LIST_TEMP_RUDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GameDS.GAME_LIST_TEMP_RUDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            GameDS.GAME_LIST_TEMP_RUDataTable dataTable = new GameDS.GAME_LIST_TEMP_RUDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GameDS.GAME_LIST_TEMP_RUDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GameDS dataSet) {
+            return this.Adapter.Update(dataSet, "GAME_LIST_TEMP_RU");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
+            if ((GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_IMAGE_PATH == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UPDATE_RU_PRICES_JSON(string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GAME_LIST_TEMP_USATableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public GAME_LIST_TEMP_USATableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GAME_LIST_TEMP_USA";
+            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
+            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
+            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
+            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP_USA] WHERE (([GLT_ID] = @Original_GLT_ID) AND ((@IsNull_GLT_PRICE = 1 AND [GLT_PRICE] IS NULL) OR ([GLT_PRICE] = @Original_GLT_PRICE)) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GAME_LIST_TEMP_USA] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PATH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH);
+SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_USA WHERE (GLT_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP] SET [GLT_PRICE] = @GLT_PRICE, [GLT_STEAM_ID] = @GLT_STEAM_ID, [GLT_STEAM_BUNDLE_ID] = @GLT_STEAM_BUNDLE_ID, [GLT_NAME] = @GLT_NAME, [GLT_IMAGE_PATH] = @GLT_IMAGE_PATH, [GLT_STEAM_REF] = @GLT_STEAM_REF WHERE (([GLT_ID] = @Original_GLT_ID) AND ([GLT_PRICE] = @Original_GLT_PRICE) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)) AND ((@IsNull_GLT_STEAM_BUNDLE_ID = 1 AND [GLT_STEAM_BUNDLE_ID] IS NULL) OR ([GLT_STEAM_BUNDLE_ID] = @Original_GLT_STEAM_BUNDLE_ID)) AND ((@IsNull_GLT_NAME = 1 AND [GLT_NAME] IS NULL) OR ([GLT_NAME] = @Original_GLT_NAME)) AND ((@IsNull_GLT_STEAM_REF = 1 AND [GLT_STEAM_REF] IS NULL) OR ([GLT_STEAM_REF] = @Original_GLT_STEAM_REF)));
-SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF FROM dbo.GAME_LIST_TEMP WHERE (GLT_ID = @GLT_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP_USA] SET [GLT_PRICE] = @GLT_PRICE, [GLT_STEAM_ID] = @GLT_STEAM_ID, [GLT_IMAGE_PATH] = @GLT_IMAGE_PATH WHERE (([GLT_ID] = @Original_GLT_ID) AND ((@IsNull_GLT_PRICE = 1 AND [GLT_PRICE] IS NULL) OR ([GLT_PRICE] = @Original_GLT_PRICE)) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)));
+SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_USA WHERE (GLT_ID = @GLT_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_BUNDLE_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_BUNDLE_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_BUNDLE_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_BUNDLE_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_BUNDLE_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_BUNDLE_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2551,43 +4818,24 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP]";
+            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_USA]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[1].CommandText = "dbo.CLEAR_TEMP_TABLE";
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.UPDATE_USA_PRICES_JSON";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[2].CommandText = "dbo.INSERT_NEW_GAMES";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[3].CommandText = "dbo.UPDATE_KZ_PRICES";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[4].CommandText = "dbo.UPDATE_RU_PRICES";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[5].CommandText = "dbo.UPDATE_TR_PRICES";
-            this._commandCollection[5].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GameDS.GAME_LIST_TEMPDataTable dataTable) {
+        public virtual int Fill(GameDS.GAME_LIST_TEMP_USADataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2600,9 +4848,9 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GameDS.GAME_LIST_TEMPDataTable GetData() {
+        public virtual GameDS.GAME_LIST_TEMP_USADataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GameDS.GAME_LIST_TEMPDataTable dataTable = new GameDS.GAME_LIST_TEMPDataTable();
+            GameDS.GAME_LIST_TEMP_USADataTable dataTable = new GameDS.GAME_LIST_TEMP_USADataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2610,7 +4858,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GameDS.GAME_LIST_TEMPDataTable dataTable) {
+        public virtual int Update(GameDS.GAME_LIST_TEMP_USADataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2618,7 +4866,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(GameDS dataSet) {
-            return this.Adapter.Update(dataSet, "GAME_LIST_TEMP");
+            return this.Adapter.Update(dataSet, "GAME_LIST_TEMP_USA");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2640,40 +4888,23 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_GLT_ID, double Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID, global::System.Nullable<int> Original_GLT_STEAM_BUNDLE_ID, string Original_GLT_NAME, string Original_GLT_STEAM_REF) {
+        public virtual int Delete(int Original_GLT_ID, global::System.Nullable<double> Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLT_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_GLT_PRICE));
+            if ((Original_GLT_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLT_PRICE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             if ((Original_GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_GLT_STEAM_ID.Value));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GLT_STEAM_ID.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_GLT_STEAM_BUNDLE_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_GLT_STEAM_BUNDLE_ID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_GLT_NAME == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_GLT_NAME));
-            }
-            if ((Original_GLT_STEAM_REF == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_GLT_STEAM_REF));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2695,37 +4926,24 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, global::System.Nullable<int> GLT_STEAM_BUNDLE_ID, string GLT_NAME, string GLT_IMAGE_PATH, string GLT_STEAM_REF) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
+        public virtual int Insert(global::System.Nullable<double> GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            if ((GLT_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((GLT_STEAM_ID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((GLT_STEAM_BUNDLE_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(GLT_STEAM_BUNDLE_ID.Value));
-            }
-            else {
+            if ((GLT_IMAGE_PATH == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((GLT_NAME == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(GLT_NAME));
-            }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(GLT_IMAGE_PATH));
-            }
-            if ((GLT_STEAM_REF == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(GLT_STEAM_REF));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2747,73 +4965,43 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, global::System.Nullable<int> GLT_STEAM_BUNDLE_ID, string GLT_NAME, string GLT_IMAGE_PATH, string GLT_STEAM_REF, int Original_GLT_ID, double Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID, global::System.Nullable<int> Original_GLT_STEAM_BUNDLE_ID, string Original_GLT_NAME, string Original_GLT_STEAM_REF, int GLT_ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLT_PRICE));
+        public virtual int Update(global::System.Nullable<double> GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH, int Original_GLT_ID, global::System.Nullable<double> Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID, int GLT_ID) {
+            if ((GLT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((GLT_STEAM_ID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((GLT_STEAM_BUNDLE_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(GLT_STEAM_BUNDLE_ID.Value));
-            }
-            else {
+            if ((GLT_IMAGE_PATH == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((GLT_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_GLT_ID));
+            if ((Original_GLT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Original_GLT_PRICE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(GLT_NAME));
-            }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(GLT_IMAGE_PATH));
-            }
-            if ((GLT_STEAM_REF == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(GLT_STEAM_REF));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_GLT_ID));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_GLT_PRICE));
             if ((Original_GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_GLT_STEAM_ID.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_GLT_STEAM_ID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_GLT_STEAM_BUNDLE_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_GLT_STEAM_BUNDLE_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_GLT_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_GLT_NAME));
-            }
-            if ((Original_GLT_STEAM_REF == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_GLT_STEAM_REF));
-            }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(GLT_ID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(GLT_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2834,103 +5022,21 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, global::System.Nullable<int> GLT_STEAM_BUNDLE_ID, string GLT_NAME, string GLT_IMAGE_PATH, string GLT_STEAM_REF, int Original_GLT_ID, double Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID, global::System.Nullable<int> Original_GLT_STEAM_BUNDLE_ID, string Original_GLT_NAME, string Original_GLT_STEAM_REF) {
-            return this.Update(GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE_PATH, GLT_STEAM_REF, Original_GLT_ID, Original_GLT_PRICE, Original_GLT_STEAM_ID, Original_GLT_STEAM_BUNDLE_ID, Original_GLT_NAME, Original_GLT_STEAM_REF, Original_GLT_ID);
+        public virtual int Update(global::System.Nullable<double> GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH, int Original_GLT_ID, global::System.Nullable<double> Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID) {
+            return this.Update(GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH, Original_GLT_ID, Original_GLT_PRICE, Original_GLT_STEAM_ID, Original_GLT_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int CLEAR_TEMP_TABLE() {
+        public virtual int UPDATE_USA_PRICES_JSON(string json) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
+            else {
+                command.Parameters[1].Value = ((string)(json));
             }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int INSERT_NEW_GAMES() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UPDATE_KZ_PRICES() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UPDATE_RU_PRICES() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UPDATE_TR_PRICES() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2963,7 +5069,13 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         
         private GAME_LISTTableAdapter _gAME_LISTTableAdapter;
         
-        private GAME_LIST_TEMPTableAdapter _gAME_LIST_TEMPTableAdapter;
+        private GAME_LIST_TEMP_TRTableAdapter _gAME_LIST_TEMP_TRTableAdapter;
+        
+        private GAME_LIST_TEMP_KZTableAdapter _gAME_LIST_TEMP_KZTableAdapter;
+        
+        private GAME_LIST_TEMP_RUTableAdapter _gAME_LIST_TEMP_RUTableAdapter;
+        
+        private GAME_LIST_TEMP_USATableAdapter _gAME_LIST_TEMP_USATableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2999,12 +5111,54 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public GAME_LIST_TEMPTableAdapter GAME_LIST_TEMPTableAdapter {
+        public GAME_LIST_TEMP_TRTableAdapter GAME_LIST_TEMP_TRTableAdapter {
             get {
-                return this._gAME_LIST_TEMPTableAdapter;
+                return this._gAME_LIST_TEMP_TRTableAdapter;
             }
             set {
-                this._gAME_LIST_TEMPTableAdapter = value;
+                this._gAME_LIST_TEMP_TRTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GAME_LIST_TEMP_KZTableAdapter GAME_LIST_TEMP_KZTableAdapter {
+            get {
+                return this._gAME_LIST_TEMP_KZTableAdapter;
+            }
+            set {
+                this._gAME_LIST_TEMP_KZTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GAME_LIST_TEMP_RUTableAdapter GAME_LIST_TEMP_RUTableAdapter {
+            get {
+                return this._gAME_LIST_TEMP_RUTableAdapter;
+            }
+            set {
+                this._gAME_LIST_TEMP_RUTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GAME_LIST_TEMP_USATableAdapter GAME_LIST_TEMP_USATableAdapter {
+            get {
+                return this._gAME_LIST_TEMP_USATableAdapter;
+            }
+            set {
+                this._gAME_LIST_TEMP_USATableAdapter = value;
             }
         }
         
@@ -3031,9 +5185,21 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                             && (this._gAME_LISTTableAdapter.Connection != null))) {
                     return this._gAME_LISTTableAdapter.Connection;
                 }
-                if (((this._gAME_LIST_TEMPTableAdapter != null) 
-                            && (this._gAME_LIST_TEMPTableAdapter.Connection != null))) {
-                    return this._gAME_LIST_TEMPTableAdapter.Connection;
+                if (((this._gAME_LIST_TEMP_TRTableAdapter != null) 
+                            && (this._gAME_LIST_TEMP_TRTableAdapter.Connection != null))) {
+                    return this._gAME_LIST_TEMP_TRTableAdapter.Connection;
+                }
+                if (((this._gAME_LIST_TEMP_KZTableAdapter != null) 
+                            && (this._gAME_LIST_TEMP_KZTableAdapter.Connection != null))) {
+                    return this._gAME_LIST_TEMP_KZTableAdapter.Connection;
+                }
+                if (((this._gAME_LIST_TEMP_RUTableAdapter != null) 
+                            && (this._gAME_LIST_TEMP_RUTableAdapter.Connection != null))) {
+                    return this._gAME_LIST_TEMP_RUTableAdapter.Connection;
+                }
+                if (((this._gAME_LIST_TEMP_USATableAdapter != null) 
+                            && (this._gAME_LIST_TEMP_USATableAdapter.Connection != null))) {
+                    return this._gAME_LIST_TEMP_USATableAdapter.Connection;
                 }
                 return null;
             }
@@ -3051,7 +5217,16 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                 if ((this._gAME_LISTTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._gAME_LIST_TEMPTableAdapter != null)) {
+                if ((this._gAME_LIST_TEMP_TRTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gAME_LIST_TEMP_KZTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gAME_LIST_TEMP_RUTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -3074,12 +5249,39 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._gAME_LIST_TEMPTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.GAME_LIST_TEMP.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._gAME_LIST_TEMP_TRTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GAME_LIST_TEMP_TR.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._gAME_LIST_TEMPTableAdapter.Update(updatedRows));
+                    result = (result + this._gAME_LIST_TEMP_TRTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_KZTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GAME_LIST_TEMP_KZ.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_KZTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_RUTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GAME_LIST_TEMP_RU.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_RUTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GAME_LIST_TEMP_USA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_USATableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3101,11 +5303,35 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._gAME_LIST_TEMPTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.GAME_LIST_TEMP.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._gAME_LIST_TEMP_TRTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GAME_LIST_TEMP_TR.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._gAME_LIST_TEMPTableAdapter.Update(addedRows));
+                    result = (result + this._gAME_LIST_TEMP_TRTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_KZTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GAME_LIST_TEMP_KZ.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_KZTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_RUTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GAME_LIST_TEMP_RU.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_RUTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GAME_LIST_TEMP_USA.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_USATableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3119,11 +5345,35 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(GameDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._gAME_LIST_TEMPTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.GAME_LIST_TEMP.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GAME_LIST_TEMP_USA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._gAME_LIST_TEMPTableAdapter.Update(deletedRows));
+                    result = (result + this._gAME_LIST_TEMP_USATableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_RUTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GAME_LIST_TEMP_RU.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_RUTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_KZTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GAME_LIST_TEMP_KZ.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_KZTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._gAME_LIST_TEMP_TRTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GAME_LIST_TEMP_TR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gAME_LIST_TEMP_TRTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3179,8 +5429,23 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._gAME_LIST_TEMPTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._gAME_LIST_TEMPTableAdapter.Connection) == false))) {
+            if (((this._gAME_LIST_TEMP_TRTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gAME_LIST_TEMP_TRTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
+                        "r, должны использовать одинаковую строку подключения.");
+            }
+            if (((this._gAME_LIST_TEMP_KZTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gAME_LIST_TEMP_KZTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
+                        "r, должны использовать одинаковую строку подключения.");
+            }
+            if (((this._gAME_LIST_TEMP_RUTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gAME_LIST_TEMP_RUTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
+                        "r, должны использовать одинаковую строку подключения.");
+            }
+            if (((this._gAME_LIST_TEMP_USATableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gAME_LIST_TEMP_USATableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -3225,13 +5490,40 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                         adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LISTTableAdapter.Adapter);
                     }
                 }
-                if ((this._gAME_LIST_TEMPTableAdapter != null)) {
-                    revertConnections.Add(this._gAME_LIST_TEMPTableAdapter, this._gAME_LIST_TEMPTableAdapter.Connection);
-                    this._gAME_LIST_TEMPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._gAME_LIST_TEMPTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._gAME_LIST_TEMPTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._gAME_LIST_TEMPTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMPTableAdapter.Adapter);
+                if ((this._gAME_LIST_TEMP_TRTableAdapter != null)) {
+                    revertConnections.Add(this._gAME_LIST_TEMP_TRTableAdapter, this._gAME_LIST_TEMP_TRTableAdapter.Connection);
+                    this._gAME_LIST_TEMP_TRTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gAME_LIST_TEMP_TRTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gAME_LIST_TEMP_TRTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gAME_LIST_TEMP_TRTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMP_TRTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gAME_LIST_TEMP_KZTableAdapter != null)) {
+                    revertConnections.Add(this._gAME_LIST_TEMP_KZTableAdapter, this._gAME_LIST_TEMP_KZTableAdapter.Connection);
+                    this._gAME_LIST_TEMP_KZTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gAME_LIST_TEMP_KZTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gAME_LIST_TEMP_KZTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gAME_LIST_TEMP_KZTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMP_KZTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gAME_LIST_TEMP_RUTableAdapter != null)) {
+                    revertConnections.Add(this._gAME_LIST_TEMP_RUTableAdapter, this._gAME_LIST_TEMP_RUTableAdapter.Connection);
+                    this._gAME_LIST_TEMP_RUTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gAME_LIST_TEMP_RUTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gAME_LIST_TEMP_RUTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gAME_LIST_TEMP_RUTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMP_RUTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
+                    revertConnections.Add(this._gAME_LIST_TEMP_USATableAdapter, this._gAME_LIST_TEMP_USATableAdapter.Connection);
+                    this._gAME_LIST_TEMP_USATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gAME_LIST_TEMP_USATableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gAME_LIST_TEMP_USATableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gAME_LIST_TEMP_USATableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMP_USATableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3296,9 +5588,21 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_STEAM_BUNDLE_ID, GLT_NAME, GLT_IMAGE
                     this._gAME_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LISTTableAdapter]));
                     this._gAME_LISTTableAdapter.Transaction = null;
                 }
-                if ((this._gAME_LIST_TEMPTableAdapter != null)) {
-                    this._gAME_LIST_TEMPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMPTableAdapter]));
-                    this._gAME_LIST_TEMPTableAdapter.Transaction = null;
+                if ((this._gAME_LIST_TEMP_TRTableAdapter != null)) {
+                    this._gAME_LIST_TEMP_TRTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMP_TRTableAdapter]));
+                    this._gAME_LIST_TEMP_TRTableAdapter.Transaction = null;
+                }
+                if ((this._gAME_LIST_TEMP_KZTableAdapter != null)) {
+                    this._gAME_LIST_TEMP_KZTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMP_KZTableAdapter]));
+                    this._gAME_LIST_TEMP_KZTableAdapter.Transaction = null;
+                }
+                if ((this._gAME_LIST_TEMP_RUTableAdapter != null)) {
+                    this._gAME_LIST_TEMP_RUTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMP_RUTableAdapter]));
+                    this._gAME_LIST_TEMP_RUTableAdapter.Transaction = null;
+                }
+                if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
+                    this._gAME_LIST_TEMP_USATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMP_USATableAdapter]));
+                    this._gAME_LIST_TEMP_USATableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -33,20 +33,22 @@ namespace TryParseSteam
             {
                 case eProxyRegion.NONE:
                     proxy = null;
-                    
+                    _currency = "&cc=ru";
                     break;
                 case eProxyRegion.USA:
                     proxy = new WebProxy(new Uri("http://80.73.244.40:59244"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-                    
+                    _currency = "&cc=us";
 
                     break;
                 case eProxyRegion.KZ:
                     proxy = new WebProxy(new Uri("http://45.152.214.36:52900"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-                    
+                    _currency = "&cc=kz";
+
                     break;
                 case eProxyRegion.TUR:
                     proxy = new WebProxy(new Uri("http://45.149.131.12:48563"), true, null, new NetworkCredential("ehG9tnGk", "YFUE4KS3"));
-                    
+                    _currency = "&cc=tr";
+
                     break;
             }
 
@@ -56,7 +58,7 @@ namespace TryParseSteam
 
 
         }
-
+        string _currency = "";
         string onlyNamesUrl = "http://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=STEAMKEY&format=json";
         string url = "https://store.steampowered.com/search/results/?page=1&count=100&sort_by=_ASC&ignore_preferences=1";
         ConcurrentBag<GameItem> _items = new ConcurrentBag<GameItem>();
@@ -107,10 +109,10 @@ namespace TryParseSteam
                     using (var clnt = new HttpClient(hdl) { Timeout = TimeSpan.FromMinutes(5) })
                     {
                         _resultPrices = new string[querryArray.Length];
-                        Parallel.For(0, querryArray.Length, i => 
+                        Parallel.For(0, querryArray.Length, i =>
                         {
 
-                            using (HttpResponseMessage resp = clnt.GetAsync(querryArray[i]).Result)
+                            using (HttpResponseMessage resp = clnt.GetAsync(querryArray[i]+_currency).Result)
                             {
                                 if (resp.IsSuccessStatusCode)
                                 {
@@ -118,7 +120,8 @@ namespace TryParseSteam
                                     if (!string.IsNullOrEmpty(html))
                                     {
                                         _resultPrices[i] = html;
-                                        Debug.WriteLine(i);
+
+                                        //Debug.WriteLine(i);
                                     }
                                 }
                                 else
@@ -128,7 +131,7 @@ namespace TryParseSteam
                             }
 
                         });
-                        //for(int i= 0;i < querryArray.Length;i++)
+                        //for (int i = 0; i < querryArray.Length; i++)
                         //{
 
                         //}

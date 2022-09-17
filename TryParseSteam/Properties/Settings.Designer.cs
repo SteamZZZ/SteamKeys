@@ -38,7 +38,8 @@ namespace TryParseSteam.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=wpl44.hosting.reg.ru;Initial Catalog=u1286676_STEAM_PARSING;Persist S" +
-            "ecurity Info=True;User ID=u1286676_Deallocate;Password=Fhz5f812~")]
+            "ecurity Info=True;User ID=u1286676_Deallocate;Password=Fhz5f812~;Max Pool Size=3" +
+            "00;Asynchronous Processing=True")]
         public string STEAM_PARSINGConnectionString {
             get {
                 return ((string)(this["STEAM_PARSINGConnectionString"]));
