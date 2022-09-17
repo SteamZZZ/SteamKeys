@@ -15,6 +15,7 @@ namespace TryParseSteam
         static void Main()
         {
             ParserManager parser = new ParserManager();
+            parser.StartSteambuy();
         }
     }
 }

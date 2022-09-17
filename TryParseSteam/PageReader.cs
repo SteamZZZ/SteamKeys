@@ -59,6 +59,7 @@ namespace TryParseSteam
 
         }
         string _currency = "";
+        string steamBuyUrl = "https://steambuy.com/catalog/?platforms=windows&activation=Steam&page=";
         string onlyNamesUrl = "http://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=STEAMKEY&format=json";
         string url = "https://store.steampowered.com/search/results/?page=1&count=100&sort_by=_ASC&ignore_preferences=1";
         ConcurrentBag<GameItem> _items = new ConcurrentBag<GameItem>();
@@ -69,6 +70,41 @@ namespace TryParseSteam
         public string ResultJsonIDs { get => _json; set => _json = value; }
         public string[] ResultPrices { get => _resultPrices; set => _resultPrices = value; }
 
+        public void ReadSteambuyPages()
+        {
+            try
+            {
+                using (HttpClientHandler hdl = new HttpClientHandler
+                {
+                    AllowAutoRedirect = false
+                    ,
+                    AutomaticDecompression = System.Net.DecompressionMethods.Deflate
+                    | System.Net.DecompressionMethods.GZip
+                    | System.Net.DecompressionMethods.None
+                })
+                {
+
+                    using (var clnt = new HttpClient(hdl) { Timeout = TimeSpan.FromMinutes(5) })
+                    {
+                        Parallel.For(0, 500, currentPage =>
+                        {
+                            using (HttpResponseMessage resp = clnt.GetAsync(steamBuyUrl).Result)
+                            {
+                                if (resp.IsSuccessStatusCode)
+                                {
+                                    
+                                }
+                            }
+                        });
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
         public void ReadAllNamesProxy()
         {
             try
@@ -153,7 +189,13 @@ namespace TryParseSteam
                 {
                     if (resp.IsSuccessStatusCode)
                     {
-                        ReadJson(resp);
+                        var html = resp.Content.ReadAsStringAsync().Result;
+                        if (!string.IsNullOrEmpty(html))
+                        {
+                            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                            doc.LoadHtml(html);
+                            var nodes = doc.DocumentNode.Descendants().Where(x => x.HasClass("product-item"));
+                        }
                     }
                 }
             }

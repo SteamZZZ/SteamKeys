@@ -16,7 +16,7 @@ namespace TryParseSteam
         bool ShowMessages = false;
         public ParserManager()
         {
-            Start();
+            
         }
         DataBaseManager mngr = new DataBaseManager();
 
@@ -30,7 +30,12 @@ namespace TryParseSteam
             JSONString = JsonConvert.SerializeObject(table);
             return JSONString;
         }
-        private void Start()
+
+        public void StartSteambuy()
+        {
+
+        }
+        public void Start()
         {
 
 
