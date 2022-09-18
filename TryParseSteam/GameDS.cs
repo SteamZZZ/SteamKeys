@@ -76,20 +76,9 @@ namespace TryParseSteam.GameDSTableAdapters
         }
     }
 
-    public partial class STEAM_ACCOUNT_LISTTableAdapter
-    {
-        public int Timeout
-        {
-            set
-            {
-                for (int i = 0; i < this.CommandCollection.Length; i++)
-                    if (this.CommandCollection[i] != null)
-                        this.CommandCollection[i].CommandTimeout = value;
-            }
-        }
-    }
 
-    public partial class STEAMKEY_LISTTableAdapter
+
+    public partial class OTHER_SITE_LISTTableAdapter
     {
         public int Timeout
         {

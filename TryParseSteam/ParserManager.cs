@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ServerObjects;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,24 +23,29 @@ namespace TryParseSteam
         DataBaseManager mngr = new DataBaseManager();
 
         //string json=new ParserManager().GetJsonString();
-        public string GetJsonString()
+        public void SaveJsonString()
         {
             GameDSTableAdapters.GAME_LISTTableAdapter adapter = new GameDSTableAdapters.GAME_LISTTableAdapter();
             GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
-            adapter.Fill(table);
+            string res_json = "";
+            adapter.GET_JSON_LIST(ref res_json);
+            //adapter.Fill(table);
             string JSONString = string.Empty;
-            JSONString = JsonConvert.SerializeObject(table);
-            return JSONString;
+            JSONString = JValue.Parse(res_json).ToString(Formatting.Indented);
+            using (StreamWriter sw=new StreamWriter("db_info.json"))
+            {
+                sw.WriteLine(JSONString);
+            }
         }
-
+        // SECOND
         public void StartSteamkey()
         {
             PageReader reader = new PageReader(eProxyRegion.NONE);
             reader.ReadSteamKeyPages();
             mngr.InsertSteamKeyItems(reader.OtherSiteItems);
         }
-
-        public void StartSteambuy()
+        // FIRST
+        public void StartSteamAccount()
         {
             PageReader reader = new PageReader(eProxyRegion.NONE);
             reader.ReadSteamAccountPages();
@@ -49,8 +56,6 @@ namespace TryParseSteam
         {
 
 
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
 
             PageReader readerUS = new PageReader(eProxyRegion.USA);
 
@@ -71,8 +76,7 @@ namespace TryParseSteam
             Debug.WriteLineIf(ShowMessages, "FULL UPDATE STARTED");
             mngr.UpdatePricesRegions();
 
-            sw.Stop();
-            Debug.WriteLine(sw.Elapsed, "FULL UPDATE ");
+
         }
 
         void UpdateRUPrices(string[] querryPrice)
