@@ -21,7 +21,7 @@ namespace TryParseSteam
         DataBaseManager mngr = new DataBaseManager();
 
         //string json=new ParserManager().GetJsonString();
-        public string GetJsonString()
+        public static string GetJsonString()
         {
             GameDSTableAdapters.GAME_LISTTableAdapter adapter = new GameDSTableAdapters.GAME_LISTTableAdapter();
             GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();

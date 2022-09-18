@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SteamKeysApp.Pages.GamesCatalogPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SteamKeysApp.Controls"
+    xmlns:models="clr-namespace:SteamKeysApp.Models"
+    xmlns:pages="clr-namespace:SteamKeysApp.Pages"
+    xmlns:res="clr-namespace:SteamKeysApp.Resources.Strings"
+    xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
+    xmlns:views="clr-namespace:SteamKeysApp.Views"
+    x:DataType="viewModels:GamesCatalogPageViewModel"
+    Style="{StaticResource DetailPageStyle}">
+
+    <Grid Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}">
+
+        <CollectionView
+            Margin="10"
+            Background="{AppThemeBinding Light={StaticResource Gray100},
+                                         Dark={StaticResource Gray900}}"
+            ItemsSource="{Binding Games}">
+
+            <CollectionView.Header>
+                <Grid>
+                    <Label
+                        Margin="14,20,0,0"
+                        HorizontalOptions="Start"
+                        Style="{StaticResource H5LabelStyle}"
+                        Text="{Static res:AppResource.Games_Catalog}" />
+
+                    <controls:HeaderControl
+                        Margin="0,20"
+                        SearchCommand="{Binding SearchCommand}"
+                        TextToSearch="{Binding Text, Mode=OneWayToSource}" />
+                </Grid>
+            </CollectionView.Header>
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    HorizontalItemSpacing="10"
+                    Orientation="Vertical"
+                    Span="{OnIdiom Phone=1,
+                                   Tablet=4,
+                                   Desktop=4}"
+                    VerticalItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <views:GameItemView SubscriptionCommand="{Binding SubscribeCommand, Source={RelativeSource AncestorType={x:Type viewModels:GamesCatalogPageViewModel}}}" SubscriptionCommandParameter="{Binding}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <Grid Padding="{OnIdiom Desktop=200, Default=50}" RowDefinitions="*, auto">
+                    <Image
+                        HorizontalOptions="Center"
+                        Source="nodata1.png"
+                        VerticalOptions="Center">
+                        <Image.Shadow>
+                            <Shadow
+                                Brush="#000000"
+                                Opacity="0.8"
+                                Radius="40"
+                                Offset="20,20" />
+                        </Image.Shadow>
+                    </Image>
+
+                    <Label
+                        Grid.Row="1"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource BodySLabelStyle}"
+                        Text="{x:Static res:AppResource.Semantic_Description_No_Games_Loaded}" />
+                </Grid>
+            </CollectionView.EmptyView>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="SteamKeysApp.Pages.DesktopShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:SteamKeysApp.Pages"
+    xmlns:root="clr-namespace:SteamKeysApp"
+    xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
+    x:DataType="viewModels:ShellViewModel"
+    FlyoutBehavior="Locked"
+    Shell.NavBarIsVisible="False">
+
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Image
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="SteamKeys application logo"
+                Source="{AppThemeBinding Light=logo_horizontal.png,
+                                         Dark=logo_horizontal_dark.png}"
+                VerticalOptions="Center"
+                WidthRequest="110" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="{Binding GamesCatalog.Title}" Icon="{AppThemeBinding Light=games_catalog_page.png, Dark=games_catalog_page_dark.png}">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:GamesCatalogPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{Binding Favorites.Title}" Icon="{AppThemeBinding Light=favorites_page.png, Dark=favorites_page_dark.png}">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:FavoritesPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{Binding Info.Title}" Icon="{AppThemeBinding Light=info_page.png, Dark=info_page_dark.png}">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:InfoPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{Binding Profile.Title}" Icon="{AppThemeBinding Light=profile_page.png, Dark=profile_page_dark.png}">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    Margin="6,10"
+                    HeightRequest="20"
+                    Source="{Binding Icon}"
+                    WidthRequest="20" />
+                <Label
+                    Margin="6,10"
+                    FontSize="Body"
+                    Text="{Binding Title}" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+</Shell>

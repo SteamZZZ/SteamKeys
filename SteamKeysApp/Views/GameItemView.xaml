@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Border
+    x:Class="SteamKeysApp.Views.GameItemView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SteamKeysApp.Controls"
+    xmlns:models="clr-namespace:SteamKeysApp.Models"
+    xmlns:pages="clr-namespace:SteamKeysApp.Pages"
+    xmlns:res="clr-namespace:SteamKeysApp.Resources.Strings"
+    xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
+    x:Name="self"
+    Padding="{OnIdiom Default=10 5 10 6, Phone=5 10 5 5}"
+    x:DataType="viewModels:GameItemViewModel"
+    Background="{AppThemeBinding Light={StaticResource Gray100},
+                                 Dark={StaticResource Gray950}}"
+    StrokeShape="RoundRectangle 10">
+
+    <!--<Border.Shadow>
+        <Shadow
+            Brush="Orange"
+            Opacity="0.8"
+            Offset="10,10" />
+    </Border.Shadow>-->
+
+    <Border.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding NavigateToDetailCommand}" />
+    </Border.GestureRecognizers>
+
+    <OnPlatform x:TypeArguments="View">
+
+        <On Platform="UWP, MacCatalyst">
+            <VerticalStackLayout Spacing="5">
+
+                <Label
+                    HorizontalOptions="Start"
+                    LineBreakMode="TailTruncation"
+                    MaxLines="1"
+                    Style="{OnIdiom Default={StaticResource BodyXLLabelStyle},
+                                    Phone={StaticResource BodyLLabelStyle}}"
+                    Text="{Binding Game.Name}" />
+
+                <Border
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 5"
+                    StrokeThickness="0">
+                    <Image
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        Loaded="Image_Loaded"
+                        Source="logo_horizontal.png"
+                        VerticalOptions="Start" />
+                </Border>
+
+                <Grid ColumnDefinitions="*,Auto">
+
+                    <VerticalStackLayout Grid.Column="0" Spacing="5">
+
+                        <Label
+                            HorizontalOptions="Start"
+                            LineBreakMode="TailTruncation"
+                            MaxLines="1"
+                            Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
+                                            Phone={StaticResource BodyMLabelStyle}}"
+                            Text="{Binding Game.PriceRu, StringFormat='Steam: {0}'}" />
+
+                        <Label
+                            HorizontalOptions="Start"
+                            LineBreakMode="TailTruncation"
+                            MaxLines="1"
+                            Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
+                                            Phone={StaticResource BodyMLabelStyle}}"
+                            Text="{Binding Game.LowestPrice, StringFormat='Cheapes Price: {0}'}" />
+
+                    </VerticalStackLayout>
+
+                    <ImageButton
+                        Grid.Column="1"
+                        BackgroundColor="Transparent"
+                        HeightRequest="35"
+                        Source="favorites_page.png"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </VerticalStackLayout>
+        </On>
+
+        <On Platform="Android, iOS">
+            <VerticalStackLayout Spacing="5">
+
+                <Label
+                    HorizontalOptions="Start"
+                    LineBreakMode="TailTruncation"
+                    MaxLines="1"
+                    Style="{OnIdiom Default={StaticResource BodyXLLabelStyle},
+                                    Phone={StaticResource BodyLLabelStyle}}"
+                    Text="{Binding Game.Name}" />
+
+                <HorizontalStackLayout Spacing="10">
+
+                    <Border
+                        BackgroundColor="Transparent"
+                        StrokeShape="RoundRectangle 5"
+                        StrokeThickness="0">
+                        <Image
+                            Aspect="AspectFit"
+                            HorizontalOptions="Start"
+                            Loaded="Image_Loaded"
+                            Source="logo_horizontal.png"
+                            VerticalOptions="Start"
+                            WidthRequest="180" />
+                    </Border>
+
+                    <VerticalStackLayout Spacing="10">
+                        <Label
+                            HorizontalOptions="Start"
+                            LineBreakMode="TailTruncation"
+                            MaxLines="1"
+                            Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
+                                            Phone={StaticResource BodyMLabelStyle}}"
+                            Text="{Binding Game.LowestPrice, StringFormat='Lowest Price: {0}'}" />
+
+                        <Label
+                            HorizontalOptions="Start"
+                            LineBreakMode="TailTruncation"
+                            MaxLines="1"
+                            Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
+                                            Phone={StaticResource BodyMLabelStyle}}"
+                            Text="{Binding Game.CheapestStore, StringFormat='Cheapes Store: {0}'}" />
+
+                        <Button Text="Отслеживать" />
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </On>
+    </OnPlatform>
+</Border>
