@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -25,15 +24,12 @@ namespace ServerObjects
             adapter.ClearBeforeFill = true;
             adapter.Timeout = 180;
             GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
+
             try
             {
                 adapter.JSON_PARSE_ID_LIST(json);
             }
-            catch(Exception ex)
-            {
-
-            }
-            
+            catch(Exception ex) { }
 
         }
 
@@ -51,7 +47,6 @@ namespace ServerObjects
             int difference = table.Count - sum;
 
             string[] querryArray; 
-
 
             if (difference > 0)
             {
@@ -88,25 +83,56 @@ namespace ServerObjects
                 }
             }
 
-
-            //foreach(GameDS.GAME_LISTRow row in table)
-            //{
-            //    resultQuerry += row.GL_STEAM_ID + ",";
-            //}
-
             return querryArray;// + "&filters=price_overview";
         }
-        Semaphore lockUs = new Semaphore(15, 15);
+
+        public void AddUser(string login,string password)
+        {
+            if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(password))
+            {
+                TryParseSteam.UserDSTableAdapters.USER_LISTTableAdapter adapter = new TryParseSteam.UserDSTableAdapters.USER_LISTTableAdapter();
+                UserDS.USER_LISTDataTable table = new UserDS.USER_LISTDataTable();
+                adapter.FillByLogin(table, login);
+                if (table.Count == 0)
+                    adapter.ADD_USER(login, password);
+                else
+                    throw new Exception("User with this login already exists");
+            }
+            else
+                throw new Exception("Empty credentials");
+
+        }
+
+        public User VerifyUser(string login,string password)
+        {
+            TryParseSteam.UserDSTableAdapters.USER_LISTTableAdapter adapter = new TryParseSteam.UserDSTableAdapters.USER_LISTTableAdapter();
+            adapter.ClearBeforeFill = true;
+            UserDS.USER_LISTDataTable table = new UserDS.USER_LISTDataTable();
+            adapter.FillByCredentials(table, login, password);
+            if (table.Count == 1)
+            {
+                var row = table[0];
+                return new User(row.UL_ID, row.UL_LOGIN);
+            }
+            return null;
+        }
+
+        public List<int> GetUserFavorites(int user_id)
+        {
+            List<int> game_ids = new List<int>();
+            TryParseSteam.UserDSTableAdapters.USER_FAVORITESTableAdapter adapter = new TryParseSteam.UserDSTableAdapters.USER_FAVORITESTableAdapter();
+            UserDS.USER_FAVORITESDataTable table = new UserDS.USER_FAVORITESDataTable();
+            adapter.ClearBeforeFill = true;
+            adapter.FillByUserId(table, user_id);
+            foreach(UserDS.USER_FAVORITESRow row in table)
+            {
+                game_ids.Add(row.UF_GL_STEAM_ID);
+            }
+            return game_ids;
+        }
+
         public void UpdatePrices(string[] querryResults)
         {
-            //TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter();
-            //adapter.ClearBeforeFill = true;
-            //adapter.Timeout = 180;
-
-            //for (int i = 0; i < querryResults.Length; i++)
-            //{
-            //    adapter.UPDATE_USA_PRICES_JSON(querryResults[i]);
-            //}
 
             Parallel.For(0, querryResults.Length, i => 
             {
@@ -120,8 +146,58 @@ namespace ServerObjects
             });
 
         }
-        //object locker = new object();
-        Semaphore lockRu = new Semaphore(15, 15);
+
+        public void InsertSteamAccountItems(ConcurrentBag<OtherSiteItem> _items)
+        {
+            TryParseSteam.GameDSTableAdapters.STEAM_ACCOUNT_LISTTableAdapter adapter
+= new TryParseSteam.GameDSTableAdapters.STEAM_ACCOUNT_LISTTableAdapter();
+            adapter.Timeout = 180;
+            GameDS.STEAM_ACCOUNT_LISTDataTable table = new GameDS.STEAM_ACCOUNT_LISTDataTable();
+            adapter.CLEAR_STEAM_ACCOUNTS_LIST();
+            GameDS.STEAM_ACCOUNT_LISTRow row = null;
+            //Parallel.ForEach(_items, item => 
+            //{
+            //    row = table.NewSTEAM_ACCOUNT_LISTRow();
+            //    row.SAL_NAME = item.Name.Contains("купить") ? item.Name.Remove(item.Name.IndexOf(" купить")) : item.Name;
+            //    row.SAL_PRICE = item.Price;
+            //    row.SAL_REF = item.Href.Contains("http") ? item.Href : "https://steam-account.ru" + item.Href;
+            //    table.AddSTEAM_ACCOUNT_LISTRow(row);
+            //});
+            foreach (var item in _items)
+            {
+                row = table.NewSTEAM_ACCOUNT_LISTRow();
+                row.SAL_NAME = item.Name.Contains("купить") ? item.Name.Remove(item.Name.IndexOf(" купить")) : item.Name;
+                row.SAL_PRICE = item.Price;
+                row.SAL_REF = item.Href.Contains("http") ? item.Href : "https://steam-account.ru" + item.Href;
+                table.AddSTEAM_ACCOUNT_LISTRow(row);
+            }
+            adapter.Update(table);
+            adapter.UPDATE_IDS_STEAM_ACCOUNTS_LIST();
+
+        }
+
+        public void InsertSteamKeyItems(ConcurrentBag<OtherSiteItem> _items)
+        {
+            TryParseSteam.GameDSTableAdapters.STEAMKEY_LISTTableAdapter adapter
+= new TryParseSteam.GameDSTableAdapters.STEAMKEY_LISTTableAdapter();
+            adapter.Timeout = 180;
+            GameDS.STEAMKEY_LISTDataTable table = new GameDS.STEAMKEY_LISTDataTable();
+            adapter.CLEAR_STEAMKEY_LIST();
+            GameDS.STEAMKEY_LISTRow row = null;
+
+            foreach (var item in _items)
+            {
+                row = table.NewSTEAMKEY_LISTRow();
+                row.SL_NAME =  item.Name;
+                row.SL_PRICE = item.Price;
+                row.SL_REF = "https://steamkey.com" + item.Href;
+                table.AddSTEAMKEY_LISTRow(row);
+            }
+            adapter.Update(table);
+            adapter.UPDATE_IDS_STEAMKEY_LIST();
+
+        }
+
         public void UpdateRuPrices(string[] querryResults)
         {
             //TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_RUTableAdapter adapter 
@@ -146,18 +222,8 @@ namespace ServerObjects
 
         }
 
-
         public void UpdateKZPrices(string[] querryResults)
         {
-            //TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_KZTableAdapter adapter 
-            //    = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_KZTableAdapter();
-            //adapter.ClearBeforeFill = true;
-            ////adapter.Timeout = 180;
-            //for (int i = 0; i < querryResults.Length; i++)
-            //{
-            //    adapter.UPDATE_KZ_PRICES_JSON(querryResults[i]);
-            //}
-
             Parallel.For(0, querryResults.Length, i => 
             {
                 TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_KZTableAdapter adapter
@@ -171,14 +237,6 @@ namespace ServerObjects
 
         public void UpdateTRPrices(string[] querryResults)
         {
-            //TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_TRTableAdapter adapter 
-            //    = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_TRTableAdapter();
-            //adapter.ClearBeforeFill = true;
-            ////adapter.Timeout = 180;
-            //for (int i = 0; i < querryResults.Length; i++)
-            //{
-            //    adapter.UPDATE_TR_PRICES_JSON(querryResults[i]);
-            //}
             Parallel.For(0, querryResults.Length, i => 
             {
                 TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMP_TRTableAdapter adapter

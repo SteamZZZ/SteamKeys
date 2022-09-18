@@ -16,7 +16,7 @@ namespace TryParseSteam
         bool ShowMessages = false;
         public ParserManager()
         {
-            Start();
+            
         }
         DataBaseManager mngr = new DataBaseManager();
 
@@ -30,7 +30,22 @@ namespace TryParseSteam
             JSONString = JsonConvert.SerializeObject(table);
             return JSONString;
         }
-        private void Start()
+
+        public void StartSteamkey()
+        {
+            PageReader reader = new PageReader(eProxyRegion.NONE);
+            reader.ReadSteamKeyPages();
+            mngr.InsertSteamKeyItems(reader.OtherSiteItems);
+        }
+
+        public void StartSteambuy()
+        {
+            PageReader reader = new PageReader(eProxyRegion.NONE);
+            reader.ReadSteamAccountPages();
+            mngr.InsertSteamAccountItems(reader.OtherSiteItems);
+        }
+
+        public void Start()
         {
 
 
@@ -95,8 +110,6 @@ namespace TryParseSteam
             Debug.WriteLineIf(ShowMessages, "TR PRICES UPDATED");
 
         }
-
-
 
     }
 }

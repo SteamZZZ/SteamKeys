@@ -33,4 +33,41 @@ namespace LogicObjects
             _bundle_id = bundle_id == "no-id" || string.IsNullOrEmpty(appId) ? 0 : bundle_id.Contains(",") ? Convert.ToInt32(bundle_id.Split(',')[0]) : Convert.ToInt32(bundle_id);
         }
     }
+
+    public class OtherSiteItem
+    {
+        string _name="";
+        string _href="";
+        float _price = 0;
+
+        public string Name { get => _name; set => _name = value; }
+        public string Href { get => _href; set => _href = value; }
+        public float Price { get => _price; set => _price = value; }
+
+        public OtherSiteItem(string name,string href,float price)
+        {
+            _name = name;
+            _href = href;
+            _price = price;
+        }
+    }
+
+    public class User
+    {
+        string _id = "";
+        float _balance=0;
+        string _name="";
+
+        public string Name { get => _name; set => _name = value; }
+        public float Balance { get => _balance; set => _balance = value; }
+        public string Id { get => _id; set => _id = value; }
+
+        public User(int id,string name)
+        {
+            _id = Id;
+            _name = name;
+        }
+
+        public User() { }
+    }
 }
