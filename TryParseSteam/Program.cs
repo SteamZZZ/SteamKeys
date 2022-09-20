@@ -19,9 +19,9 @@ namespace TryParseSteam
             Stopwatch sw = new Stopwatch();
             sw.Start();
             ParserManager parser = new ParserManager();
-            //parser.Start();
-            //parser.StartSteamAccount();
-            //parser.StartSteamkey();
+            parser.Start();
+            parser.StartSteamAccount();
+            parser.StartSteamkey();
             //parser.SaveJsonString();
             sw.Stop();
             Debug.WriteLine(sw.Elapsed, "FULL UPDATE ");

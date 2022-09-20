@@ -90,5 +90,18 @@ namespace TryParseSteam.GameDSTableAdapters
             }
         }
     }
+
+    public partial class GAME_LIST_TEMPTableAdapter
+    {
+        public int Timeout
+        {
+            set
+            {
+                for (int i = 0; i < this.CommandCollection.Length; i++)
+                    if (this.CommandCollection[i] != null)
+                        this.CommandCollection[i].CommandTimeout = value;
+            }
+        }
+    }
 }
 

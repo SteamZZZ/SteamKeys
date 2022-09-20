@@ -36,10 +36,10 @@ namespace ServerObjects
         public string[] CreatePriceQuerry(int countPerQuerry=1000)
         {
             //string resultQuerry = "https://store.steampowered.com/api/appdetails?method=post&appids=";
-            TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
             adapter.ClearBeforeFill = true;
             adapter.Timeout = 180;
-            GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
+            GameDS.GAME_LIST_TEMPDataTable table = new GameDS.GAME_LIST_TEMPDataTable();
             adapter.Fill(table);
 
             int queeryCount = table.Count / countPerQuerry;
@@ -59,8 +59,8 @@ namespace ServerObjects
                 {
                     for (int row = i * countPerQuerry; row < (i == queeryCount? difference+ i * countPerQuerry : (i + 1) * countPerQuerry); row++)
                     {
-                        GameDS.GAME_LISTRow currentRow = table[row];
-                        querryArray[i] += currentRow.GL_STEAM_ID + ",";
+                        GameDS.GAME_LIST_TEMPRow currentRow = table[row];
+                        querryArray[i] += currentRow.GLT_STEAM_ID + ",";
                     }
                     querryArray[i] += "&filters=price_overview";
                 }
@@ -76,8 +76,8 @@ namespace ServerObjects
                 {
                     for (int row = i * countPerQuerry; row < (i + 1) * countPerQuerry; row++)
                     {
-                        GameDS.GAME_LISTRow currentRow = table[row];
-                        querryArray[i] += currentRow.GL_STEAM_ID + ",";
+                        GameDS.GAME_LIST_TEMPRow currentRow = table[row];
+                        querryArray[i] += currentRow.GLT_STEAM_ID + ",";
                     }
                     querryArray[i] += "&filters=price_overview";
                 }
