@@ -16,17 +16,17 @@
                                  Dark={StaticResource GameCardBgDark}}"
     MaximumHeightRequest="{OnIdiom Default=270,
                                    Phone=140}"
-    MinimumHeightRequest="{OnIdiom Default=285,
+    MinimumHeightRequest="{OnIdiom Default=270,
                                    Phone=140}"
     StrokeShape="RoundRectangle 10"
     StrokeThickness="0">
 
-    <Border.Shadow>
+    <!--<Border.Shadow>
         <Shadow
             Brush="#CA7115"
             Opacity="1.0"
             Offset="3,3" />
-    </Border.Shadow>
+    </Border.Shadow>-->
 
     <Border.GestureRecognizers>
         <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:GameItemViewModel}}, Path=GoToGameDetailsPageCommand}" CommandParameter="{Binding Game}" />
@@ -61,11 +61,6 @@
 
                     <VerticalStackLayout Grid.Column="0" Spacing="5">
 
-                        <!--<Border
-                            Padding="5"
-                            BackgroundColor="{OnIdiom Default={StaticResource BodyXLLabelStyle},
-                                    Phone={StaticResource BodyLLabelStyle}}"
-                            StrokeShape="RoundRectangle 8">-->
                         <Label
                             Padding="10"
                             BackgroundColor="{Binding Color}"
@@ -75,7 +70,6 @@
                             Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
                                             Phone={StaticResource BodyMLabelStyle}}"
                             Text="{Binding PriceRu, StringFormat='{0}'}" />
-                        <!--</Border>-->
 
                         <Label
                             HorizontalOptions="Start"
@@ -90,10 +84,10 @@
                     <ImageButton
                         Grid.Column="1"
                         BackgroundColor="Transparent"
-                        Clicked="Animate"
                         Command="{Binding ToFavoriteCommand}"
                         HeightRequest="35"
-                        Source="favorites_page_dark.png"
+                        Source="unstarred.png"
+                        Clicked="Starred"
                         VerticalOptions="Center"
                         ZIndex="1000" />
 
@@ -123,30 +117,37 @@
                             Aspect="AspectFit"
                             HorizontalOptions="Start"
                             Loaded="Image_Loaded"
-                            Source="banner.png"
+                            Source="{Binding Game.Image}"
                             VerticalOptions="Start" />
-                        <!--  Source="{Binding Game.Image}"  -->
                     </Border>
 
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Start"
-                        LineBreakMode="TailTruncation"
-                        MaxLines="1"
-                        Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
-                                        Phone={StaticResource BodyMLabelStyle}}"
-                        Text="{Binding Game.IsAvaliable, StringFormat='Is Avaliable: {0}'}" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="5">
 
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        HorizontalOptions="Start"
-                        LineBreakMode="TailTruncation"
-                        MaxLines="1"
-                        Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
-                                        Phone={StaticResource BodyMLabelStyle}}"
-                        Text="{Binding Game.CheapestStore, StringFormat='Cheapes Store: {0}'}" />
+                        <!--<Border
+                            Padding="5"
+                            BackgroundColor="{OnIdiom Default={StaticResource BodyXLLabelStyle},
+                                    Phone={StaticResource BodyLLabelStyle}}"
+                            StrokeShape="RoundRectangle 8">-->
+                        <Label
+                            Padding="10"
+                            BackgroundColor="{Binding Color}"
+                            HorizontalOptions="Start"
+                            IsVisible="{Binding IsAvaliable}"
+                            LineBreakMode="TailTruncation"
+                            Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
+                                            Phone={StaticResource BodyMLabelStyle}}"
+                            Text="{Binding PriceRu, StringFormat='{0}'}" />
+                        <!--</Border>-->
+
+                        <Label
+                            HorizontalOptions="Start"
+                            IsVisible="{Binding IsInStore}"
+                            LineBreakMode="TailTruncation"
+                            Style="{OnIdiom Default={StaticResource BodyMLabelStyle},
+                                            Phone={StaticResource BodyMLabelStyle}}"
+                            Text="{Binding LowestPrice, StringFormat='Lowest Price: {0}'}" />
+
+                    </VerticalStackLayout>
 
                     <ImageButton
                         Grid.Row="2"

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SteamKeysApp.Models;
 using System.Net;
 using System.Text.RegularExpressions;
 
@@ -22,50 +23,33 @@ public class GamesService
     public async Task<IEnumerable<Game>> LoadGames(int start, int count)
         => await GetGames($"JsonData?start={start}&count={count}");
 
-    public async Task AddToFavorites(int userId, int gameId)
+    public async Task<bool> ToFavorite(int userId, int gameId)
     {
         try
         {
-            HttpResponseMessage response = await _httpClient.GetAsync(BaseApi($"AddToFaforites?{userId}=1&{gameId}=10"));
+            HttpResponseMessage response = await _httpClient.GetAsync(BaseApi($"AddToFavorites?user_id={userId}&game_steam_id={gameId}"));
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 HttpContent responseContent = response.Content;
-                var id = await responseContent.ReadAsStringAsync();
-                switch (Convert.ToInt32(id))
+                var ans = await responseContent.ReadAsStringAsync();
+                switch (Convert.ToString(ans))
                 {
-                    case 0: await Shell.Current.DisplayAlert("Yo!", $"Added to favirites!", "Ok"); break;
-                    case 1: await Shell.Current.DisplayAlert("Yo!", $"Already in favorites!", "Ok"); break;
-                    case 2: await Shell.Current.DisplayAlert("Ooops", $"No such game or user!", "Ok"); break;
+                    case "Added": return true;
+                    case "Removed": return false;
+                    default: throw new Exception("No such game or user!");
                 }
+            }
+            else
+            {
+                throw new Exception("Bad request!"); ;
             }
         }
         catch (Exception ex)
         {
             await Shell.Current.DisplayAlert("Ooops", $"{ex.Message}", "Ok");
         }
-    }
 
-    public async Task RemoveFromFavorites(int userId, int gameId)
-    {
-        try
-        {
-            HttpResponseMessage response = await _httpClient.GetAsync(BaseApi($"RemoveFromFaforites?{userId}=1&{gameId}=10"));
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                HttpContent responseContent = response.Content;
-                var id = await responseContent.ReadAsStringAsync();
-                switch (Convert.ToInt32(id))
-                {
-                    case 0: await Shell.Current.DisplayAlert("Yo!", $"Added to favirites!", "Ok"); break;
-                    case 1: await Shell.Current.DisplayAlert("Yo!", $"Already in favorites!", "Ok"); break;
-                    case 2: await Shell.Current.DisplayAlert("Ooops", $"No such game or user!", "Ok"); break;
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            await Shell.Current.DisplayAlert("Ooops", $"{ex.Message}", "Ok");
-        }
+        throw new Exception("Something is wrong!"); ;
     }
 
     public async Task<IEnumerable<Game>> GetFavorites(int id)

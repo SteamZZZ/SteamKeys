@@ -1,6 +1,3 @@
-using System.Windows.Input;
-using MvvmHelpers;
-
 namespace SteamKeysApp.Views;
 
 public partial class GameItemView
@@ -30,6 +27,12 @@ public partial class GameItemView
             await Task.Delay(2000);
             IsLoading = false;
         });
+    }
+
+    private void Starred(object sender, EventArgs e)
+    {
+        var ib = (ImageButton)sender;
+  //      ib.Source = ImageSource.FromFile("Images/starred.png" : "Images/unstarred.png");
     }
 
     private async void Animate(object sender, EventArgs e)

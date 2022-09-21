@@ -3,7 +3,7 @@
 public partial class GameItemViewModel : BaseViewModel
 {
     public Game Game { get; set; }
-    readonly GamesService GamesService;
+    readonly GamesService _gamesService;
     readonly ProfileService _profileService;
 
     [ObservableProperty] string name;
@@ -17,10 +17,12 @@ public partial class GameItemViewModel : BaseViewModel
     [ObservableProperty] string lowestPrice;
     [ObservableProperty] bool isAvaliable;
 
+    [ObservableProperty] bool isFavorite;
+
     public GameItemViewModel(Game game, GamesService gs, ProfileService ps)
     {
         Game = game;
-        GamesService = gs;
+        _gamesService = gs;
         _profileService = ps;
 
         Name = Game.Name;
@@ -38,7 +40,10 @@ public partial class GameItemViewModel : BaseViewModel
     [RelayCommand]
     async Task ToFavorite()
     {
-        await GamesService.AddToFavorites(_profileService.UserId, Game.SteamId);
+        if (_profileService.UserId != -1)
+            IsFavorite = await _gamesService.ToFavorite(_profileService.UserId, Game.SteamId);
+        else
+            await Shell.Current.DisplayAlert("Ooops", $"You need to be logged in.", "Ok");
     }
 
     [RelayCommand]
