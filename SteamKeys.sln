@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamKeysApp", "SteamKeysAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryParseSteam", "TryParseSteam\TryParseSteam.csproj", "{2C945B50-8A6A-4F2D-A2CE-791E883A53EF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSteamParser", "WebSteamParser\WebSteamParser.csproj", "{7A912DAF-D285-4CD4-944D-EEF1F38939B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{2C945B50-8A6A-4F2D-A2CE-791E883A53EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C945B50-8A6A-4F2D-A2CE-791E883A53EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C945B50-8A6A-4F2D-A2CE-791E883A53EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A912DAF-D285-4CD4-944D-EEF1F38939B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A912DAF-D285-4CD4-944D-EEF1F38939B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A912DAF-D285-4CD4-944D-EEF1F38939B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A912DAF-D285-4CD4-944D-EEF1F38939B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
