@@ -36,10 +36,10 @@ namespace ServerObjects
         public string[] CreatePriceQuerry(int countPerQuerry=1000)
         {
             //string resultQuerry = "https://store.steampowered.com/api/appdetails?method=post&appids=";
-            TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LISTTableAdapter();
+            TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter adapter = new TryParseSteam.GameDSTableAdapters.GAME_LIST_TEMPTableAdapter();
             adapter.ClearBeforeFill = true;
             adapter.Timeout = 180;
-            GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
+            GameDS.GAME_LIST_TEMPDataTable table = new GameDS.GAME_LIST_TEMPDataTable();
             adapter.Fill(table);
 
             int queeryCount = table.Count / countPerQuerry;
@@ -59,8 +59,8 @@ namespace ServerObjects
                 {
                     for (int row = i * countPerQuerry; row < (i == queeryCount? difference+ i * countPerQuerry : (i + 1) * countPerQuerry); row++)
                     {
-                        GameDS.GAME_LISTRow currentRow = table[row];
-                        querryArray[i] += currentRow.GL_STEAM_ID + ",";
+                        GameDS.GAME_LIST_TEMPRow currentRow = table[row];
+                        querryArray[i] += currentRow.GLT_STEAM_ID + ",";
                     }
                     querryArray[i] += "&filters=price_overview";
                 }
@@ -76,8 +76,8 @@ namespace ServerObjects
                 {
                     for (int row = i * countPerQuerry; row < (i + 1) * countPerQuerry; row++)
                     {
-                        GameDS.GAME_LISTRow currentRow = table[row];
-                        querryArray[i] += currentRow.GL_STEAM_ID + ",";
+                        GameDS.GAME_LIST_TEMPRow currentRow = table[row];
+                        querryArray[i] += currentRow.GLT_STEAM_ID + ",";
                     }
                     querryArray[i] += "&filters=price_overview";
                 }
@@ -146,15 +146,15 @@ namespace ServerObjects
             });
 
         }
-
+        // FIRST
         public void InsertSteamAccountItems(ConcurrentBag<OtherSiteItem> _items)
         {
-            TryParseSteam.GameDSTableAdapters.STEAM_ACCOUNT_LISTTableAdapter adapter
-= new TryParseSteam.GameDSTableAdapters.STEAM_ACCOUNT_LISTTableAdapter();
+            TryParseSteam.GameDSTableAdapters.OTHER_SITE_LISTTableAdapter adapter
+= new TryParseSteam.GameDSTableAdapters.OTHER_SITE_LISTTableAdapter();
             adapter.Timeout = 180;
-            GameDS.STEAM_ACCOUNT_LISTDataTable table = new GameDS.STEAM_ACCOUNT_LISTDataTable();
-            adapter.CLEAR_STEAM_ACCOUNTS_LIST();
-            GameDS.STEAM_ACCOUNT_LISTRow row = null;
+            GameDS.OTHER_SITE_LISTDataTable table = new GameDS.OTHER_SITE_LISTDataTable();
+            adapter.CLEAR_OTHER_SITE_LIST();
+            GameDS.OTHER_SITE_LISTRow row = null;
             //Parallel.ForEach(_items, item => 
             //{
             //    row = table.NewSTEAM_ACCOUNT_LISTRow();
@@ -165,36 +165,38 @@ namespace ServerObjects
             //});
             foreach (var item in _items)
             {
-                row = table.NewSTEAM_ACCOUNT_LISTRow();
-                row.SAL_NAME = item.Name.Contains("купить") ? item.Name.Remove(item.Name.IndexOf(" купить")) : item.Name;
-                row.SAL_PRICE = item.Price;
-                row.SAL_REF = item.Href.Contains("http") ? item.Href : "https://steam-account.ru" + item.Href;
-                table.AddSTEAM_ACCOUNT_LISTRow(row);
+                row = table.NewOTHER_SITE_LISTRow();
+                row.OSL_SITE_NAME = "SteamAccount";
+                row.OSL_NAME = item.Name.Contains("купить") ? item.Name.Remove(item.Name.IndexOf(" купить")) : item.Name;
+                row.OSL_PRICE = item.Price;
+                row.OSL_REF = item.Href.Contains("http") ? item.Href : "https://steam-account.ru" + item.Href;
+                table.AddOTHER_SITE_LISTRow(row);
             }
             adapter.Update(table);
-            adapter.UPDATE_IDS_STEAM_ACCOUNTS_LIST();
+            adapter.UPDATE_IDS_OTHER_SITE_LIST();
 
         }
-
+        // SECOND
         public void InsertSteamKeyItems(ConcurrentBag<OtherSiteItem> _items)
         {
-            TryParseSteam.GameDSTableAdapters.STEAMKEY_LISTTableAdapter adapter
-= new TryParseSteam.GameDSTableAdapters.STEAMKEY_LISTTableAdapter();
+            TryParseSteam.GameDSTableAdapters.OTHER_SITE_LISTTableAdapter adapter
+= new TryParseSteam.GameDSTableAdapters.OTHER_SITE_LISTTableAdapter();
             adapter.Timeout = 180;
-            GameDS.STEAMKEY_LISTDataTable table = new GameDS.STEAMKEY_LISTDataTable();
-            adapter.CLEAR_STEAMKEY_LIST();
-            GameDS.STEAMKEY_LISTRow row = null;
+            GameDS.OTHER_SITE_LISTDataTable table = new GameDS.OTHER_SITE_LISTDataTable();
+            //adapter.c();
+            GameDS.OTHER_SITE_LISTRow row = null;
 
             foreach (var item in _items)
             {
-                row = table.NewSTEAMKEY_LISTRow();
-                row.SL_NAME =  item.Name;
-                row.SL_PRICE = item.Price;
-                row.SL_REF = "https://steamkey.com" + item.Href;
-                table.AddSTEAMKEY_LISTRow(row);
+                row = table.NewOTHER_SITE_LISTRow();
+                row.OSL_SITE_NAME = "SteamKey";
+                row.OSL_NAME =  item.Name;
+                row.OSL_PRICE = item.Price;
+                row.OSL_REF = "https://steamkey.com" + item.Href;
+                table.AddOTHER_SITE_LISTRow(row);
             }
             adapter.Update(table);
-            adapter.UPDATE_IDS_STEAMKEY_LIST();
+            adapter.UPDATE_IDS_OTHER_SITE_LIST();
 
         }
 

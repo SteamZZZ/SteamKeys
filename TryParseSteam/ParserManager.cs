@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ServerObjects;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,24 +23,29 @@ namespace TryParseSteam
         DataBaseManager mngr = new DataBaseManager();
 
         //string json=new ParserManager().GetJsonString();
-        public static string GetJsonString()
+        public void SaveJsonString()
         {
             GameDSTableAdapters.GAME_LISTTableAdapter adapter = new GameDSTableAdapters.GAME_LISTTableAdapter();
             GameDS.GAME_LISTDataTable table = new GameDS.GAME_LISTDataTable();
-            adapter.Fill(table);
+            string res_json = "";
+            adapter.GET_JSON_LIST(ref res_json);
+            //adapter.Fill(table);
             string JSONString = string.Empty;
-            JSONString = JsonConvert.SerializeObject(table);
-            return JSONString;
+            JSONString = JValue.Parse(res_json).ToString(Formatting.Indented);
+            using (StreamWriter sw = new StreamWriter("db_info.json"))
+            {
+                sw.WriteLine(JSONString);
+            }
         }
-
+        // SECOND
         public void StartSteamkey()
         {
             PageReader reader = new PageReader(eProxyRegion.NONE);
             reader.ReadSteamKeyPages();
             mngr.InsertSteamKeyItems(reader.OtherSiteItems);
         }
-
-        public void StartSteambuy()
+        // FIRST
+        public void StartSteamAccount()
         {
             PageReader reader = new PageReader(eProxyRegion.NONE);
             reader.ReadSteamAccountPages();
@@ -47,8 +54,8 @@ namespace TryParseSteam
 
         public void Start()
         {
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
+
+
 
             PageReader readerUS = new PageReader(eProxyRegion.USA);
 
@@ -58,7 +65,7 @@ namespace TryParseSteam
 
             string[] querryPrice = mngr.CreatePriceQuerry(1000);
 
-            var taskRu= Task.Factory.StartNew(() => UpdateRUPrices(querryPrice));
+            var taskRu = Task.Factory.StartNew(() => UpdateRUPrices(querryPrice));
             var taskKz = Task.Factory.StartNew(() => UpdateKZPrices(querryPrice));
             var taskTr = Task.Factory.StartNew(() => UpdateTRPrices(querryPrice));
             var taskUs = Task.Factory.StartNew(() => UpdateUSAPrices(querryPrice));
@@ -69,8 +76,7 @@ namespace TryParseSteam
             Debug.WriteLineIf(ShowMessages, "FULL UPDATE STARTED");
             mngr.UpdatePricesRegions();
 
-            sw.Stop();
-            Debug.WriteLine(sw.Elapsed, "FULL UPDATE ");
+
         }
 
         void UpdateRUPrices(string[] querryPrice)
@@ -100,7 +106,7 @@ namespace TryParseSteam
 
         }
 
-        void UpdateTRPrices( string[] querryPrice)
+        void UpdateTRPrices(string[] querryPrice)
         {
             PageReader readerTR = new PageReader(eProxyRegion.TUR);
             readerTR.ReadAllPrices(querryPrice);

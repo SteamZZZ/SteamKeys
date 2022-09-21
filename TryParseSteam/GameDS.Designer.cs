@@ -34,9 +34,9 @@ namespace TryParseSteam {
         
         private GAME_LIST_TEMP_USADataTable tableGAME_LIST_TEMP_USA;
         
-        private STEAM_ACCOUNT_LISTDataTable tableSTEAM_ACCOUNT_LIST;
+        private OTHER_SITE_LISTDataTable tableOTHER_SITE_LIST;
         
-        private STEAMKEY_LISTDataTable tableSTEAMKEY_LIST;
+        private GAME_LIST_TEMPDataTable tableGAME_LIST_TEMP;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -81,11 +81,11 @@ namespace TryParseSteam {
                 if ((ds.Tables["GAME_LIST_TEMP_USA"] != null)) {
                     base.Tables.Add(new GAME_LIST_TEMP_USADataTable(ds.Tables["GAME_LIST_TEMP_USA"]));
                 }
-                if ((ds.Tables["STEAM_ACCOUNT_LIST"] != null)) {
-                    base.Tables.Add(new STEAM_ACCOUNT_LISTDataTable(ds.Tables["STEAM_ACCOUNT_LIST"]));
+                if ((ds.Tables["OTHER_SITE_LIST"] != null)) {
+                    base.Tables.Add(new OTHER_SITE_LISTDataTable(ds.Tables["OTHER_SITE_LIST"]));
                 }
-                if ((ds.Tables["STEAMKEY_LIST"] != null)) {
-                    base.Tables.Add(new STEAMKEY_LISTDataTable(ds.Tables["STEAMKEY_LIST"]));
+                if ((ds.Tables["GAME_LIST_TEMP"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMPDataTable(ds.Tables["GAME_LIST_TEMP"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -159,9 +159,9 @@ namespace TryParseSteam {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public STEAM_ACCOUNT_LISTDataTable STEAM_ACCOUNT_LIST {
+        public OTHER_SITE_LISTDataTable OTHER_SITE_LIST {
             get {
-                return this.tableSTEAM_ACCOUNT_LIST;
+                return this.tableOTHER_SITE_LIST;
             }
         }
         
@@ -169,9 +169,9 @@ namespace TryParseSteam {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public STEAMKEY_LISTDataTable STEAMKEY_LIST {
+        public GAME_LIST_TEMPDataTable GAME_LIST_TEMP {
             get {
-                return this.tableSTEAMKEY_LIST;
+                return this.tableGAME_LIST_TEMP;
             }
         }
         
@@ -257,11 +257,11 @@ namespace TryParseSteam {
                 if ((ds.Tables["GAME_LIST_TEMP_USA"] != null)) {
                     base.Tables.Add(new GAME_LIST_TEMP_USADataTable(ds.Tables["GAME_LIST_TEMP_USA"]));
                 }
-                if ((ds.Tables["STEAM_ACCOUNT_LIST"] != null)) {
-                    base.Tables.Add(new STEAM_ACCOUNT_LISTDataTable(ds.Tables["STEAM_ACCOUNT_LIST"]));
+                if ((ds.Tables["OTHER_SITE_LIST"] != null)) {
+                    base.Tables.Add(new OTHER_SITE_LISTDataTable(ds.Tables["OTHER_SITE_LIST"]));
                 }
-                if ((ds.Tables["STEAMKEY_LIST"] != null)) {
-                    base.Tables.Add(new STEAMKEY_LISTDataTable(ds.Tables["STEAMKEY_LIST"]));
+                if ((ds.Tables["GAME_LIST_TEMP"] != null)) {
+                    base.Tables.Add(new GAME_LIST_TEMPDataTable(ds.Tables["GAME_LIST_TEMP"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -326,16 +326,16 @@ namespace TryParseSteam {
                     this.tableGAME_LIST_TEMP_USA.InitVars();
                 }
             }
-            this.tableSTEAM_ACCOUNT_LIST = ((STEAM_ACCOUNT_LISTDataTable)(base.Tables["STEAM_ACCOUNT_LIST"]));
+            this.tableOTHER_SITE_LIST = ((OTHER_SITE_LISTDataTable)(base.Tables["OTHER_SITE_LIST"]));
             if ((initTable == true)) {
-                if ((this.tableSTEAM_ACCOUNT_LIST != null)) {
-                    this.tableSTEAM_ACCOUNT_LIST.InitVars();
+                if ((this.tableOTHER_SITE_LIST != null)) {
+                    this.tableOTHER_SITE_LIST.InitVars();
                 }
             }
-            this.tableSTEAMKEY_LIST = ((STEAMKEY_LISTDataTable)(base.Tables["STEAMKEY_LIST"]));
+            this.tableGAME_LIST_TEMP = ((GAME_LIST_TEMPDataTable)(base.Tables["GAME_LIST_TEMP"]));
             if ((initTable == true)) {
-                if ((this.tableSTEAMKEY_LIST != null)) {
-                    this.tableSTEAMKEY_LIST.InitVars();
+                if ((this.tableGAME_LIST_TEMP != null)) {
+                    this.tableGAME_LIST_TEMP.InitVars();
                 }
             }
         }
@@ -358,10 +358,10 @@ namespace TryParseSteam {
             base.Tables.Add(this.tableGAME_LIST_TEMP_RU);
             this.tableGAME_LIST_TEMP_USA = new GAME_LIST_TEMP_USADataTable();
             base.Tables.Add(this.tableGAME_LIST_TEMP_USA);
-            this.tableSTEAM_ACCOUNT_LIST = new STEAM_ACCOUNT_LISTDataTable();
-            base.Tables.Add(this.tableSTEAM_ACCOUNT_LIST);
-            this.tableSTEAMKEY_LIST = new STEAMKEY_LISTDataTable();
-            base.Tables.Add(this.tableSTEAMKEY_LIST);
+            this.tableOTHER_SITE_LIST = new OTHER_SITE_LISTDataTable();
+            base.Tables.Add(this.tableOTHER_SITE_LIST);
+            this.tableGAME_LIST_TEMP = new GAME_LIST_TEMPDataTable();
+            base.Tables.Add(this.tableGAME_LIST_TEMP);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -396,13 +396,13 @@ namespace TryParseSteam {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSTEAM_ACCOUNT_LIST() {
+        private bool ShouldSerializeOTHER_SITE_LIST() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSTEAMKEY_LIST() {
+        private bool ShouldSerializeGAME_LIST_TEMP() {
             return false;
         }
         
@@ -477,10 +477,10 @@ namespace TryParseSteam {
         public delegate void GAME_LIST_TEMP_USARowChangeEventHandler(object sender, GAME_LIST_TEMP_USARowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void STEAM_ACCOUNT_LISTRowChangeEventHandler(object sender, STEAM_ACCOUNT_LISTRowChangeEvent e);
+        public delegate void OTHER_SITE_LISTRowChangeEventHandler(object sender, OTHER_SITE_LISTRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void STEAMKEY_LISTRowChangeEventHandler(object sender, STEAMKEY_LISTRowChangeEvent e);
+        public delegate void GAME_LIST_TEMPRowChangeEventHandler(object sender, GAME_LIST_TEMPRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -896,13 +896,11 @@ namespace TryParseSteam {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class GAME_LIST_TEMP_TRDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_TRRow> {
             
-            private global::System.Data.DataColumn columnGLT_ID;
+            private global::System.Data.DataColumn columnGLTT_ID;
             
-            private global::System.Data.DataColumn columnGLT_PRICE;
+            private global::System.Data.DataColumn columnGLTT_PRICE;
             
-            private global::System.Data.DataColumn columnGLT_STEAM_ID;
-            
-            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            private global::System.Data.DataColumn columnGLTT_STEAM_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -939,33 +937,25 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IDColumn {
+            public global::System.Data.DataColumn GLTT_IDColumn {
                 get {
-                    return this.columnGLT_ID;
+                    return this.columnGLTT_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_PRICEColumn {
+            public global::System.Data.DataColumn GLTT_PRICEColumn {
                 get {
-                    return this.columnGLT_PRICE;
+                    return this.columnGLTT_PRICE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+            public global::System.Data.DataColumn GLTT_STEAM_IDColumn {
                 get {
-                    return this.columnGLT_STEAM_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
-                get {
-                    return this.columnGLT_IMAGE_PATH;
+                    return this.columnGLTT_STEAM_ID;
                 }
             }
             
@@ -1006,16 +996,22 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMP_TRRow AddGAME_LIST_TEMP_TRRow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            public GAME_LIST_TEMP_TRRow AddGAME_LIST_TEMP_TRRow(double GLTT_PRICE, int GLTT_STEAM_ID) {
                 GAME_LIST_TEMP_TRRow rowGAME_LIST_TEMP_TRRow = ((GAME_LIST_TEMP_TRRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        GLT_PRICE,
-                        GLT_STEAM_ID,
-                        GLT_IMAGE_PATH};
+                        GLTT_PRICE,
+                        GLTT_STEAM_ID};
                 rowGAME_LIST_TEMP_TRRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGAME_LIST_TEMP_TRRow);
                 return rowGAME_LIST_TEMP_TRRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_TRRow FindByGLTT_ID(int GLTT_ID) {
+                return ((GAME_LIST_TEMP_TRRow)(this.Rows.Find(new object[] {
+                            GLTT_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1035,30 +1031,28 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnGLT_ID = base.Columns["GLT_ID"];
-                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
-                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
-                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+                this.columnGLTT_ID = base.Columns["GLTT_ID"];
+                this.columnGLTT_PRICE = base.Columns["GLTT_PRICE"];
+                this.columnGLTT_STEAM_ID = base.Columns["GLTT_STEAM_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_ID);
-                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_PRICE);
-                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_STEAM_ID);
-                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_IMAGE_PATH);
-                this.columnGLT_ID.AutoIncrement = true;
-                this.columnGLT_ID.AutoIncrementSeed = -1;
-                this.columnGLT_ID.AutoIncrementStep = -1;
-                this.columnGLT_ID.AllowDBNull = false;
-                this.columnGLT_ID.ReadOnly = true;
-                this.columnGLT_PRICE.AllowDBNull = false;
-                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+                this.columnGLTT_ID = new global::System.Data.DataColumn("GLTT_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTT_ID);
+                this.columnGLTT_PRICE = new global::System.Data.DataColumn("GLTT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTT_PRICE);
+                this.columnGLTT_STEAM_ID = new global::System.Data.DataColumn("GLTT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTT_STEAM_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnGLTT_ID}, true));
+                this.columnGLTT_ID.AutoIncrement = true;
+                this.columnGLTT_ID.AutoIncrementSeed = -1;
+                this.columnGLTT_ID.AutoIncrementStep = -1;
+                this.columnGLTT_ID.AllowDBNull = false;
+                this.columnGLTT_ID.ReadOnly = true;
+                this.columnGLTT_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1192,13 +1186,11 @@ namespace TryParseSteam {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class GAME_LIST_TEMP_KZDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_KZRow> {
             
-            private global::System.Data.DataColumn columnGLT_ID;
+            private global::System.Data.DataColumn columnGLTK_ID;
             
-            private global::System.Data.DataColumn columnGLT_PRICE;
+            private global::System.Data.DataColumn columnGLTK_PRICE;
             
-            private global::System.Data.DataColumn columnGLT_STEAM_ID;
-            
-            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            private global::System.Data.DataColumn columnGLTK_STEAM_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1235,33 +1227,25 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IDColumn {
+            public global::System.Data.DataColumn GLTK_IDColumn {
                 get {
-                    return this.columnGLT_ID;
+                    return this.columnGLTK_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_PRICEColumn {
+            public global::System.Data.DataColumn GLTK_PRICEColumn {
                 get {
-                    return this.columnGLT_PRICE;
+                    return this.columnGLTK_PRICE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+            public global::System.Data.DataColumn GLTK_STEAM_IDColumn {
                 get {
-                    return this.columnGLT_STEAM_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
-                get {
-                    return this.columnGLT_IMAGE_PATH;
+                    return this.columnGLTK_STEAM_ID;
                 }
             }
             
@@ -1302,16 +1286,22 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMP_KZRow AddGAME_LIST_TEMP_KZRow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            public GAME_LIST_TEMP_KZRow AddGAME_LIST_TEMP_KZRow(double GLTK_PRICE, int GLTK_STEAM_ID) {
                 GAME_LIST_TEMP_KZRow rowGAME_LIST_TEMP_KZRow = ((GAME_LIST_TEMP_KZRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        GLT_PRICE,
-                        GLT_STEAM_ID,
-                        GLT_IMAGE_PATH};
+                        GLTK_PRICE,
+                        GLTK_STEAM_ID};
                 rowGAME_LIST_TEMP_KZRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGAME_LIST_TEMP_KZRow);
                 return rowGAME_LIST_TEMP_KZRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GAME_LIST_TEMP_KZRow FindByGLTK_ID(int GLTK_ID) {
+                return ((GAME_LIST_TEMP_KZRow)(this.Rows.Find(new object[] {
+                            GLTK_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1331,30 +1321,28 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnGLT_ID = base.Columns["GLT_ID"];
-                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
-                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
-                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+                this.columnGLTK_ID = base.Columns["GLTK_ID"];
+                this.columnGLTK_PRICE = base.Columns["GLTK_PRICE"];
+                this.columnGLTK_STEAM_ID = base.Columns["GLTK_STEAM_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_ID);
-                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_PRICE);
-                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_STEAM_ID);
-                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_IMAGE_PATH);
-                this.columnGLT_ID.AutoIncrement = true;
-                this.columnGLT_ID.AutoIncrementSeed = -1;
-                this.columnGLT_ID.AutoIncrementStep = -1;
-                this.columnGLT_ID.AllowDBNull = false;
-                this.columnGLT_ID.ReadOnly = true;
-                this.columnGLT_PRICE.AllowDBNull = false;
-                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+                this.columnGLTK_ID = new global::System.Data.DataColumn("GLTK_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTK_ID);
+                this.columnGLTK_PRICE = new global::System.Data.DataColumn("GLTK_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTK_PRICE);
+                this.columnGLTK_STEAM_ID = new global::System.Data.DataColumn("GLTK_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTK_STEAM_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnGLTK_ID}, true));
+                this.columnGLTK_ID.AutoIncrement = true;
+                this.columnGLTK_ID.AutoIncrementSeed = -1;
+                this.columnGLTK_ID.AutoIncrementStep = -1;
+                this.columnGLTK_ID.AllowDBNull = false;
+                this.columnGLTK_ID.ReadOnly = true;
+                this.columnGLTK_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1488,13 +1476,11 @@ namespace TryParseSteam {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class GAME_LIST_TEMP_RUDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_RURow> {
             
-            private global::System.Data.DataColumn columnGLT_ID;
+            private global::System.Data.DataColumn columnGLTR_ID;
             
-            private global::System.Data.DataColumn columnGLT_PRICE;
+            private global::System.Data.DataColumn columnGLTR_PRICE;
             
-            private global::System.Data.DataColumn columnGLT_STEAM_ID;
-            
-            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            private global::System.Data.DataColumn columnGLTR_STEAM_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1531,33 +1517,25 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IDColumn {
+            public global::System.Data.DataColumn GLTR_IDColumn {
                 get {
-                    return this.columnGLT_ID;
+                    return this.columnGLTR_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_PRICEColumn {
+            public global::System.Data.DataColumn GLTR_PRICEColumn {
                 get {
-                    return this.columnGLT_PRICE;
+                    return this.columnGLTR_PRICE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+            public global::System.Data.DataColumn GLTR_STEAM_IDColumn {
                 get {
-                    return this.columnGLT_STEAM_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
-                get {
-                    return this.columnGLT_IMAGE_PATH;
+                    return this.columnGLTR_STEAM_ID;
                 }
             }
             
@@ -1598,13 +1576,12 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMP_RURow AddGAME_LIST_TEMP_RURow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            public GAME_LIST_TEMP_RURow AddGAME_LIST_TEMP_RURow(double GLTR_PRICE, int GLTR_STEAM_ID) {
                 GAME_LIST_TEMP_RURow rowGAME_LIST_TEMP_RURow = ((GAME_LIST_TEMP_RURow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        GLT_PRICE,
-                        GLT_STEAM_ID,
-                        GLT_IMAGE_PATH};
+                        GLTR_PRICE,
+                        GLTR_STEAM_ID};
                 rowGAME_LIST_TEMP_RURow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGAME_LIST_TEMP_RURow);
                 return rowGAME_LIST_TEMP_RURow;
@@ -1627,30 +1604,28 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnGLT_ID = base.Columns["GLT_ID"];
-                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
-                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
-                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+                this.columnGLTR_ID = base.Columns["GLTR_ID"];
+                this.columnGLTR_PRICE = base.Columns["GLTR_PRICE"];
+                this.columnGLTR_STEAM_ID = base.Columns["GLTR_STEAM_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_ID);
-                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_PRICE);
-                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_STEAM_ID);
-                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_IMAGE_PATH);
-                this.columnGLT_ID.AutoIncrement = true;
-                this.columnGLT_ID.AutoIncrementSeed = -1;
-                this.columnGLT_ID.AutoIncrementStep = -1;
-                this.columnGLT_ID.AllowDBNull = false;
-                this.columnGLT_ID.ReadOnly = true;
-                this.columnGLT_PRICE.AllowDBNull = false;
-                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+                this.columnGLTR_ID = new global::System.Data.DataColumn("GLTR_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTR_ID);
+                this.columnGLTR_PRICE = new global::System.Data.DataColumn("GLTR_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTR_PRICE);
+                this.columnGLTR_STEAM_ID = new global::System.Data.DataColumn("GLTR_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTR_STEAM_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnGLTR_ID}, false));
+                this.columnGLTR_ID.AutoIncrement = true;
+                this.columnGLTR_ID.AutoIncrementSeed = -1;
+                this.columnGLTR_ID.AutoIncrementStep = -1;
+                this.columnGLTR_ID.AllowDBNull = false;
+                this.columnGLTR_ID.ReadOnly = true;
+                this.columnGLTR_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1784,13 +1759,11 @@ namespace TryParseSteam {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class GAME_LIST_TEMP_USADataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMP_USARow> {
             
-            private global::System.Data.DataColumn columnGLT_ID;
+            private global::System.Data.DataColumn columnGLTU_ID;
             
-            private global::System.Data.DataColumn columnGLT_PRICE;
+            private global::System.Data.DataColumn columnGLTU_PRICE;
             
-            private global::System.Data.DataColumn columnGLT_STEAM_ID;
-            
-            private global::System.Data.DataColumn columnGLT_IMAGE_PATH;
+            private global::System.Data.DataColumn columnGLTU_STEAM_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1827,33 +1800,25 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IDColumn {
+            public global::System.Data.DataColumn GLTU_IDColumn {
                 get {
-                    return this.columnGLT_ID;
+                    return this.columnGLTU_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_PRICEColumn {
+            public global::System.Data.DataColumn GLTU_PRICEColumn {
                 get {
-                    return this.columnGLT_PRICE;
+                    return this.columnGLTU_PRICE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+            public global::System.Data.DataColumn GLTU_STEAM_IDColumn {
                 get {
-                    return this.columnGLT_STEAM_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn GLT_IMAGE_PATHColumn {
-                get {
-                    return this.columnGLT_IMAGE_PATH;
+                    return this.columnGLTU_STEAM_ID;
                 }
             }
             
@@ -1894,23 +1859,15 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMP_USARow AddGAME_LIST_TEMP_USARow(double GLT_PRICE, int GLT_STEAM_ID, string GLT_IMAGE_PATH) {
+            public GAME_LIST_TEMP_USARow AddGAME_LIST_TEMP_USARow(double GLTU_PRICE, int GLTU_STEAM_ID) {
                 GAME_LIST_TEMP_USARow rowGAME_LIST_TEMP_USARow = ((GAME_LIST_TEMP_USARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        GLT_PRICE,
-                        GLT_STEAM_ID,
-                        GLT_IMAGE_PATH};
+                        GLTU_PRICE,
+                        GLTU_STEAM_ID};
                 rowGAME_LIST_TEMP_USARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGAME_LIST_TEMP_USARow);
                 return rowGAME_LIST_TEMP_USARow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GAME_LIST_TEMP_USARow FindByGLT_ID(int GLT_ID) {
-                return ((GAME_LIST_TEMP_USARow)(this.Rows.Find(new object[] {
-                            GLT_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1930,32 +1887,28 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnGLT_ID = base.Columns["GLT_ID"];
-                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
-                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
-                this.columnGLT_IMAGE_PATH = base.Columns["GLT_IMAGE_PATH"];
+                this.columnGLTU_ID = base.Columns["GLTU_ID"];
+                this.columnGLTU_PRICE = base.Columns["GLTU_PRICE"];
+                this.columnGLTU_STEAM_ID = base.Columns["GLTU_STEAM_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_ID);
-                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_PRICE);
-                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_STEAM_ID);
-                this.columnGLT_IMAGE_PATH = new global::System.Data.DataColumn("GLT_IMAGE_PATH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGLT_IMAGE_PATH);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnGLT_ID}, true));
-                this.columnGLT_ID.AutoIncrement = true;
-                this.columnGLT_ID.AutoIncrementSeed = -1;
-                this.columnGLT_ID.AutoIncrementStep = -1;
-                this.columnGLT_ID.AllowDBNull = false;
-                this.columnGLT_ID.ReadOnly = true;
-                this.columnGLT_ID.Unique = true;
-                this.columnGLT_IMAGE_PATH.MaxLength = 2147483647;
+                this.columnGLTU_ID = new global::System.Data.DataColumn("GLTU_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTU_ID);
+                this.columnGLTU_PRICE = new global::System.Data.DataColumn("GLTU_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTU_PRICE);
+                this.columnGLTU_STEAM_ID = new global::System.Data.DataColumn("GLTU_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLTU_STEAM_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnGLTU_ID}, false));
+                this.columnGLTU_ID.AutoIncrement = true;
+                this.columnGLTU_ID.AutoIncrementSeed = -1;
+                this.columnGLTU_ID.AutoIncrementStep = -1;
+                this.columnGLTU_ID.AllowDBNull = false;
+                this.columnGLTU_ID.ReadOnly = true;
+                this.columnGLTU_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2087,22 +2040,24 @@ namespace TryParseSteam {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class STEAM_ACCOUNT_LISTDataTable : global::System.Data.TypedTableBase<STEAM_ACCOUNT_LISTRow> {
+        public partial class OTHER_SITE_LISTDataTable : global::System.Data.TypedTableBase<OTHER_SITE_LISTRow> {
             
-            private global::System.Data.DataColumn columnSAL_ID;
+            private global::System.Data.DataColumn columnOSL_ID;
             
-            private global::System.Data.DataColumn columnSAL_NAME;
+            private global::System.Data.DataColumn columnOSL_SITE_NAME;
             
-            private global::System.Data.DataColumn columnSAL_PRICE;
+            private global::System.Data.DataColumn columnOSL_NAME;
             
-            private global::System.Data.DataColumn columnSAL_REF;
+            private global::System.Data.DataColumn columnOSL_PRICE;
             
-            private global::System.Data.DataColumn columnSAL_STEAM_ID;
+            private global::System.Data.DataColumn columnOSL_REF;
+            
+            private global::System.Data.DataColumn columnOSL_STEAM_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTDataTable() {
-                this.TableName = "STEAM_ACCOUNT_LIST";
+            public OTHER_SITE_LISTDataTable() {
+                this.TableName = "OTHER_SITE_LIST";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2110,7 +2065,7 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal STEAM_ACCOUNT_LISTDataTable(global::System.Data.DataTable table) {
+            internal OTHER_SITE_LISTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2127,48 +2082,56 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected STEAM_ACCOUNT_LISTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected OTHER_SITE_LISTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SAL_IDColumn {
+            public global::System.Data.DataColumn OSL_IDColumn {
                 get {
-                    return this.columnSAL_ID;
+                    return this.columnOSL_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SAL_NAMEColumn {
+            public global::System.Data.DataColumn OSL_SITE_NAMEColumn {
                 get {
-                    return this.columnSAL_NAME;
+                    return this.columnOSL_SITE_NAME;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SAL_PRICEColumn {
+            public global::System.Data.DataColumn OSL_NAMEColumn {
                 get {
-                    return this.columnSAL_PRICE;
+                    return this.columnOSL_NAME;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SAL_REFColumn {
+            public global::System.Data.DataColumn OSL_PRICEColumn {
                 get {
-                    return this.columnSAL_REF;
+                    return this.columnOSL_PRICE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SAL_STEAM_IDColumn {
+            public global::System.Data.DataColumn OSL_REFColumn {
                 get {
-                    return this.columnSAL_STEAM_ID;
+                    return this.columnOSL_REF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OSL_STEAM_IDColumn {
+                get {
+                    return this.columnOSL_STEAM_ID;
                 }
             }
             
@@ -2183,56 +2146,57 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTRow this[int index] {
+            public OTHER_SITE_LISTRow this[int index] {
                 get {
-                    return ((STEAM_ACCOUNT_LISTRow)(this.Rows[index]));
+                    return ((OTHER_SITE_LISTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAM_ACCOUNT_LISTRowChangeEventHandler STEAM_ACCOUNT_LISTRowChanging;
+            public event OTHER_SITE_LISTRowChangeEventHandler OTHER_SITE_LISTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAM_ACCOUNT_LISTRowChangeEventHandler STEAM_ACCOUNT_LISTRowChanged;
+            public event OTHER_SITE_LISTRowChangeEventHandler OTHER_SITE_LISTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAM_ACCOUNT_LISTRowChangeEventHandler STEAM_ACCOUNT_LISTRowDeleting;
+            public event OTHER_SITE_LISTRowChangeEventHandler OTHER_SITE_LISTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAM_ACCOUNT_LISTRowChangeEventHandler STEAM_ACCOUNT_LISTRowDeleted;
+            public event OTHER_SITE_LISTRowChangeEventHandler OTHER_SITE_LISTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSTEAM_ACCOUNT_LISTRow(STEAM_ACCOUNT_LISTRow row) {
+            public void AddOTHER_SITE_LISTRow(OTHER_SITE_LISTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTRow AddSTEAM_ACCOUNT_LISTRow(string SAL_NAME, double SAL_PRICE, string SAL_REF, int SAL_STEAM_ID) {
-                STEAM_ACCOUNT_LISTRow rowSTEAM_ACCOUNT_LISTRow = ((STEAM_ACCOUNT_LISTRow)(this.NewRow()));
+            public OTHER_SITE_LISTRow AddOTHER_SITE_LISTRow(string OSL_SITE_NAME, string OSL_NAME, double OSL_PRICE, string OSL_REF, int OSL_STEAM_ID) {
+                OTHER_SITE_LISTRow rowOTHER_SITE_LISTRow = ((OTHER_SITE_LISTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        SAL_NAME,
-                        SAL_PRICE,
-                        SAL_REF,
-                        SAL_STEAM_ID};
-                rowSTEAM_ACCOUNT_LISTRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSTEAM_ACCOUNT_LISTRow);
-                return rowSTEAM_ACCOUNT_LISTRow;
+                        OSL_SITE_NAME,
+                        OSL_NAME,
+                        OSL_PRICE,
+                        OSL_REF,
+                        OSL_STEAM_ID};
+                rowOTHER_SITE_LISTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowOTHER_SITE_LISTRow);
+                return rowOTHER_SITE_LISTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTRow FindBySAL_ID(int SAL_ID) {
-                return ((STEAM_ACCOUNT_LISTRow)(this.Rows.Find(new object[] {
-                            SAL_ID})));
+            public OTHER_SITE_LISTRow FindByOSL_ID(int OSL_ID) {
+                return ((OTHER_SITE_LISTRow)(this.Rows.Find(new object[] {
+                            OSL_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                STEAM_ACCOUNT_LISTDataTable cln = ((STEAM_ACCOUNT_LISTDataTable)(base.Clone()));
+                OTHER_SITE_LISTDataTable cln = ((OTHER_SITE_LISTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2240,68 +2204,72 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new STEAM_ACCOUNT_LISTDataTable();
+                return new OTHER_SITE_LISTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnSAL_ID = base.Columns["SAL_ID"];
-                this.columnSAL_NAME = base.Columns["SAL_NAME"];
-                this.columnSAL_PRICE = base.Columns["SAL_PRICE"];
-                this.columnSAL_REF = base.Columns["SAL_REF"];
-                this.columnSAL_STEAM_ID = base.Columns["SAL_STEAM_ID"];
+                this.columnOSL_ID = base.Columns["OSL_ID"];
+                this.columnOSL_SITE_NAME = base.Columns["OSL_SITE_NAME"];
+                this.columnOSL_NAME = base.Columns["OSL_NAME"];
+                this.columnOSL_PRICE = base.Columns["OSL_PRICE"];
+                this.columnOSL_REF = base.Columns["OSL_REF"];
+                this.columnOSL_STEAM_ID = base.Columns["OSL_STEAM_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnSAL_ID = new global::System.Data.DataColumn("SAL_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSAL_ID);
-                this.columnSAL_NAME = new global::System.Data.DataColumn("SAL_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSAL_NAME);
-                this.columnSAL_PRICE = new global::System.Data.DataColumn("SAL_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSAL_PRICE);
-                this.columnSAL_REF = new global::System.Data.DataColumn("SAL_REF", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSAL_REF);
-                this.columnSAL_STEAM_ID = new global::System.Data.DataColumn("SAL_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSAL_STEAM_ID);
+                this.columnOSL_ID = new global::System.Data.DataColumn("OSL_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOSL_ID);
+                this.columnOSL_SITE_NAME = new global::System.Data.DataColumn("OSL_SITE_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOSL_SITE_NAME);
+                this.columnOSL_NAME = new global::System.Data.DataColumn("OSL_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOSL_NAME);
+                this.columnOSL_PRICE = new global::System.Data.DataColumn("OSL_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOSL_PRICE);
+                this.columnOSL_REF = new global::System.Data.DataColumn("OSL_REF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOSL_REF);
+                this.columnOSL_STEAM_ID = new global::System.Data.DataColumn("OSL_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOSL_STEAM_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnSAL_ID}, true));
-                this.columnSAL_ID.AutoIncrement = true;
-                this.columnSAL_ID.AutoIncrementSeed = -1;
-                this.columnSAL_ID.AutoIncrementStep = -1;
-                this.columnSAL_ID.AllowDBNull = false;
-                this.columnSAL_ID.ReadOnly = true;
-                this.columnSAL_ID.Unique = true;
-                this.columnSAL_NAME.MaxLength = 400;
-                this.columnSAL_REF.MaxLength = 300;
+                                this.columnOSL_ID}, true));
+                this.columnOSL_ID.AutoIncrement = true;
+                this.columnOSL_ID.AutoIncrementSeed = -1;
+                this.columnOSL_ID.AutoIncrementStep = -1;
+                this.columnOSL_ID.AllowDBNull = false;
+                this.columnOSL_ID.ReadOnly = true;
+                this.columnOSL_ID.Unique = true;
+                this.columnOSL_SITE_NAME.MaxLength = 100;
+                this.columnOSL_NAME.MaxLength = 400;
+                this.columnOSL_REF.MaxLength = 300;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTRow NewSTEAM_ACCOUNT_LISTRow() {
-                return ((STEAM_ACCOUNT_LISTRow)(this.NewRow()));
+            public OTHER_SITE_LISTRow NewOTHER_SITE_LISTRow() {
+                return ((OTHER_SITE_LISTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new STEAM_ACCOUNT_LISTRow(builder);
+                return new OTHER_SITE_LISTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(STEAM_ACCOUNT_LISTRow);
+                return typeof(OTHER_SITE_LISTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.STEAM_ACCOUNT_LISTRowChanged != null)) {
-                    this.STEAM_ACCOUNT_LISTRowChanged(this, new STEAM_ACCOUNT_LISTRowChangeEvent(((STEAM_ACCOUNT_LISTRow)(e.Row)), e.Action));
+                if ((this.OTHER_SITE_LISTRowChanged != null)) {
+                    this.OTHER_SITE_LISTRowChanged(this, new OTHER_SITE_LISTRowChangeEvent(((OTHER_SITE_LISTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2309,8 +2277,8 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.STEAM_ACCOUNT_LISTRowChanging != null)) {
-                    this.STEAM_ACCOUNT_LISTRowChanging(this, new STEAM_ACCOUNT_LISTRowChangeEvent(((STEAM_ACCOUNT_LISTRow)(e.Row)), e.Action));
+                if ((this.OTHER_SITE_LISTRowChanging != null)) {
+                    this.OTHER_SITE_LISTRowChanging(this, new OTHER_SITE_LISTRowChangeEvent(((OTHER_SITE_LISTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2318,8 +2286,8 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.STEAM_ACCOUNT_LISTRowDeleted != null)) {
-                    this.STEAM_ACCOUNT_LISTRowDeleted(this, new STEAM_ACCOUNT_LISTRowChangeEvent(((STEAM_ACCOUNT_LISTRow)(e.Row)), e.Action));
+                if ((this.OTHER_SITE_LISTRowDeleted != null)) {
+                    this.OTHER_SITE_LISTRowDeleted(this, new OTHER_SITE_LISTRowChangeEvent(((OTHER_SITE_LISTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2327,14 +2295,14 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.STEAM_ACCOUNT_LISTRowDeleting != null)) {
-                    this.STEAM_ACCOUNT_LISTRowDeleting(this, new STEAM_ACCOUNT_LISTRowChangeEvent(((STEAM_ACCOUNT_LISTRow)(e.Row)), e.Action));
+                if ((this.OTHER_SITE_LISTRowDeleting != null)) {
+                    this.OTHER_SITE_LISTRowDeleting(this, new OTHER_SITE_LISTRowChangeEvent(((OTHER_SITE_LISTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSTEAM_ACCOUNT_LISTRow(STEAM_ACCOUNT_LISTRow row) {
+            public void RemoveOTHER_SITE_LISTRow(OTHER_SITE_LISTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2361,7 +2329,7 @@ namespace TryParseSteam {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "STEAM_ACCOUNT_LISTDataTable";
+                attribute2.FixedValue = "OTHER_SITE_LISTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2407,22 +2375,28 @@ namespace TryParseSteam {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class STEAMKEY_LISTDataTable : global::System.Data.TypedTableBase<STEAMKEY_LISTRow> {
+        public partial class GAME_LIST_TEMPDataTable : global::System.Data.TypedTableBase<GAME_LIST_TEMPRow> {
             
-            private global::System.Data.DataColumn columnSL_ID;
+            private global::System.Data.DataColumn columnGLT_ID;
             
-            private global::System.Data.DataColumn columnSL_NAME;
+            private global::System.Data.DataColumn columnGLT_NAME;
             
-            private global::System.Data.DataColumn columnSL_PRICE;
+            private global::System.Data.DataColumn columnGLT_PRICE;
             
-            private global::System.Data.DataColumn columnSL_REF;
+            private global::System.Data.DataColumn columnGLT_AVAILABILITY;
             
-            private global::System.Data.DataColumn columnSL_STEAM_ID;
+            private global::System.Data.DataColumn columnGLT_PRICE_RU;
+            
+            private global::System.Data.DataColumn columnGLT_PRICE_KZ;
+            
+            private global::System.Data.DataColumn columnGLT_PRICE_TR;
+            
+            private global::System.Data.DataColumn columnGLT_STEAM_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTDataTable() {
-                this.TableName = "STEAMKEY_LIST";
+            public GAME_LIST_TEMPDataTable() {
+                this.TableName = "GAME_LIST_TEMP";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2430,7 +2404,7 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal STEAMKEY_LISTDataTable(global::System.Data.DataTable table) {
+            internal GAME_LIST_TEMPDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2447,48 +2421,72 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected STEAMKEY_LISTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GAME_LIST_TEMPDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SL_IDColumn {
+            public global::System.Data.DataColumn GLT_IDColumn {
                 get {
-                    return this.columnSL_ID;
+                    return this.columnGLT_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SL_NAMEColumn {
+            public global::System.Data.DataColumn GLT_NAMEColumn {
                 get {
-                    return this.columnSL_NAME;
+                    return this.columnGLT_NAME;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SL_PRICEColumn {
+            public global::System.Data.DataColumn GLT_PRICEColumn {
                 get {
-                    return this.columnSL_PRICE;
+                    return this.columnGLT_PRICE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SL_REFColumn {
+            public global::System.Data.DataColumn GLT_AVAILABILITYColumn {
                 get {
-                    return this.columnSL_REF;
+                    return this.columnGLT_AVAILABILITY;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SL_STEAM_IDColumn {
+            public global::System.Data.DataColumn GLT_PRICE_RUColumn {
                 get {
-                    return this.columnSL_STEAM_ID;
+                    return this.columnGLT_PRICE_RU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_PRICE_KZColumn {
+                get {
+                    return this.columnGLT_PRICE_KZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_PRICE_TRColumn {
+                get {
+                    return this.columnGLT_PRICE_TR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GLT_STEAM_IDColumn {
+                get {
+                    return this.columnGLT_STEAM_ID;
                 }
             }
             
@@ -2503,56 +2501,59 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTRow this[int index] {
+            public GAME_LIST_TEMPRow this[int index] {
                 get {
-                    return ((STEAMKEY_LISTRow)(this.Rows[index]));
+                    return ((GAME_LIST_TEMPRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAMKEY_LISTRowChangeEventHandler STEAMKEY_LISTRowChanging;
+            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAMKEY_LISTRowChangeEventHandler STEAMKEY_LISTRowChanged;
+            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAMKEY_LISTRowChangeEventHandler STEAMKEY_LISTRowDeleting;
+            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event STEAMKEY_LISTRowChangeEventHandler STEAMKEY_LISTRowDeleted;
+            public event GAME_LIST_TEMPRowChangeEventHandler GAME_LIST_TEMPRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSTEAMKEY_LISTRow(STEAMKEY_LISTRow row) {
+            public void AddGAME_LIST_TEMPRow(GAME_LIST_TEMPRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTRow AddSTEAMKEY_LISTRow(string SL_NAME, double SL_PRICE, string SL_REF, int SL_STEAM_ID) {
-                STEAMKEY_LISTRow rowSTEAMKEY_LISTRow = ((STEAMKEY_LISTRow)(this.NewRow()));
+            public GAME_LIST_TEMPRow AddGAME_LIST_TEMPRow(string GLT_NAME, double GLT_PRICE, bool GLT_AVAILABILITY, double GLT_PRICE_RU, double GLT_PRICE_KZ, double GLT_PRICE_TR, int GLT_STEAM_ID) {
+                GAME_LIST_TEMPRow rowGAME_LIST_TEMPRow = ((GAME_LIST_TEMPRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        SL_NAME,
-                        SL_PRICE,
-                        SL_REF,
-                        SL_STEAM_ID};
-                rowSTEAMKEY_LISTRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSTEAMKEY_LISTRow);
-                return rowSTEAMKEY_LISTRow;
+                        GLT_NAME,
+                        GLT_PRICE,
+                        GLT_AVAILABILITY,
+                        GLT_PRICE_RU,
+                        GLT_PRICE_KZ,
+                        GLT_PRICE_TR,
+                        GLT_STEAM_ID};
+                rowGAME_LIST_TEMPRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGAME_LIST_TEMPRow);
+                return rowGAME_LIST_TEMPRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTRow FindBySL_ID(int SL_ID) {
-                return ((STEAMKEY_LISTRow)(this.Rows.Find(new object[] {
-                            SL_ID})));
+            public GAME_LIST_TEMPRow FindByGLT_ID(int GLT_ID) {
+                return ((GAME_LIST_TEMPRow)(this.Rows.Find(new object[] {
+                            GLT_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                STEAMKEY_LISTDataTable cln = ((STEAMKEY_LISTDataTable)(base.Clone()));
+                GAME_LIST_TEMPDataTable cln = ((GAME_LIST_TEMPDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2560,68 +2561,78 @@ namespace TryParseSteam {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new STEAMKEY_LISTDataTable();
+                return new GAME_LIST_TEMPDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnSL_ID = base.Columns["SL_ID"];
-                this.columnSL_NAME = base.Columns["SL_NAME"];
-                this.columnSL_PRICE = base.Columns["SL_PRICE"];
-                this.columnSL_REF = base.Columns["SL_REF"];
-                this.columnSL_STEAM_ID = base.Columns["SL_STEAM_ID"];
+                this.columnGLT_ID = base.Columns["GLT_ID"];
+                this.columnGLT_NAME = base.Columns["GLT_NAME"];
+                this.columnGLT_PRICE = base.Columns["GLT_PRICE"];
+                this.columnGLT_AVAILABILITY = base.Columns["GLT_AVAILABILITY"];
+                this.columnGLT_PRICE_RU = base.Columns["GLT_PRICE_RU"];
+                this.columnGLT_PRICE_KZ = base.Columns["GLT_PRICE_KZ"];
+                this.columnGLT_PRICE_TR = base.Columns["GLT_PRICE_TR"];
+                this.columnGLT_STEAM_ID = base.Columns["GLT_STEAM_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnSL_ID = new global::System.Data.DataColumn("SL_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSL_ID);
-                this.columnSL_NAME = new global::System.Data.DataColumn("SL_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSL_NAME);
-                this.columnSL_PRICE = new global::System.Data.DataColumn("SL_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSL_PRICE);
-                this.columnSL_REF = new global::System.Data.DataColumn("SL_REF", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSL_REF);
-                this.columnSL_STEAM_ID = new global::System.Data.DataColumn("SL_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSL_STEAM_ID);
+                this.columnGLT_ID = new global::System.Data.DataColumn("GLT_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_ID);
+                this.columnGLT_NAME = new global::System.Data.DataColumn("GLT_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_NAME);
+                this.columnGLT_PRICE = new global::System.Data.DataColumn("GLT_PRICE", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE);
+                this.columnGLT_AVAILABILITY = new global::System.Data.DataColumn("GLT_AVAILABILITY", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_AVAILABILITY);
+                this.columnGLT_PRICE_RU = new global::System.Data.DataColumn("GLT_PRICE_RU", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE_RU);
+                this.columnGLT_PRICE_KZ = new global::System.Data.DataColumn("GLT_PRICE_KZ", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE_KZ);
+                this.columnGLT_PRICE_TR = new global::System.Data.DataColumn("GLT_PRICE_TR", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_PRICE_TR);
+                this.columnGLT_STEAM_ID = new global::System.Data.DataColumn("GLT_STEAM_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGLT_STEAM_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnSL_ID}, true));
-                this.columnSL_ID.AutoIncrement = true;
-                this.columnSL_ID.AutoIncrementSeed = -1;
-                this.columnSL_ID.AutoIncrementStep = -1;
-                this.columnSL_ID.AllowDBNull = false;
-                this.columnSL_ID.ReadOnly = true;
-                this.columnSL_ID.Unique = true;
-                this.columnSL_NAME.MaxLength = 300;
-                this.columnSL_REF.MaxLength = 300;
+                                this.columnGLT_ID}, true));
+                this.columnGLT_ID.AutoIncrement = true;
+                this.columnGLT_ID.AutoIncrementSeed = -1;
+                this.columnGLT_ID.AutoIncrementStep = -1;
+                this.columnGLT_ID.AllowDBNull = false;
+                this.columnGLT_ID.ReadOnly = true;
+                this.columnGLT_ID.Unique = true;
+                this.columnGLT_NAME.AllowDBNull = false;
+                this.columnGLT_NAME.MaxLength = 500;
+                this.columnGLT_PRICE.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTRow NewSTEAMKEY_LISTRow() {
-                return ((STEAMKEY_LISTRow)(this.NewRow()));
+            public GAME_LIST_TEMPRow NewGAME_LIST_TEMPRow() {
+                return ((GAME_LIST_TEMPRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new STEAMKEY_LISTRow(builder);
+                return new GAME_LIST_TEMPRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(STEAMKEY_LISTRow);
+                return typeof(GAME_LIST_TEMPRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.STEAMKEY_LISTRowChanged != null)) {
-                    this.STEAMKEY_LISTRowChanged(this, new STEAMKEY_LISTRowChangeEvent(((STEAMKEY_LISTRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMPRowChanged != null)) {
+                    this.GAME_LIST_TEMPRowChanged(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2629,8 +2640,8 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.STEAMKEY_LISTRowChanging != null)) {
-                    this.STEAMKEY_LISTRowChanging(this, new STEAMKEY_LISTRowChangeEvent(((STEAMKEY_LISTRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMPRowChanging != null)) {
+                    this.GAME_LIST_TEMPRowChanging(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2638,8 +2649,8 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.STEAMKEY_LISTRowDeleted != null)) {
-                    this.STEAMKEY_LISTRowDeleted(this, new STEAMKEY_LISTRowChangeEvent(((STEAMKEY_LISTRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMPRowDeleted != null)) {
+                    this.GAME_LIST_TEMPRowDeleted(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2647,14 +2658,14 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.STEAMKEY_LISTRowDeleting != null)) {
-                    this.STEAMKEY_LISTRowDeleting(this, new STEAMKEY_LISTRowChangeEvent(((STEAMKEY_LISTRow)(e.Row)), e.Action));
+                if ((this.GAME_LIST_TEMPRowDeleting != null)) {
+                    this.GAME_LIST_TEMPRowDeleting(this, new GAME_LIST_TEMPRowChangeEvent(((GAME_LIST_TEMPRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSTEAMKEY_LISTRow(STEAMKEY_LISTRow row) {
+            public void RemoveGAME_LIST_TEMPRow(GAME_LIST_TEMPRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2681,7 +2692,7 @@ namespace TryParseSteam {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "STEAMKEY_LISTDataTable";
+                attribute2.FixedValue = "GAME_LIST_TEMPDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3010,81 +3021,69 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_ID {
+            public int GLTT_ID {
                 get {
-                    return ((int)(this[this.tableGAME_LIST_TEMP_TR.GLT_IDColumn]));
+                    return ((int)(this[this.tableGAME_LIST_TEMP_TR.GLTT_IDColumn]));
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_TR.GLT_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLTT_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double GLT_PRICE {
-                get {
-                    return ((double)(this[this.tableGAME_LIST_TEMP_TR.GLT_PRICEColumn]));
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP_TR.GLT_PRICEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_STEAM_ID {
+            public double GLTT_PRICE {
                 get {
                     try {
-                        return ((int)(this[this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn]));
+                        return ((double)(this[this.tableGAME_LIST_TEMP_TR.GLTT_PRICEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_TR\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTT_PRICE\' в таблице \'GAME_LIST_TEMP_TR\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLTT_PRICEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GLT_IMAGE_PATH {
+            public int GLTT_STEAM_ID {
                 get {
                     try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn]));
+                        return ((int)(this[this.tableGAME_LIST_TEMP_TR.GLTT_STEAM_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_TR\' равно DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_TR\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_TR.GLTT_STEAM_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_STEAM_IDNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn);
+            public bool IsGLTT_PRICENull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_TR.GLTT_PRICEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_STEAM_IDNull() {
-                this[this.tableGAME_LIST_TEMP_TR.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
+            public void SetGLTT_PRICENull() {
+                this[this.tableGAME_LIST_TEMP_TR.GLTT_PRICEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_IMAGE_PATHNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn);
+            public bool IsGLTT_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_TR.GLTT_STEAM_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_IMAGE_PATHNull() {
-                this[this.tableGAME_LIST_TEMP_TR.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+            public void SetGLTT_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_TR.GLTT_STEAM_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3104,81 +3103,69 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_ID {
+            public int GLTK_ID {
                 get {
-                    return ((int)(this[this.tableGAME_LIST_TEMP_KZ.GLT_IDColumn]));
+                    return ((int)(this[this.tableGAME_LIST_TEMP_KZ.GLTK_IDColumn]));
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_KZ.GLT_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_KZ.GLTK_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double GLT_PRICE {
-                get {
-                    return ((double)(this[this.tableGAME_LIST_TEMP_KZ.GLT_PRICEColumn]));
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP_KZ.GLT_PRICEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_STEAM_ID {
+            public double GLTK_PRICE {
                 get {
                     try {
-                        return ((int)(this[this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn]));
+                        return ((double)(this[this.tableGAME_LIST_TEMP_KZ.GLTK_PRICEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_KZ\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTK_PRICE\' в таблице \'GAME_LIST_TEMP_KZ\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_KZ.GLTK_PRICEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GLT_IMAGE_PATH {
+            public int GLTK_STEAM_ID {
                 get {
                     try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn]));
+                        return ((int)(this[this.tableGAME_LIST_TEMP_KZ.GLTK_STEAM_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_KZ\' равно DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTK_STEAM_ID\' в таблице \'GAME_LIST_TEMP_KZ\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_KZ.GLTK_STEAM_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_STEAM_IDNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn);
+            public bool IsGLTK_PRICENull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_KZ.GLTK_PRICEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_STEAM_IDNull() {
-                this[this.tableGAME_LIST_TEMP_KZ.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
+            public void SetGLTK_PRICENull() {
+                this[this.tableGAME_LIST_TEMP_KZ.GLTK_PRICEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_IMAGE_PATHNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn);
+            public bool IsGLTK_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_KZ.GLTK_STEAM_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_IMAGE_PATHNull() {
-                this[this.tableGAME_LIST_TEMP_KZ.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+            public void SetGLTK_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_KZ.GLTK_STEAM_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3198,81 +3185,69 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_ID {
+            public int GLTR_ID {
                 get {
-                    return ((int)(this[this.tableGAME_LIST_TEMP_RU.GLT_IDColumn]));
+                    return ((int)(this[this.tableGAME_LIST_TEMP_RU.GLTR_IDColumn]));
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_RU.GLT_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_RU.GLTR_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double GLT_PRICE {
-                get {
-                    return ((double)(this[this.tableGAME_LIST_TEMP_RU.GLT_PRICEColumn]));
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP_RU.GLT_PRICEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_STEAM_ID {
+            public double GLTR_PRICE {
                 get {
                     try {
-                        return ((int)(this[this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn]));
+                        return ((double)(this[this.tableGAME_LIST_TEMP_RU.GLTR_PRICEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_RU\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTR_PRICE\' в таблице \'GAME_LIST_TEMP_RU\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_RU.GLTR_PRICEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GLT_IMAGE_PATH {
+            public int GLTR_STEAM_ID {
                 get {
                     try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn]));
+                        return ((int)(this[this.tableGAME_LIST_TEMP_RU.GLTR_STEAM_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_RU\' равно DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTR_STEAM_ID\' в таблице \'GAME_LIST_TEMP_RU\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_RU.GLTR_STEAM_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_STEAM_IDNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn);
+            public bool IsGLTR_PRICENull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_RU.GLTR_PRICEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_STEAM_IDNull() {
-                this[this.tableGAME_LIST_TEMP_RU.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
+            public void SetGLTR_PRICENull() {
+                this[this.tableGAME_LIST_TEMP_RU.GLTR_PRICEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_IMAGE_PATHNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn);
+            public bool IsGLTR_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_RU.GLTR_STEAM_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_IMAGE_PATHNull() {
-                this[this.tableGAME_LIST_TEMP_RU.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
+            public void SetGLTR_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_RU.GLTR_STEAM_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3292,12 +3267,272 @@ namespace TryParseSteam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int GLT_ID {
+            public int GLTU_ID {
                 get {
-                    return ((int)(this[this.tableGAME_LIST_TEMP_USA.GLT_IDColumn]));
+                    return ((int)(this[this.tableGAME_LIST_TEMP_USA.GLTU_IDColumn]));
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_USA.GLT_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP_USA.GLTU_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double GLTU_PRICE {
+                get {
+                    try {
+                        return ((double)(this[this.tableGAME_LIST_TEMP_USA.GLTU_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTU_PRICE\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_USA.GLTU_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLTU_STEAM_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableGAME_LIST_TEMP_USA.GLTU_STEAM_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLTU_STEAM_ID\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP_USA.GLTU_STEAM_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLTU_PRICENull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLTU_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLTU_PRICENull() {
+                this[this.tableGAME_LIST_TEMP_USA.GLTU_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLTU_STEAM_IDNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLTU_STEAM_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLTU_STEAM_IDNull() {
+                this[this.tableGAME_LIST_TEMP_USA.GLTU_STEAM_IDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class OTHER_SITE_LISTRow : global::System.Data.DataRow {
+            
+            private OTHER_SITE_LISTDataTable tableOTHER_SITE_LIST;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal OTHER_SITE_LISTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableOTHER_SITE_LIST = ((OTHER_SITE_LISTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int OSL_ID {
+                get {
+                    return ((int)(this[this.tableOTHER_SITE_LIST.OSL_IDColumn]));
+                }
+                set {
+                    this[this.tableOTHER_SITE_LIST.OSL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OSL_SITE_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableOTHER_SITE_LIST.OSL_SITE_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'OSL_SITE_NAME\' в таблице \'OTHER_SITE_LIST\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOTHER_SITE_LIST.OSL_SITE_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OSL_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableOTHER_SITE_LIST.OSL_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'OSL_NAME\' в таблице \'OTHER_SITE_LIST\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOTHER_SITE_LIST.OSL_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double OSL_PRICE {
+                get {
+                    try {
+                        return ((double)(this[this.tableOTHER_SITE_LIST.OSL_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'OSL_PRICE\' в таблице \'OTHER_SITE_LIST\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOTHER_SITE_LIST.OSL_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OSL_REF {
+                get {
+                    try {
+                        return ((string)(this[this.tableOTHER_SITE_LIST.OSL_REFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'OSL_REF\' в таблице \'OTHER_SITE_LIST\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOTHER_SITE_LIST.OSL_REFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int OSL_STEAM_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableOTHER_SITE_LIST.OSL_STEAM_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'OSL_STEAM_ID\' в таблице \'OTHER_SITE_LIST\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOTHER_SITE_LIST.OSL_STEAM_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOSL_SITE_NAMENull() {
+                return this.IsNull(this.tableOTHER_SITE_LIST.OSL_SITE_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOSL_SITE_NAMENull() {
+                this[this.tableOTHER_SITE_LIST.OSL_SITE_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOSL_NAMENull() {
+                return this.IsNull(this.tableOTHER_SITE_LIST.OSL_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOSL_NAMENull() {
+                this[this.tableOTHER_SITE_LIST.OSL_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOSL_PRICENull() {
+                return this.IsNull(this.tableOTHER_SITE_LIST.OSL_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOSL_PRICENull() {
+                this[this.tableOTHER_SITE_LIST.OSL_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOSL_REFNull() {
+                return this.IsNull(this.tableOTHER_SITE_LIST.OSL_REFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOSL_REFNull() {
+                this[this.tableOTHER_SITE_LIST.OSL_REFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOSL_STEAM_IDNull() {
+                return this.IsNull(this.tableOTHER_SITE_LIST.OSL_STEAM_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOSL_STEAM_IDNull() {
+                this[this.tableOTHER_SITE_LIST.OSL_STEAM_IDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GAME_LIST_TEMPRow : global::System.Data.DataRow {
+            
+            private GAME_LIST_TEMPDataTable tableGAME_LIST_TEMP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal GAME_LIST_TEMPRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGAME_LIST_TEMP = ((GAME_LIST_TEMPDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int GLT_ID {
+                get {
+                    return ((int)(this[this.tableGAME_LIST_TEMP.GLT_IDColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP.GLT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GLT_NAME {
+                get {
+                    return ((string)(this[this.tableGAME_LIST_TEMP.GLT_NAMEColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP.GLT_NAMEColumn] = value;
                 }
             }
             
@@ -3305,15 +3540,74 @@ namespace TryParseSteam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public double GLT_PRICE {
                 get {
+                    return ((double)(this[this.tableGAME_LIST_TEMP.GLT_PRICEColumn]));
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP.GLT_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool GLT_AVAILABILITY {
+                get {
                     try {
-                        return ((double)(this[this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn]));
+                        return ((bool)(this[this.tableGAME_LIST_TEMP.GLT_AVAILABILITYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_PRICE\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_AVAILABILITY\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn] = value;
+                    this[this.tableGAME_LIST_TEMP.GLT_AVAILABILITYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double GLT_PRICE_RU {
+                get {
+                    try {
+                        return ((double)(this[this.tableGAME_LIST_TEMP.GLT_PRICE_RUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_PRICE_RU\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP.GLT_PRICE_RUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double GLT_PRICE_KZ {
+                get {
+                    try {
+                        return ((double)(this[this.tableGAME_LIST_TEMP.GLT_PRICE_KZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_PRICE_KZ\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP.GLT_PRICE_KZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double GLT_PRICE_TR {
+                get {
+                    try {
+                        return ((double)(this[this.tableGAME_LIST_TEMP.GLT_PRICE_TRColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_PRICE_TR\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGAME_LIST_TEMP.GLT_PRICE_TRColumn] = value;
                 }
             }
             
@@ -3322,344 +3616,75 @@ namespace TryParseSteam {
             public int GLT_STEAM_ID {
                 get {
                     try {
-                        return ((int)(this[this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn]));
+                        return ((int)(this[this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_STEAM_ID\' в таблице \'GAME_LIST_TEMP\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn] = value;
+                    this[this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string GLT_IMAGE_PATH {
-                get {
-                    try {
-                        return ((string)(this[this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GLT_IMAGE_PATH\' в таблице \'GAME_LIST_TEMP_USA\' равно DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn] = value;
-                }
+            public bool IsGLT_AVAILABILITYNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_AVAILABILITYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_PRICENull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn);
+            public void SetGLT_AVAILABILITYNull() {
+                this[this.tableGAME_LIST_TEMP.GLT_AVAILABILITYColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_PRICENull() {
-                this[this.tableGAME_LIST_TEMP_USA.GLT_PRICEColumn] = global::System.Convert.DBNull;
+            public bool IsGLT_PRICE_RUNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_PRICE_RUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_PRICE_RUNull() {
+                this[this.tableGAME_LIST_TEMP.GLT_PRICE_RUColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_PRICE_KZNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_PRICE_KZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_PRICE_KZNull() {
+                this[this.tableGAME_LIST_TEMP.GLT_PRICE_KZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGLT_PRICE_TRNull() {
+                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_PRICE_TRColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGLT_PRICE_TRNull() {
+                this[this.tableGAME_LIST_TEMP.GLT_PRICE_TRColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsGLT_STEAM_IDNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn);
+                return this.IsNull(this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetGLT_STEAM_IDNull() {
-                this[this.tableGAME_LIST_TEMP_USA.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsGLT_IMAGE_PATHNull() {
-                return this.IsNull(this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetGLT_IMAGE_PATHNull() {
-                this[this.tableGAME_LIST_TEMP_USA.GLT_IMAGE_PATHColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class STEAM_ACCOUNT_LISTRow : global::System.Data.DataRow {
-            
-            private STEAM_ACCOUNT_LISTDataTable tableSTEAM_ACCOUNT_LIST;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal STEAM_ACCOUNT_LISTRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSTEAM_ACCOUNT_LIST = ((STEAM_ACCOUNT_LISTDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SAL_ID {
-                get {
-                    return ((int)(this[this.tableSTEAM_ACCOUNT_LIST.SAL_IDColumn]));
-                }
-                set {
-                    this[this.tableSTEAM_ACCOUNT_LIST.SAL_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string SAL_NAME {
-                get {
-                    try {
-                        return ((string)(this[this.tableSTEAM_ACCOUNT_LIST.SAL_NAMEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SAL_NAME\' в таблице \'STEAM_ACCOUNT_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAM_ACCOUNT_LIST.SAL_NAMEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double SAL_PRICE {
-                get {
-                    try {
-                        return ((double)(this[this.tableSTEAM_ACCOUNT_LIST.SAL_PRICEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SAL_PRICE\' в таблице \'STEAM_ACCOUNT_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAM_ACCOUNT_LIST.SAL_PRICEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string SAL_REF {
-                get {
-                    try {
-                        return ((string)(this[this.tableSTEAM_ACCOUNT_LIST.SAL_REFColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SAL_REF\' в таблице \'STEAM_ACCOUNT_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAM_ACCOUNT_LIST.SAL_REFColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SAL_STEAM_ID {
-                get {
-                    try {
-                        return ((int)(this[this.tableSTEAM_ACCOUNT_LIST.SAL_STEAM_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SAL_STEAM_ID\' в таблице \'STEAM_ACCOUNT_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAM_ACCOUNT_LIST.SAL_STEAM_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSAL_NAMENull() {
-                return this.IsNull(this.tableSTEAM_ACCOUNT_LIST.SAL_NAMEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSAL_NAMENull() {
-                this[this.tableSTEAM_ACCOUNT_LIST.SAL_NAMEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSAL_PRICENull() {
-                return this.IsNull(this.tableSTEAM_ACCOUNT_LIST.SAL_PRICEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSAL_PRICENull() {
-                this[this.tableSTEAM_ACCOUNT_LIST.SAL_PRICEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSAL_REFNull() {
-                return this.IsNull(this.tableSTEAM_ACCOUNT_LIST.SAL_REFColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSAL_REFNull() {
-                this[this.tableSTEAM_ACCOUNT_LIST.SAL_REFColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSAL_STEAM_IDNull() {
-                return this.IsNull(this.tableSTEAM_ACCOUNT_LIST.SAL_STEAM_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSAL_STEAM_IDNull() {
-                this[this.tableSTEAM_ACCOUNT_LIST.SAL_STEAM_IDColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class STEAMKEY_LISTRow : global::System.Data.DataRow {
-            
-            private STEAMKEY_LISTDataTable tableSTEAMKEY_LIST;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal STEAMKEY_LISTRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSTEAMKEY_LIST = ((STEAMKEY_LISTDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SL_ID {
-                get {
-                    return ((int)(this[this.tableSTEAMKEY_LIST.SL_IDColumn]));
-                }
-                set {
-                    this[this.tableSTEAMKEY_LIST.SL_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string SL_NAME {
-                get {
-                    try {
-                        return ((string)(this[this.tableSTEAMKEY_LIST.SL_NAMEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SL_NAME\' в таблице \'STEAMKEY_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAMKEY_LIST.SL_NAMEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double SL_PRICE {
-                get {
-                    try {
-                        return ((double)(this[this.tableSTEAMKEY_LIST.SL_PRICEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SL_PRICE\' в таблице \'STEAMKEY_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAMKEY_LIST.SL_PRICEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string SL_REF {
-                get {
-                    try {
-                        return ((string)(this[this.tableSTEAMKEY_LIST.SL_REFColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SL_REF\' в таблице \'STEAMKEY_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAMKEY_LIST.SL_REFColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SL_STEAM_ID {
-                get {
-                    try {
-                        return ((int)(this[this.tableSTEAMKEY_LIST.SL_STEAM_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'SL_STEAM_ID\' в таблице \'STEAMKEY_LIST\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSTEAMKEY_LIST.SL_STEAM_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSL_NAMENull() {
-                return this.IsNull(this.tableSTEAMKEY_LIST.SL_NAMEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSL_NAMENull() {
-                this[this.tableSTEAMKEY_LIST.SL_NAMEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSL_PRICENull() {
-                return this.IsNull(this.tableSTEAMKEY_LIST.SL_PRICEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSL_PRICENull() {
-                this[this.tableSTEAMKEY_LIST.SL_PRICEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSL_REFNull() {
-                return this.IsNull(this.tableSTEAMKEY_LIST.SL_REFColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSL_REFNull() {
-                this[this.tableSTEAMKEY_LIST.SL_REFColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSL_STEAM_IDNull() {
-                return this.IsNull(this.tableSTEAMKEY_LIST.SL_STEAM_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSL_STEAM_IDNull() {
-                this[this.tableSTEAMKEY_LIST.SL_STEAM_IDColumn] = global::System.Convert.DBNull;
+                this[this.tableGAME_LIST_TEMP.GLT_STEAM_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3837,22 +3862,22 @@ namespace TryParseSteam {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class STEAM_ACCOUNT_LISTRowChangeEvent : global::System.EventArgs {
+        public class OTHER_SITE_LISTRowChangeEvent : global::System.EventArgs {
             
-            private STEAM_ACCOUNT_LISTRow eventRow;
+            private OTHER_SITE_LISTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTRowChangeEvent(STEAM_ACCOUNT_LISTRow row, global::System.Data.DataRowAction action) {
+            public OTHER_SITE_LISTRowChangeEvent(OTHER_SITE_LISTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAM_ACCOUNT_LISTRow Row {
+            public OTHER_SITE_LISTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3871,22 +3896,22 @@ namespace TryParseSteam {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class STEAMKEY_LISTRowChangeEvent : global::System.EventArgs {
+        public class GAME_LIST_TEMPRowChangeEvent : global::System.EventArgs {
             
-            private STEAMKEY_LISTRow eventRow;
+            private GAME_LIST_TEMPRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTRowChangeEvent(STEAMKEY_LISTRow row, global::System.Data.DataRowAction action) {
+            public GAME_LIST_TEMPRowChangeEvent(GAME_LIST_TEMPRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public STEAMKEY_LISTRow Row {
+            public GAME_LIST_TEMPRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4119,72 +4144,59 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[11];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[9];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "select * from GAME_LIST";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[1].CommandText = "SELECT GL_AVAILABILITY, GL_ID, GL_IMAGE_PATH, GL_NAME, GL_PRICE, GL_PRICE_KZ, GL_" +
-                "PRICE_RU, GL_PRICE_TR, GL_STEAM_BUNDLE_ID, GL_STEAM_ID, GL_STEAM_REF FROM GAME_L" +
-                "IST WHERE (GL_NAME LIKE \'%\' + @name + \'%\')";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "GL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.GET_JSON_LIST";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::TryParseSteam.Properties.Settings.Default.JustForTestConnectionString);
-            this._commandCollection[2].CommandText = "SELECT GL_AVAILABILITY, GL_ID, GL_IMAGE_PATH, GL_NAME, GL_PRICE, GL_PRICE_KZ, GL_" +
-                "PRICE_RU, GL_PRICE_TR, GL_STEAM_BUNDLE_ID, GL_STEAM_ID, GL_STEAM_REF FROM GAME_L" +
-                "IST WHERE (GL_PRICE = @price)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "GL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "dbo.INSERT_GAME";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SteamId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "dbo.GET_JSON_LIST";
+            this._commandCollection[3].CommandText = "dbo.JSON_PARSE_ID_LIST";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "dbo.INSERT_GAME";
+            this._commandCollection[4].CommandText = "dbo.UPDATE_KZ_PRICES_JSON";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SteamId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "u1286676_Deallocate.JSON_PARSE_ID_LIST";
+            this._commandCollection[5].CommandText = "dbo.UPDATE_REGION_PRICES";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "dbo.UPDATE_KZ_PRICES_JSON";
+            this._commandCollection[6].CommandText = "dbo.UPDATE_RU_PRICES_JSON";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "u1286676_Deallocate.UPDATE_REGION_PRICES";
+            this._commandCollection[7].CommandText = "dbo.UPDATE_TR_PRICES_JSON";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = "dbo.UPDATE_RU_PRICES_JSON";
+            this._commandCollection[8].CommandText = "dbo.UPDATE_USA_PRICES_JSON";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[9].Connection = this.Connection;
-            this._commandCollection[9].CommandText = "dbo.UPDATE_TR_PRICES_JSON";
-            this._commandCollection[9].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[10].Connection = this.Connection;
-            this._commandCollection[10].CommandText = "dbo.UPDATE_USA_PRICES_JSON";
-            this._commandCollection[10].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@json", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4206,68 +4218,6 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual GameDS.GAME_LISTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GameDS.GAME_LISTDataTable dataTable = new GameDS.GAME_LISTDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByName(GameDS.GAME_LISTDataTable dataTable, string name) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(name));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual GameDS.GAME_LISTDataTable GetDataByName(string name) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(name));
-            }
-            GameDS.GAME_LISTDataTable dataTable = new GameDS.GAME_LISTDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPrice(GameDS.GAME_LISTDataTable dataTable, double price) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((double)(price));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual GameDS.GAME_LISTDataTable GetDataByPrice(double price) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((double)(price));
             GameDS.GAME_LISTDataTable dataTable = new GameDS.GAME_LISTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4656,36 +4606,43 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object GET_JSON_LIST() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+        public virtual int GET_JSON_LIST(ref string json) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((json == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(json));
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            object returnValue;
+            int returnValue;
             try {
-                returnValue = command.ExecuteScalar();
+                returnValue = command.ExecuteNonQuery();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return null;
+            if (((command.Parameters[1].Value == null) 
+                        || (command.Parameters[1].Value.GetType() == typeof(global::System.DBNull)))) {
+                json = null;
             }
             else {
-                return ((object)(returnValue));
+                json = ((string)(command.Parameters[1].Value));
             }
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int INSERT_GAME(string Name, global::System.Nullable<int> SteamId) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Name == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4719,7 +4676,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int JSON_PARSE_ID_LIST(string json) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((json == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4747,7 +4704,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int UPDATE_KZ_PRICES_JSON(string json) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((json == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4775,7 +4732,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int UPDATE_REGION_PRICES() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4797,7 +4754,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int UPDATE_RU_PRICES_JSON(string json) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
             if ((json == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4825,7 +4782,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int UPDATE_TR_PRICES_JSON(string json) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
             if ((json == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4853,7 +4810,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int UPDATE_USA_PRICES_JSON(string json) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
             if ((json == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4999,19 +4956,37 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "GAME_LIST_TEMP_TR";
-            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
-            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
-            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
-            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            tableMapping.ColumnMappings.Add("GLTT_ID", "GLTT_ID");
+            tableMapping.ColumnMappings.Add("GLTT_PRICE", "GLTT_PRICE");
+            tableMapping.ColumnMappings.Add("GLTT_STEAM_ID", "GLTT_STEAM_ID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP_TR] WHERE (([GLTT_ID] = @Original_GLTT_ID) AND ((@IsNull_GLTT_PRICE = 1 AND [GLTT_PRICE] IS NULL) OR ([GLTT_PRICE] = @Original_GLTT_PRICE)) AND ((@IsNull_GLTT_STEAM_ID = 1 AND [GLTT_STEAM_ID] IS NULL) OR ([GLTT_STEAM_ID] = @Original_GLTT_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_TR] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PA" +
-                "TH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_TR] ([GLTT_PRICE], [GLTT_STEAM_ID]) VALUES (@GL" +
+                "TT_PRICE, @GLTT_STEAM_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP_TR] SET [GLTT_PRICE] = @GLTT_PRICE, [GLTT_STEAM_ID] = @GLTT_STEAM_ID WHERE (([GLTT_ID] = @Original_GLTT_ID) AND ((@IsNull_GLTT_PRICE = 1 AND [GLTT_PRICE] IS NULL) OR ([GLTT_PRICE] = @Original_GLTT_PRICE)) AND ((@IsNull_GLTT_STEAM_ID = 1 AND [GLTT_STEAM_ID] IS NULL) OR ([GLTT_STEAM_ID] = @Original_GLTT_STEAM_ID)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5027,7 +5002,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_TR]";
+            this._commandCollection[0].CommandText = "SELECT GLTT_ID, GLTT_PRICE, GLTT_STEAM_ID FROM dbo.GAME_LIST_TEMP_TR";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -5093,20 +5068,57 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_GLTT_ID, global::System.Nullable<double> Original_GLTT_PRICE, global::System.Nullable<int> Original_GLTT_STEAM_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLTT_ID));
+            if ((Original_GLTT_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLTT_PRICE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLTT_STEAM_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GLTT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
-            if ((GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+        public virtual int Insert(global::System.Nullable<double> GLTT_PRICE, global::System.Nullable<int> GLTT_STEAM_ID) {
+            if ((GLTT_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLTT_PRICE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((GLTT_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLTT_STEAM_ID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5120,6 +5132,56 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<double> GLTT_PRICE, global::System.Nullable<int> GLTT_STEAM_ID, int Original_GLTT_ID, global::System.Nullable<double> Original_GLTT_PRICE, global::System.Nullable<int> Original_GLTT_STEAM_ID) {
+            if ((GLTT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLTT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((GLTT_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GLTT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_GLTT_ID));
+            if ((Original_GLTT_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Original_GLTT_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLTT_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_GLTT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
@@ -5274,19 +5336,37 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "GAME_LIST_TEMP_KZ";
-            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
-            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
-            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
-            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            tableMapping.ColumnMappings.Add("GLTK_ID", "GLTK_ID");
+            tableMapping.ColumnMappings.Add("GLTK_PRICE", "GLTK_PRICE");
+            tableMapping.ColumnMappings.Add("GLTK_STEAM_ID", "GLTK_STEAM_ID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP_KZ] WHERE (([GLTK_ID] = @Original_GLTK_ID) AND ((@IsNull_GLTK_PRICE = 1 AND [GLTK_PRICE] IS NULL) OR ([GLTK_PRICE] = @Original_GLTK_PRICE)) AND ((@IsNull_GLTK_STEAM_ID = 1 AND [GLTK_STEAM_ID] IS NULL) OR ([GLTK_STEAM_ID] = @Original_GLTK_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTK_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTK_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTK_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTK_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_KZ] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PA" +
-                "TH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_KZ] ([GLTK_PRICE], [GLTK_STEAM_ID]) VALUES (@GL" +
+                "TK_PRICE, @GLTK_STEAM_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTK_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTK_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP_KZ] SET [GLTK_PRICE] = @GLTK_PRICE, [GLTK_STEAM_ID] = @GLTK_STEAM_ID WHERE (([GLTK_ID] = @Original_GLTK_ID) AND ((@IsNull_GLTK_PRICE = 1 AND [GLTK_PRICE] IS NULL) OR ([GLTK_PRICE] = @Original_GLTK_PRICE)) AND ((@IsNull_GLTK_STEAM_ID = 1 AND [GLTK_STEAM_ID] IS NULL) OR ([GLTK_STEAM_ID] = @Original_GLTK_STEAM_ID)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTK_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTK_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTK_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTK_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTK_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTK_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTK_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5302,7 +5382,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_KZ]";
+            this._commandCollection[0].CommandText = "SELECT GLTK_ID, GLTK_PRICE, GLTK_STEAM_ID FROM dbo.GAME_LIST_TEMP_KZ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -5368,20 +5448,57 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_GLTK_ID, global::System.Nullable<double> Original_GLTK_PRICE, global::System.Nullable<int> Original_GLTK_STEAM_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLTK_ID));
+            if ((Original_GLTK_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLTK_PRICE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLTK_STEAM_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GLTK_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
-            if ((GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+        public virtual int Insert(global::System.Nullable<double> GLTK_PRICE, global::System.Nullable<int> GLTK_STEAM_ID) {
+            if ((GLTK_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLTK_PRICE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((GLTK_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLTK_STEAM_ID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5395,6 +5512,56 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<double> GLTK_PRICE, global::System.Nullable<int> GLTK_STEAM_ID, int Original_GLTK_ID, global::System.Nullable<double> Original_GLTK_PRICE, global::System.Nullable<int> Original_GLTK_STEAM_ID) {
+            if ((GLTK_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLTK_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((GLTK_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GLTK_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_GLTK_ID));
+            if ((Original_GLTK_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Original_GLTK_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLTK_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_GLTK_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
@@ -5549,19 +5716,37 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "GAME_LIST_TEMP_RU";
-            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
-            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
-            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
-            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            tableMapping.ColumnMappings.Add("GLTR_ID", "GLTR_ID");
+            tableMapping.ColumnMappings.Add("GLTR_PRICE", "GLTR_PRICE");
+            tableMapping.ColumnMappings.Add("GLTR_STEAM_ID", "GLTR_STEAM_ID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP_RU] WHERE (([GLTR_ID] = @Original_GLTR_ID) AND ((@IsNull_GLTR_PRICE = 1 AND [GLTR_PRICE] IS NULL) OR ([GLTR_PRICE] = @Original_GLTR_PRICE)) AND ((@IsNull_GLTR_STEAM_ID = 1 AND [GLTR_STEAM_ID] IS NULL) OR ([GLTR_STEAM_ID] = @Original_GLTR_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTR_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTR_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTR_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTR_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTR_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_RU] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PA" +
-                "TH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_RU] ([GLTR_PRICE], [GLTR_STEAM_ID]) VALUES (@GL" +
+                "TR_PRICE, @GLTR_STEAM_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTR_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTR_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP_RU] SET [GLTR_PRICE] = @GLTR_PRICE, [GLTR_STEAM_ID] = @GLTR_STEAM_ID WHERE (([GLTR_ID] = @Original_GLTR_ID) AND ((@IsNull_GLTR_PRICE = 1 AND [GLTR_PRICE] IS NULL) OR ([GLTR_PRICE] = @Original_GLTR_PRICE)) AND ((@IsNull_GLTR_STEAM_ID = 1 AND [GLTR_STEAM_ID] IS NULL) OR ([GLTR_STEAM_ID] = @Original_GLTR_STEAM_ID)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTR_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTR_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTR_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTR_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTR_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTR_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTR_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTR_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5577,7 +5762,7 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_RU]";
+            this._commandCollection[0].CommandText = "SELECT GLTR_ID, GLTR_PRICE, GLTR_STEAM_ID FROM dbo.GAME_LIST_TEMP_RU";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -5643,20 +5828,57 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_GLTR_ID, global::System.Nullable<double> Original_GLTR_PRICE, global::System.Nullable<int> Original_GLTR_STEAM_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLTR_ID));
+            if ((Original_GLTR_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLTR_PRICE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLTR_STEAM_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GLTR_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(double GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE));
-            if ((GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+        public virtual int Insert(global::System.Nullable<double> GLTR_PRICE, global::System.Nullable<int> GLTR_STEAM_ID) {
+            if ((GLTR_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLTR_PRICE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((GLTR_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLTR_STEAM_ID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5670,6 +5892,56 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<double> GLTR_PRICE, global::System.Nullable<int> GLTR_STEAM_ID, int Original_GLTR_ID, global::System.Nullable<double> Original_GLTR_PRICE, global::System.Nullable<int> Original_GLTR_STEAM_ID) {
+            if ((GLTR_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLTR_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((GLTR_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GLTR_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_GLTR_ID));
+            if ((Original_GLTR_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Original_GLTR_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLTR_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_GLTR_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
@@ -5824,42 +6096,40 @@ SELECT GL_ID, GL_NAME, GL_IMAGE_PATH, GL_PRICE, GL_AVAILABILITY, GL_PRICE_RU, GL
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "GAME_LIST_TEMP_USA";
-            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
-            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
-            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
-            tableMapping.ColumnMappings.Add("GLT_IMAGE_PATH", "GLT_IMAGE_PATH");
+            tableMapping.ColumnMappings.Add("GLTU_ID", "GLTU_ID");
+            tableMapping.ColumnMappings.Add("GLTU_PRICE", "GLTU_PRICE");
+            tableMapping.ColumnMappings.Add("GLTU_STEAM_ID", "GLTU_STEAM_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP_USA] WHERE (([GLT_ID] = @Original_GLT_ID) AND ((@IsNull_GLT_PRICE = 1 AND [GLT_PRICE] IS NULL) OR ([GLT_PRICE] = @Original_GLT_PRICE)) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP_USA] WHERE (([GLTU_ID] = @Original_GLTU_ID) AND ((@IsNull_GLTU_PRICE = 1 AND [GLTU_PRICE] IS NULL) OR ([GLTU_PRICE] = @Original_GLTU_PRICE)) AND ((@IsNull_GLTU_STEAM_ID = 1 AND [GLTU_STEAM_ID] IS NULL) OR ([GLTU_STEAM_ID] = @Original_GLTU_STEAM_ID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTU_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTU_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTU_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTU_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTU_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GAME_LIST_TEMP_USA] ([GLT_PRICE], [GLT_STEAM_ID], [GLT_IMAGE_PATH]) VALUES (@GLT_PRICE, @GLT_STEAM_ID, @GLT_IMAGE_PATH);
-SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_USA WHERE (GLT_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GAME_LIST_TEMP_USA] ([GLTU_PRICE], [GLTU_STEAM_ID]) VALUES (@G" +
+                "LTU_PRICE, @GLTU_STEAM_ID);\r\nSELECT GLTU_ID, GLTU_PRICE, GLTU_STEAM_ID FROM dbo." +
+                "GAME_LIST_TEMP_USA WHERE (GLTU_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTU_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTU_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP_USA] SET [GLT_PRICE] = @GLT_PRICE, [GLT_STEAM_ID] = @GLT_STEAM_ID, [GLT_IMAGE_PATH] = @GLT_IMAGE_PATH WHERE (([GLT_ID] = @Original_GLT_ID) AND ((@IsNull_GLT_PRICE = 1 AND [GLT_PRICE] IS NULL) OR ([GLT_PRICE] = @Original_GLT_PRICE)) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)));
-SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_USA WHERE (GLT_ID = @GLT_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP_USA] SET [GLTU_PRICE] = @GLTU_PRICE, [GLTU_STEAM_ID] = @GLTU_STEAM_ID WHERE (([GLTU_ID] = @Original_GLTU_ID) AND ((@IsNull_GLTU_PRICE = 1 AND [GLTU_PRICE] IS NULL) OR ([GLTU_PRICE] = @Original_GLTU_PRICE)) AND ((@IsNull_GLTU_STEAM_ID = 1 AND [GLTU_STEAM_ID] IS NULL) OR ([GLTU_STEAM_ID] = @Original_GLTU_STEAM_ID)));
+SELECT GLTU_ID, GLTU_PRICE, GLTU_STEAM_ID FROM dbo.GAME_LIST_TEMP_USA WHERE (GLTU_ID = @GLTU_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_IMAGE_PATH", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_IMAGE_PATH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTU_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTU_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTU_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTU_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTU_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLTU_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLTU_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLTU_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GLTU_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5875,7 +6145,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from [dbo].[GAME_LIST_TEMP_USA]";
+            this._commandCollection[0].CommandText = "SELECT GLTU_ID, GLTU_PRICE, GLTU_STEAM_ID FROM dbo.GAME_LIST_TEMP_USA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -5942,19 +6212,19 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_GLT_ID, global::System.Nullable<double> Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLT_ID));
-            if ((Original_GLT_PRICE.HasValue == true)) {
+        public virtual int Delete(int Original_GLTU_ID, global::System.Nullable<double> Original_GLTU_PRICE, global::System.Nullable<int> Original_GLTU_STEAM_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLTU_ID));
+            if ((Original_GLTU_PRICE.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLT_PRICE.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLTU_PRICE.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_GLT_STEAM_ID.HasValue == true)) {
+            if ((Original_GLTU_STEAM_ID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GLT_STEAM_ID.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GLTU_STEAM_ID.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -5980,24 +6250,18 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<double> GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH) {
-            if ((GLT_PRICE.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLT_PRICE.Value));
+        public virtual int Insert(global::System.Nullable<double> GLTU_PRICE, global::System.Nullable<int> GLTU_STEAM_ID) {
+            if ((GLTU_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(GLTU_PRICE.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+            if ((GLTU_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GLTU_STEAM_ID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6019,43 +6283,37 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<double> GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH, int Original_GLT_ID, global::System.Nullable<double> Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID, int GLT_ID) {
-            if ((GLT_PRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLT_PRICE.Value));
+        public virtual int Update(global::System.Nullable<double> GLTU_PRICE, global::System.Nullable<int> GLTU_STEAM_ID, int Original_GLTU_ID, global::System.Nullable<double> Original_GLTU_PRICE, global::System.Nullable<int> Original_GLTU_STEAM_ID, int GLTU_ID) {
+            if ((GLTU_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(GLTU_PRICE.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GLT_STEAM_ID.Value));
+            if ((GLTU_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GLTU_STEAM_ID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((GLT_IMAGE_PATH == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_GLTU_ID));
+            if ((Original_GLTU_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Original_GLTU_PRICE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(GLT_IMAGE_PATH));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_GLT_ID));
-            if ((Original_GLT_PRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Original_GLT_PRICE.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_GLT_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_GLT_STEAM_ID.Value));
+            if ((Original_GLTU_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_GLTU_STEAM_ID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(GLT_ID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(GLTU_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6070,14 +6328,6 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<double> GLT_PRICE, global::System.Nullable<int> GLT_STEAM_ID, string GLT_IMAGE_PATH, int Original_GLT_ID, global::System.Nullable<double> Original_GLT_PRICE, global::System.Nullable<int> Original_GLT_STEAM_ID) {
-            return this.Update(GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH, Original_GLT_ID, Original_GLT_PRICE, Original_GLT_STEAM_ID, Original_GLT_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6118,7 +6368,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class STEAM_ACCOUNT_LISTTableAdapter : global::System.ComponentModel.Component {
+    public partial class OTHER_SITE_LISTTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6132,7 +6382,7 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public STEAM_ACCOUNT_LISTTableAdapter() {
+        public OTHER_SITE_LISTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6229,54 +6479,61 @@ SELECT GLT_ID, GLT_PRICE, GLT_STEAM_ID, GLT_IMAGE_PATH FROM dbo.GAME_LIST_TEMP_U
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "STEAM_ACCOUNT_LIST";
-            tableMapping.ColumnMappings.Add("SAL_ID", "SAL_ID");
-            tableMapping.ColumnMappings.Add("SAL_NAME", "SAL_NAME");
-            tableMapping.ColumnMappings.Add("SAL_PRICE", "SAL_PRICE");
-            tableMapping.ColumnMappings.Add("SAL_REF", "SAL_REF");
-            tableMapping.ColumnMappings.Add("SAL_STEAM_ID", "SAL_STEAM_ID");
+            tableMapping.DataSetTable = "OTHER_SITE_LIST";
+            tableMapping.ColumnMappings.Add("OSL_ID", "OSL_ID");
+            tableMapping.ColumnMappings.Add("OSL_SITE_NAME", "OSL_SITE_NAME");
+            tableMapping.ColumnMappings.Add("OSL_NAME", "OSL_NAME");
+            tableMapping.ColumnMappings.Add("OSL_PRICE", "OSL_PRICE");
+            tableMapping.ColumnMappings.Add("OSL_REF", "OSL_REF");
+            tableMapping.ColumnMappings.Add("OSL_STEAM_ID", "OSL_STEAM_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[STEAM_ACCOUNT_LIST] WHERE (([SAL_ID] = @Original_SAL_ID) AND ((@IsNull_SAL_NAME = 1 AND [SAL_NAME] IS NULL) OR ([SAL_NAME] = @Original_SAL_NAME)) AND ((@IsNull_SAL_PRICE = 1 AND [SAL_PRICE] IS NULL) OR ([SAL_PRICE] = @Original_SAL_PRICE)) AND ((@IsNull_SAL_REF = 1 AND [SAL_REF] IS NULL) OR ([SAL_REF] = @Original_SAL_REF)) AND ((@IsNull_SAL_STEAM_ID = 1 AND [SAL_STEAM_ID] IS NULL) OR ([SAL_STEAM_ID] = @Original_SAL_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[OTHER_SITE_LIST] WHERE (([OSL_ID] = @Original_OSL_ID) AND ((@IsNull_OSL_SITE_NAME = 1 AND [OSL_SITE_NAME] IS NULL) OR ([OSL_SITE_NAME] = @Original_OSL_SITE_NAME)) AND ((@IsNull_OSL_NAME = 1 AND [OSL_NAME] IS NULL) OR ([OSL_NAME] = @Original_OSL_NAME)) AND ((@IsNull_OSL_PRICE = 1 AND [OSL_PRICE] IS NULL) OR ([OSL_PRICE] = @Original_OSL_PRICE)) AND ((@IsNull_OSL_REF = 1 AND [OSL_REF] IS NULL) OR ([OSL_REF] = @Original_OSL_REF)) AND ((@IsNull_OSL_STEAM_ID = 1 AND [OSL_STEAM_ID] IS NULL) OR ([OSL_STEAM_ID] = @Original_OSL_STEAM_ID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_SITE_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_SITE_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_SITE_NAME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_SITE_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[STEAM_ACCOUNT_LIST] ([SAL_NAME], [SAL_PRICE], [SAL_REF], [SAL_STEAM_ID]) VALUES (@SAL_NAME, @SAL_PRICE, @SAL_REF, @SAL_STEAM_ID);
-SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT_LIST WHERE (SAL_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[OTHER_SITE_LIST] ([OSL_SITE_NAME], [OSL_NAME], [OSL_PRICE], [OSL_REF], [OSL_STEAM_ID]) VALUES (@OSL_SITE_NAME, @OSL_NAME, @OSL_PRICE, @OSL_REF, @OSL_STEAM_ID);
+SELECT OSL_ID, OSL_SITE_NAME, OSL_NAME, OSL_PRICE, OSL_REF, OSL_STEAM_ID FROM dbo.OTHER_SITE_LIST WHERE (OSL_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_SITE_NAME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_SITE_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[STEAM_ACCOUNT_LIST] SET [SAL_NAME] = @SAL_NAME, [SAL_PRICE] = @SAL_PRICE, [SAL_REF] = @SAL_REF, [SAL_STEAM_ID] = @SAL_STEAM_ID WHERE (([SAL_ID] = @Original_SAL_ID) AND ((@IsNull_SAL_NAME = 1 AND [SAL_NAME] IS NULL) OR ([SAL_NAME] = @Original_SAL_NAME)) AND ((@IsNull_SAL_PRICE = 1 AND [SAL_PRICE] IS NULL) OR ([SAL_PRICE] = @Original_SAL_PRICE)) AND ((@IsNull_SAL_REF = 1 AND [SAL_REF] IS NULL) OR ([SAL_REF] = @Original_SAL_REF)) AND ((@IsNull_SAL_STEAM_ID = 1 AND [SAL_STEAM_ID] IS NULL) OR ([SAL_STEAM_ID] = @Original_SAL_STEAM_ID)));
-SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT_LIST WHERE (SAL_ID = @SAL_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[OTHER_SITE_LIST] SET [OSL_SITE_NAME] = @OSL_SITE_NAME, [OSL_NAME] = @OSL_NAME, [OSL_PRICE] = @OSL_PRICE, [OSL_REF] = @OSL_REF, [OSL_STEAM_ID] = @OSL_STEAM_ID WHERE (([OSL_ID] = @Original_OSL_ID) AND ((@IsNull_OSL_SITE_NAME = 1 AND [OSL_SITE_NAME] IS NULL) OR ([OSL_SITE_NAME] = @Original_OSL_SITE_NAME)) AND ((@IsNull_OSL_NAME = 1 AND [OSL_NAME] IS NULL) OR ([OSL_NAME] = @Original_OSL_NAME)) AND ((@IsNull_OSL_PRICE = 1 AND [OSL_PRICE] IS NULL) OR ([OSL_PRICE] = @Original_OSL_PRICE)) AND ((@IsNull_OSL_REF = 1 AND [OSL_REF] IS NULL) OR ([OSL_REF] = @Original_OSL_REF)) AND ((@IsNull_OSL_STEAM_ID = 1 AND [OSL_STEAM_ID] IS NULL) OR ([OSL_STEAM_ID] = @Original_OSL_STEAM_ID)));
+SELECT OSL_ID, OSL_SITE_NAME, OSL_NAME, OSL_PRICE, OSL_REF, OSL_STEAM_ID FROM dbo.OTHER_SITE_LIST WHERE (OSL_ID = @OSL_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SAL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAL_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SAL_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_SITE_NAME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_SITE_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_SITE_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_SITE_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_SITE_NAME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_SITE_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OSL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OSL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSL_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSL_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6292,16 +6549,16 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from dbo.STEAM_ACCOUNT_LIST";
+            this._commandCollection[0].CommandText = "select * from dbo.OTHER_SITE_LIST";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "dbo.CLEAR_STEAM_ACCOUNTS_LIST";
+            this._commandCollection[1].CommandText = "dbo.CLEAR_OTHER_SITE_LIST";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "dbo.UPDATE_IDS_STEAM_ACCOUNTS_LIST";
+            this._commandCollection[2].CommandText = "dbo.UPDATE_IDS_OTHER_SITE_LIST";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -6310,7 +6567,7 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GameDS.STEAM_ACCOUNT_LISTDataTable dataTable) {
+        public virtual int Fill(GameDS.OTHER_SITE_LISTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6323,9 +6580,9 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GameDS.STEAM_ACCOUNT_LISTDataTable GetData() {
+        public virtual GameDS.OTHER_SITE_LISTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GameDS.STEAM_ACCOUNT_LISTDataTable dataTable = new GameDS.STEAM_ACCOUNT_LISTDataTable();
+            GameDS.OTHER_SITE_LISTDataTable dataTable = new GameDS.OTHER_SITE_LISTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6333,7 +6590,7 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GameDS.STEAM_ACCOUNT_LISTDataTable dataTable) {
+        public virtual int Update(GameDS.OTHER_SITE_LISTDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6341,7 +6598,7 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(GameDS dataSet) {
-            return this.Adapter.Update(dataSet, "STEAM_ACCOUNT_LIST");
+            return this.Adapter.Update(dataSet, "OTHER_SITE_LIST");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6363,39 +6620,47 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_SAL_ID, string Original_SAL_NAME, global::System.Nullable<double> Original_SAL_PRICE, string Original_SAL_REF, global::System.Nullable<int> Original_SAL_STEAM_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_SAL_ID));
-            if ((Original_SAL_NAME == null)) {
+        public virtual int Delete(int Original_OSL_ID, string Original_OSL_SITE_NAME, string Original_OSL_NAME, global::System.Nullable<double> Original_OSL_PRICE, string Original_OSL_REF, global::System.Nullable<int> Original_OSL_STEAM_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_OSL_ID));
+            if ((Original_OSL_SITE_NAME == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_SAL_NAME));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_OSL_SITE_NAME));
             }
-            if ((Original_SAL_PRICE.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_SAL_PRICE.Value));
-            }
-            else {
+            if ((Original_OSL_NAME == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_SAL_REF == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_OSL_NAME));
+            }
+            if ((Original_OSL_PRICE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_OSL_PRICE.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_SAL_REF));
-            }
-            if ((Original_SAL_STEAM_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_SAL_STEAM_ID.Value));
-            }
-            else {
+            if ((Original_OSL_REF == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_OSL_REF));
+            }
+            if ((Original_OSL_STEAM_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_OSL_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6417,30 +6682,36 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string SAL_NAME, global::System.Nullable<double> SAL_PRICE, string SAL_REF, global::System.Nullable<int> SAL_STEAM_ID) {
-            if ((SAL_NAME == null)) {
+        public virtual int Insert(string OSL_SITE_NAME, string OSL_NAME, global::System.Nullable<double> OSL_PRICE, string OSL_REF, global::System.Nullable<int> OSL_STEAM_ID) {
+            if ((OSL_SITE_NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SAL_NAME));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(OSL_SITE_NAME));
             }
-            if ((SAL_PRICE.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((double)(SAL_PRICE.Value));
-            }
-            else {
+            if ((OSL_NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((SAL_REF == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(OSL_NAME));
+            }
+            if ((OSL_PRICE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(OSL_PRICE.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SAL_REF));
-            }
-            if ((SAL_STEAM_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(SAL_STEAM_ID.Value));
-            }
-            else {
+            if ((OSL_REF == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(OSL_REF));
+            }
+            if ((OSL_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(OSL_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6462,65 +6733,79 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SAL_NAME, global::System.Nullable<double> SAL_PRICE, string SAL_REF, global::System.Nullable<int> SAL_STEAM_ID, int Original_SAL_ID, string Original_SAL_NAME, global::System.Nullable<double> Original_SAL_PRICE, string Original_SAL_REF, global::System.Nullable<int> Original_SAL_STEAM_ID, int SAL_ID) {
-            if ((SAL_NAME == null)) {
+        public virtual int Update(string OSL_SITE_NAME, string OSL_NAME, global::System.Nullable<double> OSL_PRICE, string OSL_REF, global::System.Nullable<int> OSL_STEAM_ID, int Original_OSL_ID, string Original_OSL_SITE_NAME, string Original_OSL_NAME, global::System.Nullable<double> Original_OSL_PRICE, string Original_OSL_REF, global::System.Nullable<int> Original_OSL_STEAM_ID, int OSL_ID) {
+            if ((OSL_SITE_NAME == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(SAL_NAME));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(OSL_SITE_NAME));
             }
-            if ((SAL_PRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(SAL_PRICE.Value));
-            }
-            else {
+            if ((OSL_NAME == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((SAL_REF == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(OSL_NAME));
+            }
+            if ((OSL_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(OSL_PRICE.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SAL_REF));
-            }
-            if ((SAL_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(SAL_STEAM_ID.Value));
-            }
-            else {
+            if ((OSL_REF == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_SAL_ID));
-            if ((Original_SAL_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(OSL_REF));
+            }
+            if ((OSL_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(OSL_STEAM_ID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_SAL_NAME));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_SAL_PRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_SAL_PRICE.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SAL_REF == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_OSL_ID));
+            if ((Original_OSL_SITE_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_SAL_REF));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_OSL_SITE_NAME));
             }
-            if ((Original_SAL_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_SAL_STEAM_ID.Value));
+            if ((Original_OSL_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_OSL_NAME));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(SAL_ID));
+            if ((Original_OSL_PRICE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_OSL_PRICE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_OSL_REF == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_OSL_REF));
+            }
+            if ((Original_OSL_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_OSL_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(OSL_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6541,14 +6826,14 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SAL_NAME, global::System.Nullable<double> SAL_PRICE, string SAL_REF, global::System.Nullable<int> SAL_STEAM_ID, int Original_SAL_ID, string Original_SAL_NAME, global::System.Nullable<double> Original_SAL_PRICE, string Original_SAL_REF, global::System.Nullable<int> Original_SAL_STEAM_ID) {
-            return this.Update(SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID, Original_SAL_ID, Original_SAL_NAME, Original_SAL_PRICE, Original_SAL_REF, Original_SAL_STEAM_ID, Original_SAL_ID);
+        public virtual int Update(string OSL_SITE_NAME, string OSL_NAME, global::System.Nullable<double> OSL_PRICE, string OSL_REF, global::System.Nullable<int> OSL_STEAM_ID, int Original_OSL_ID, string Original_OSL_SITE_NAME, string Original_OSL_NAME, global::System.Nullable<double> Original_OSL_PRICE, string Original_OSL_REF, global::System.Nullable<int> Original_OSL_STEAM_ID) {
+            return this.Update(OSL_SITE_NAME, OSL_NAME, OSL_PRICE, OSL_REF, OSL_STEAM_ID, Original_OSL_ID, Original_OSL_SITE_NAME, Original_OSL_NAME, Original_OSL_PRICE, Original_OSL_REF, Original_OSL_STEAM_ID, Original_OSL_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int CLEAR_STEAM_ACCOUNTS_LIST() {
+        public virtual int CLEAR_OTHER_SITE_LIST() {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6570,7 +6855,7 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UPDATE_IDS_STEAM_ACCOUNTS_LIST() {
+        public virtual int UPDATE_IDS_OTHER_SITE_LIST() {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6599,7 +6884,7 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class STEAMKEY_LISTTableAdapter : global::System.ComponentModel.Component {
+    public partial class GAME_LIST_TEMPTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6613,7 +6898,7 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public STEAMKEY_LISTTableAdapter() {
+        public GAME_LIST_TEMPTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6710,56 +6995,71 @@ SELECT SAL_ID, SAL_NAME, SAL_PRICE, SAL_REF, SAL_STEAM_ID FROM dbo.STEAM_ACCOUNT
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "STEAMKEY_LIST";
-            tableMapping.ColumnMappings.Add("SL_ID", "SL_ID");
-            tableMapping.ColumnMappings.Add("SL_NAME", "SL_NAME");
-            tableMapping.ColumnMappings.Add("SL_PRICE", "SL_PRICE");
-            tableMapping.ColumnMappings.Add("SL_REF", "SL_REF");
-            tableMapping.ColumnMappings.Add("SL_STEAM_ID", "SL_STEAM_ID");
+            tableMapping.DataSetTable = "GAME_LIST_TEMP";
+            tableMapping.ColumnMappings.Add("GLT_ID", "GLT_ID");
+            tableMapping.ColumnMappings.Add("GLT_NAME", "GLT_NAME");
+            tableMapping.ColumnMappings.Add("GLT_PRICE", "GLT_PRICE");
+            tableMapping.ColumnMappings.Add("GLT_AVAILABILITY", "GLT_AVAILABILITY");
+            tableMapping.ColumnMappings.Add("GLT_PRICE_RU", "GLT_PRICE_RU");
+            tableMapping.ColumnMappings.Add("GLT_PRICE_KZ", "GLT_PRICE_KZ");
+            tableMapping.ColumnMappings.Add("GLT_PRICE_TR", "GLT_PRICE_TR");
+            tableMapping.ColumnMappings.Add("GLT_STEAM_ID", "GLT_STEAM_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[STEAMKEY_LIST] WHERE (([SL_ID] = @Original_SL_ID) AND ((@IsNull_SL_NAME = 1 AND [SL_NAME] IS NULL) OR ([SL_NAME] = @Original_SL_NAME)) AND ((@IsNull_SL_PRICE = 1 AND [SL_PRICE] IS NULL) OR ([SL_PRICE] = @Original_SL_PRICE)) AND ((@IsNull_SL_REF = 1 AND [SL_REF] IS NULL) OR ([SL_REF] = @Original_SL_REF)) AND ((@IsNull_SL_STEAM_ID = 1 AND [SL_STEAM_ID] IS NULL) OR ([SL_STEAM_ID] = @Original_SL_STEAM_ID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GAME_LIST_TEMP] WHERE (([GLT_ID] = @Original_GLT_ID) AND ([GLT_NAME] = @Original_GLT_NAME) AND ([GLT_PRICE] = @Original_GLT_PRICE) AND ((@IsNull_GLT_AVAILABILITY = 1 AND [GLT_AVAILABILITY] IS NULL) OR ([GLT_AVAILABILITY] = @Original_GLT_AVAILABILITY)) AND ((@IsNull_GLT_PRICE_RU = 1 AND [GLT_PRICE_RU] IS NULL) OR ([GLT_PRICE_RU] = @Original_GLT_PRICE_RU)) AND ((@IsNull_GLT_PRICE_KZ = 1 AND [GLT_PRICE_KZ] IS NULL) OR ([GLT_PRICE_KZ] = @Original_GLT_PRICE_KZ)) AND ((@IsNull_GLT_PRICE_TR = 1 AND [GLT_PRICE_TR] IS NULL) OR ([GLT_PRICE_TR] = @Original_GLT_PRICE_TR)) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_AVAILABILITY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_AVAILABILITY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_AVAILABILITY", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_AVAILABILITY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE_RU", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_RU", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE_RU", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_RU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE_KZ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_KZ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE_KZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_KZ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE_TR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_TR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE_TR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_TR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[STEAMKEY_LIST] ([SL_NAME], [SL_PRICE], [SL_REF], [SL_STEAM_ID]" +
-                ") VALUES (@SL_NAME, @SL_PRICE, @SL_REF, @SL_STEAM_ID);\r\nSELECT SL_ID, SL_NAME, S" +
-                "L_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHERE (SL_ID = SCOPE_IDENTIT" +
-                "Y())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GAME_LIST_TEMP] ([GLT_NAME], [GLT_PRICE], [GLT_AVAILABILITY], [GLT_PRICE_RU], [GLT_PRICE_KZ], [GLT_PRICE_TR], [GLT_STEAM_ID]) VALUES (@GLT_NAME, @GLT_PRICE, @GLT_AVAILABILITY, @GLT_PRICE_RU, @GLT_PRICE_KZ, @GLT_PRICE_TR, @GLT_STEAM_ID);
+SELECT GLT_ID, GLT_NAME, GLT_PRICE, GLT_AVAILABILITY, GLT_PRICE_RU, GLT_PRICE_KZ, GLT_PRICE_TR, GLT_STEAM_ID FROM dbo.GAME_LIST_TEMP WHERE (GLT_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_AVAILABILITY", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_AVAILABILITY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE_RU", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_RU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE_KZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_KZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE_TR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_TR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[STEAMKEY_LIST] SET [SL_NAME] = @SL_NAME, [SL_PRICE] = @SL_PRICE, [SL_REF] = @SL_REF, [SL_STEAM_ID] = @SL_STEAM_ID WHERE (([SL_ID] = @Original_SL_ID) AND ((@IsNull_SL_NAME = 1 AND [SL_NAME] IS NULL) OR ([SL_NAME] = @Original_SL_NAME)) AND ((@IsNull_SL_PRICE = 1 AND [SL_PRICE] IS NULL) OR ([SL_PRICE] = @Original_SL_PRICE)) AND ((@IsNull_SL_REF = 1 AND [SL_REF] IS NULL) OR ([SL_REF] = @Original_SL_REF)) AND ((@IsNull_SL_STEAM_ID = 1 AND [SL_STEAM_ID] IS NULL) OR ([SL_STEAM_ID] = @Original_SL_STEAM_ID)));
-SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHERE (SL_ID = @SL_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GAME_LIST_TEMP] SET [GLT_NAME] = @GLT_NAME, [GLT_PRICE] = @GLT_PRICE, [GLT_AVAILABILITY] = @GLT_AVAILABILITY, [GLT_PRICE_RU] = @GLT_PRICE_RU, [GLT_PRICE_KZ] = @GLT_PRICE_KZ, [GLT_PRICE_TR] = @GLT_PRICE_TR, [GLT_STEAM_ID] = @GLT_STEAM_ID WHERE (([GLT_ID] = @Original_GLT_ID) AND ([GLT_NAME] = @Original_GLT_NAME) AND ([GLT_PRICE] = @Original_GLT_PRICE) AND ((@IsNull_GLT_AVAILABILITY = 1 AND [GLT_AVAILABILITY] IS NULL) OR ([GLT_AVAILABILITY] = @Original_GLT_AVAILABILITY)) AND ((@IsNull_GLT_PRICE_RU = 1 AND [GLT_PRICE_RU] IS NULL) OR ([GLT_PRICE_RU] = @Original_GLT_PRICE_RU)) AND ((@IsNull_GLT_PRICE_KZ = 1 AND [GLT_PRICE_KZ] IS NULL) OR ([GLT_PRICE_KZ] = @Original_GLT_PRICE_KZ)) AND ((@IsNull_GLT_PRICE_TR = 1 AND [GLT_PRICE_TR] IS NULL) OR ([GLT_PRICE_TR] = @Original_GLT_PRICE_TR)) AND ((@IsNull_GLT_STEAM_ID = 1 AND [GLT_STEAM_ID] IS NULL) OR ([GLT_STEAM_ID] = @Original_GLT_STEAM_ID)));
+SELECT GLT_ID, GLT_NAME, GLT_PRICE, GLT_AVAILABILITY, GLT_PRICE_RU, GLT_PRICE_KZ, GLT_PRICE_TR, GLT_STEAM_ID FROM dbo.GAME_LIST_TEMP WHERE (GLT_ID = @GLT_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_REF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_PRICE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_PRICE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_REF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_REF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_REF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_REF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SL_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_AVAILABILITY", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_AVAILABILITY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE_RU", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_RU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE_KZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_KZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_PRICE_TR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_TR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_AVAILABILITY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_AVAILABILITY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_AVAILABILITY", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_AVAILABILITY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE_RU", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_RU", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE_RU", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_RU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE_KZ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_KZ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE_KZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_KZ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_PRICE_TR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_TR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_PRICE_TR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_PRICE_TR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GLT_STEAM_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_STEAM_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GLT_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GLT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6772,28 +7072,18 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from dbo.STEAMKEY_LIST";
+            this._commandCollection[0].CommandText = "select * from dbo.GAME_LIST_TEMP";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "dbo.CLEAR_STEAMKEY_LIST";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "dbo.UPDATE_IDS_STEAMKEY_LIST";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GameDS.STEAMKEY_LISTDataTable dataTable) {
+        public virtual int Fill(GameDS.GAME_LIST_TEMPDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6806,9 +7096,9 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GameDS.STEAMKEY_LISTDataTable GetData() {
+        public virtual GameDS.GAME_LIST_TEMPDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GameDS.STEAMKEY_LISTDataTable dataTable = new GameDS.STEAMKEY_LISTDataTable();
+            GameDS.GAME_LIST_TEMPDataTable dataTable = new GameDS.GAME_LIST_TEMPDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6816,7 +7106,7 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GameDS.STEAMKEY_LISTDataTable dataTable) {
+        public virtual int Update(GameDS.GAME_LIST_TEMPDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6824,7 +7114,7 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(GameDS dataSet) {
-            return this.Adapter.Update(dataSet, "STEAMKEY_LIST");
+            return this.Adapter.Update(dataSet, "GAME_LIST_TEMP");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6846,39 +7136,54 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_SL_ID, string Original_SL_NAME, global::System.Nullable<double> Original_SL_PRICE, string Original_SL_REF, global::System.Nullable<int> Original_SL_STEAM_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_SL_ID));
-            if ((Original_SL_NAME == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+        public virtual int Delete(int Original_GLT_ID, string Original_GLT_NAME, double Original_GLT_PRICE, global::System.Nullable<bool> Original_GLT_AVAILABILITY, global::System.Nullable<double> Original_GLT_PRICE_RU, global::System.Nullable<double> Original_GLT_PRICE_KZ, global::System.Nullable<double> Original_GLT_PRICE_TR, global::System.Nullable<int> Original_GLT_STEAM_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GLT_ID));
+            if ((Original_GLT_NAME == null)) {
+                throw new global::System.ArgumentNullException("Original_GLT_NAME");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_SL_NAME));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_GLT_NAME));
             }
-            if ((Original_SL_PRICE.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_GLT_PRICE));
+            if ((Original_GLT_AVAILABILITY.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_SL_PRICE.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_GLT_AVAILABILITY.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_SL_REF == null)) {
+            if ((Original_GLT_PRICE_RU.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_GLT_PRICE_RU.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_SL_REF));
-            }
-            if ((Original_SL_STEAM_ID.HasValue == true)) {
+            if ((Original_GLT_PRICE_KZ.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_SL_STEAM_ID.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_GLT_PRICE_KZ.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLT_PRICE_TR.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((double)(Original_GLT_PRICE_TR.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_GLT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6900,30 +7205,43 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string SL_NAME, global::System.Nullable<double> SL_PRICE, string SL_REF, global::System.Nullable<int> SL_STEAM_ID) {
-            if ((SL_NAME == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string GLT_NAME, double GLT_PRICE, global::System.Nullable<bool> GLT_AVAILABILITY, global::System.Nullable<double> GLT_PRICE_RU, global::System.Nullable<double> GLT_PRICE_KZ, global::System.Nullable<double> GLT_PRICE_TR, global::System.Nullable<int> GLT_STEAM_ID) {
+            if ((GLT_NAME == null)) {
+                throw new global::System.ArgumentNullException("GLT_NAME");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SL_NAME));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(GLT_NAME));
             }
-            if ((SL_PRICE.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((double)(SL_PRICE.Value));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((double)(GLT_PRICE));
+            if ((GLT_AVAILABILITY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(GLT_AVAILABILITY.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((SL_REF == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SL_REF));
-            }
-            if ((SL_STEAM_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(SL_STEAM_ID.Value));
+            if ((GLT_PRICE_RU.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(GLT_PRICE_RU.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_PRICE_KZ.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(GLT_PRICE_KZ.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_PRICE_TR.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((double)(GLT_PRICE_TR.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(GLT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6945,65 +7263,109 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SL_NAME, global::System.Nullable<double> SL_PRICE, string SL_REF, global::System.Nullable<int> SL_STEAM_ID, int Original_SL_ID, string Original_SL_NAME, global::System.Nullable<double> Original_SL_PRICE, string Original_SL_REF, global::System.Nullable<int> Original_SL_STEAM_ID, int SL_ID) {
-            if ((SL_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(
+                    string GLT_NAME, 
+                    double GLT_PRICE, 
+                    global::System.Nullable<bool> GLT_AVAILABILITY, 
+                    global::System.Nullable<double> GLT_PRICE_RU, 
+                    global::System.Nullable<double> GLT_PRICE_KZ, 
+                    global::System.Nullable<double> GLT_PRICE_TR, 
+                    global::System.Nullable<int> GLT_STEAM_ID, 
+                    int Original_GLT_ID, 
+                    string Original_GLT_NAME, 
+                    double Original_GLT_PRICE, 
+                    global::System.Nullable<bool> Original_GLT_AVAILABILITY, 
+                    global::System.Nullable<double> Original_GLT_PRICE_RU, 
+                    global::System.Nullable<double> Original_GLT_PRICE_KZ, 
+                    global::System.Nullable<double> Original_GLT_PRICE_TR, 
+                    global::System.Nullable<int> Original_GLT_STEAM_ID, 
+                    int GLT_ID) {
+            if ((GLT_NAME == null)) {
+                throw new global::System.ArgumentNullException("GLT_NAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(SL_NAME));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(GLT_NAME));
             }
-            if ((SL_PRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(SL_PRICE.Value));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(GLT_PRICE));
+            if ((GLT_AVAILABILITY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(GLT_AVAILABILITY.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((SL_REF == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SL_REF));
-            }
-            if ((SL_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(SL_STEAM_ID.Value));
+            if ((GLT_PRICE_RU.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(GLT_PRICE_RU.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_SL_ID));
-            if ((Original_SL_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+            if ((GLT_PRICE_KZ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(GLT_PRICE_KZ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_PRICE_TR.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(GLT_PRICE_TR.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(GLT_STEAM_ID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_SL_NAME));
-            }
-            if ((Original_SL_PRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_SL_PRICE.Value));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_GLT_ID));
+            if ((Original_GLT_NAME == null)) {
+                throw new global::System.ArgumentNullException("Original_GLT_NAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_GLT_NAME));
             }
-            if ((Original_SL_REF == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_SL_REF));
-            }
-            if ((Original_SL_STEAM_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_SL_STEAM_ID.Value));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_GLT_PRICE));
+            if ((Original_GLT_AVAILABILITY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_GLT_AVAILABILITY.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(SL_ID));
+            if ((Original_GLT_PRICE_RU.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(Original_GLT_PRICE_RU.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLT_PRICE_KZ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_GLT_PRICE_KZ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLT_PRICE_TR.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((double)(Original_GLT_PRICE_TR.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_GLT_STEAM_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_GLT_STEAM_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(GLT_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7024,52 +7386,8 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SL_NAME, global::System.Nullable<double> SL_PRICE, string SL_REF, global::System.Nullable<int> SL_STEAM_ID, int Original_SL_ID, string Original_SL_NAME, global::System.Nullable<double> Original_SL_PRICE, string Original_SL_REF, global::System.Nullable<int> Original_SL_STEAM_ID) {
-            return this.Update(SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID, Original_SL_ID, Original_SL_NAME, Original_SL_PRICE, Original_SL_REF, Original_SL_STEAM_ID, Original_SL_ID);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int CLEAR_STEAMKEY_LIST() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UPDATE_IDS_STEAMKEY_LIST() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
+        public virtual int Update(string GLT_NAME, double GLT_PRICE, global::System.Nullable<bool> GLT_AVAILABILITY, global::System.Nullable<double> GLT_PRICE_RU, global::System.Nullable<double> GLT_PRICE_KZ, global::System.Nullable<double> GLT_PRICE_TR, global::System.Nullable<int> GLT_STEAM_ID, int Original_GLT_ID, string Original_GLT_NAME, double Original_GLT_PRICE, global::System.Nullable<bool> Original_GLT_AVAILABILITY, global::System.Nullable<double> Original_GLT_PRICE_RU, global::System.Nullable<double> Original_GLT_PRICE_KZ, global::System.Nullable<double> Original_GLT_PRICE_TR, global::System.Nullable<int> Original_GLT_STEAM_ID) {
+            return this.Update(GLT_NAME, GLT_PRICE, GLT_AVAILABILITY, GLT_PRICE_RU, GLT_PRICE_KZ, GLT_PRICE_TR, GLT_STEAM_ID, Original_GLT_ID, Original_GLT_NAME, Original_GLT_PRICE, Original_GLT_AVAILABILITY, Original_GLT_PRICE_RU, Original_GLT_PRICE_KZ, Original_GLT_PRICE_TR, Original_GLT_STEAM_ID, Original_GLT_ID);
         }
     }
     
@@ -7095,9 +7413,9 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         
         private GAME_LIST_TEMP_USATableAdapter _gAME_LIST_TEMP_USATableAdapter;
         
-        private STEAM_ACCOUNT_LISTTableAdapter _sTEAM_ACCOUNT_LISTTableAdapter;
+        private OTHER_SITE_LISTTableAdapter _oTHER_SITE_LISTTableAdapter;
         
-        private STEAMKEY_LISTTableAdapter _sTEAMKEY_LISTTableAdapter;
+        private GAME_LIST_TEMPTableAdapter _gAME_LIST_TEMPTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7189,12 +7507,12 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public STEAM_ACCOUNT_LISTTableAdapter STEAM_ACCOUNT_LISTTableAdapter {
+        public OTHER_SITE_LISTTableAdapter OTHER_SITE_LISTTableAdapter {
             get {
-                return this._sTEAM_ACCOUNT_LISTTableAdapter;
+                return this._oTHER_SITE_LISTTableAdapter;
             }
             set {
-                this._sTEAM_ACCOUNT_LISTTableAdapter = value;
+                this._oTHER_SITE_LISTTableAdapter = value;
             }
         }
         
@@ -7203,12 +7521,12 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public STEAMKEY_LISTTableAdapter STEAMKEY_LISTTableAdapter {
+        public GAME_LIST_TEMPTableAdapter GAME_LIST_TEMPTableAdapter {
             get {
-                return this._sTEAMKEY_LISTTableAdapter;
+                return this._gAME_LIST_TEMPTableAdapter;
             }
             set {
-                this._sTEAMKEY_LISTTableAdapter = value;
+                this._gAME_LIST_TEMPTableAdapter = value;
             }
         }
         
@@ -7251,13 +7569,13 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                             && (this._gAME_LIST_TEMP_USATableAdapter.Connection != null))) {
                     return this._gAME_LIST_TEMP_USATableAdapter.Connection;
                 }
-                if (((this._sTEAM_ACCOUNT_LISTTableAdapter != null) 
-                            && (this._sTEAM_ACCOUNT_LISTTableAdapter.Connection != null))) {
-                    return this._sTEAM_ACCOUNT_LISTTableAdapter.Connection;
+                if (((this._oTHER_SITE_LISTTableAdapter != null) 
+                            && (this._oTHER_SITE_LISTTableAdapter.Connection != null))) {
+                    return this._oTHER_SITE_LISTTableAdapter.Connection;
                 }
-                if (((this._sTEAMKEY_LISTTableAdapter != null) 
-                            && (this._sTEAMKEY_LISTTableAdapter.Connection != null))) {
-                    return this._sTEAMKEY_LISTTableAdapter.Connection;
+                if (((this._gAME_LIST_TEMPTableAdapter != null) 
+                            && (this._gAME_LIST_TEMPTableAdapter.Connection != null))) {
+                    return this._gAME_LIST_TEMPTableAdapter.Connection;
                 }
                 return null;
             }
@@ -7287,10 +7605,10 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                 if ((this._gAME_LIST_TEMP_USATableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._sTEAM_ACCOUNT_LISTTableAdapter != null)) {
+                if ((this._oTHER_SITE_LISTTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._sTEAMKEY_LISTTableAdapter != null)) {
+                if ((this._gAME_LIST_TEMPTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -7349,21 +7667,21 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._sTEAM_ACCOUNT_LISTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.STEAM_ACCOUNT_LIST.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._oTHER_SITE_LISTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.OTHER_SITE_LIST.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._sTEAM_ACCOUNT_LISTTableAdapter.Update(updatedRows));
+                    result = (result + this._oTHER_SITE_LISTTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._sTEAMKEY_LISTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.STEAMKEY_LIST.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._gAME_LIST_TEMPTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GAME_LIST_TEMP.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._sTEAMKEY_LISTTableAdapter.Update(updatedRows));
+                    result = (result + this._gAME_LIST_TEMPTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7417,19 +7735,19 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._sTEAM_ACCOUNT_LISTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.STEAM_ACCOUNT_LIST.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._oTHER_SITE_LISTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.OTHER_SITE_LIST.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._sTEAM_ACCOUNT_LISTTableAdapter.Update(addedRows));
+                    result = (result + this._oTHER_SITE_LISTTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._sTEAMKEY_LISTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.STEAMKEY_LIST.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._gAME_LIST_TEMPTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GAME_LIST_TEMP.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._sTEAMKEY_LISTTableAdapter.Update(addedRows));
+                    result = (result + this._gAME_LIST_TEMPTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7443,19 +7761,19 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(GameDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._sTEAMKEY_LISTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.STEAMKEY_LIST.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._gAME_LIST_TEMPTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GAME_LIST_TEMP.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._sTEAMKEY_LISTTableAdapter.Update(deletedRows));
+                    result = (result + this._gAME_LIST_TEMPTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._sTEAM_ACCOUNT_LISTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.STEAM_ACCOUNT_LIST.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._oTHER_SITE_LISTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.OTHER_SITE_LIST.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._sTEAM_ACCOUNT_LISTTableAdapter.Update(deletedRows));
+                    result = (result + this._oTHER_SITE_LISTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7563,13 +7881,13 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._sTEAM_ACCOUNT_LISTTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._sTEAM_ACCOUNT_LISTTableAdapter.Connection) == false))) {
+            if (((this._oTHER_SITE_LISTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._oTHER_SITE_LISTTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._sTEAMKEY_LISTTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._sTEAMKEY_LISTTableAdapter.Connection) == false))) {
+            if (((this._gAME_LIST_TEMPTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gAME_LIST_TEMPTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -7650,22 +7968,22 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                         adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMP_USATableAdapter.Adapter);
                     }
                 }
-                if ((this._sTEAM_ACCOUNT_LISTTableAdapter != null)) {
-                    revertConnections.Add(this._sTEAM_ACCOUNT_LISTTableAdapter, this._sTEAM_ACCOUNT_LISTTableAdapter.Connection);
-                    this._sTEAM_ACCOUNT_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._sTEAM_ACCOUNT_LISTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._sTEAM_ACCOUNT_LISTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._sTEAM_ACCOUNT_LISTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._sTEAM_ACCOUNT_LISTTableAdapter.Adapter);
+                if ((this._oTHER_SITE_LISTTableAdapter != null)) {
+                    revertConnections.Add(this._oTHER_SITE_LISTTableAdapter, this._oTHER_SITE_LISTTableAdapter.Connection);
+                    this._oTHER_SITE_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._oTHER_SITE_LISTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._oTHER_SITE_LISTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._oTHER_SITE_LISTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._oTHER_SITE_LISTTableAdapter.Adapter);
                     }
                 }
-                if ((this._sTEAMKEY_LISTTableAdapter != null)) {
-                    revertConnections.Add(this._sTEAMKEY_LISTTableAdapter, this._sTEAMKEY_LISTTableAdapter.Connection);
-                    this._sTEAMKEY_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._sTEAMKEY_LISTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._sTEAMKEY_LISTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._sTEAMKEY_LISTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._sTEAMKEY_LISTTableAdapter.Adapter);
+                if ((this._gAME_LIST_TEMPTableAdapter != null)) {
+                    revertConnections.Add(this._gAME_LIST_TEMPTableAdapter, this._gAME_LIST_TEMPTableAdapter.Connection);
+                    this._gAME_LIST_TEMPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gAME_LIST_TEMPTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gAME_LIST_TEMPTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gAME_LIST_TEMPTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gAME_LIST_TEMPTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -7746,13 +8064,13 @@ SELECT SL_ID, SL_NAME, SL_PRICE, SL_REF, SL_STEAM_ID FROM dbo.STEAMKEY_LIST WHER
                     this._gAME_LIST_TEMP_USATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMP_USATableAdapter]));
                     this._gAME_LIST_TEMP_USATableAdapter.Transaction = null;
                 }
-                if ((this._sTEAM_ACCOUNT_LISTTableAdapter != null)) {
-                    this._sTEAM_ACCOUNT_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._sTEAM_ACCOUNT_LISTTableAdapter]));
-                    this._sTEAM_ACCOUNT_LISTTableAdapter.Transaction = null;
+                if ((this._oTHER_SITE_LISTTableAdapter != null)) {
+                    this._oTHER_SITE_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._oTHER_SITE_LISTTableAdapter]));
+                    this._oTHER_SITE_LISTTableAdapter.Transaction = null;
                 }
-                if ((this._sTEAMKEY_LISTTableAdapter != null)) {
-                    this._sTEAMKEY_LISTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._sTEAMKEY_LISTTableAdapter]));
-                    this._sTEAMKEY_LISTTableAdapter.Transaction = null;
+                if ((this._gAME_LIST_TEMPTableAdapter != null)) {
+                    this._gAME_LIST_TEMPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gAME_LIST_TEMPTableAdapter]));
+                    this._gAME_LIST_TEMPTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

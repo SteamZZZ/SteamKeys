@@ -76,7 +76,9 @@ namespace TryParseSteam.GameDSTableAdapters
         }
     }
 
-    public partial class STEAM_ACCOUNT_LISTTableAdapter
+
+
+    public partial class OTHER_SITE_LISTTableAdapter
     {
         public int Timeout
         {
@@ -89,7 +91,7 @@ namespace TryParseSteam.GameDSTableAdapters
         }
     }
 
-    public partial class STEAMKEY_LISTTableAdapter
+    public partial class GAME_LIST_TEMPTableAdapter
     {
         public int Timeout
         {
