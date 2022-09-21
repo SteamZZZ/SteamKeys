@@ -3,176 +3,249 @@
     "success": true,
     "data": {
       "type": "game",
-      "name": "FPV.SkyDive : FPV Drone Racing & Freestyle Simulator",
-      "steam_appid": 1278060,
+      "name": "Sable",
+      "steam_appid": 757310,
       "required_age": 0,
-      "is_free": true,
-      "dlc": [ 1838190, 1966060 ],
-      "detailed_description": "Orqa <strong>FPV.SkyDive<\/strong> is Drone Racing And Freestyle Simulator.<br><br><ul class=\"bb_ul\"><li>Seamless integration with your favourite controller<br><\/li><li>Practice racing skills or enjoy freestyling with selected maps<br><\/li><li>Platform agnostic. Run FPV.SkyDive on PC, Mac or Linux computer<br><\/li><li>Drone physics optimised for the most realistic flying experience<\/li><\/ul>",
-      "about_the_game": "Orqa <strong>FPV.SkyDive<\/strong> is Drone Racing And Freestyle Simulator.<br><br><ul class=\"bb_ul\"><li>Seamless integration with your favourite controller<br><\/li><li>Practice racing skills or enjoy freestyling with selected maps<br><\/li><li>Platform agnostic. Run FPV.SkyDive on PC, Mac or Linux computer<br><\/li><li>Drone physics optimised for the most realistic flying experience<\/li><\/ul>",
-      "short_description": "Orqa FPV.Skydive is Drone Racing And Freestyle Simulator.",
-      "supported_languages": "English, French, Italian, German, Spanish - Spain",
-      "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/header.jpg?t=1653393360",
-      "website": "https:\/\/skydive.orqafpv.com\/",
+      "is_free": false,
+      "controller_support": "full",
+      "detailed_description": "<img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/extras\/1SableGIF.gif?t=1658922379\" \/><br><br><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/extras\/RU_About_Sable.png?t=1658922379\" \/><br><br>Отправляйтесь в незабываемое путешествие вместе с Сэйбл, скользите через бескрайние пустыни и завораживающие пейзажи, осматривайте остовы космических кораблей и открывайте для себя чудеса древних цивилизаций.<br><br>Исследуйте пустыню, оседлав верный ховербайк, взбирайтесь на занесенные песком монументальные руины и встречайтесь с другими кочевниками, раскрывайте давно забытые тайны и помогите героине выяснить, кто же она на самом деле.<br><br>Уникальный стиль рисовки и саундтрек от Japanese Breakfast создают неповторимую атмосферу игры, в которой можно не торопясь исследовать огромный мир Сэйбл. Множество чудес этого мира только и ждут, когда вы их откроете. Не бойтесь сделать первый шаг.<br> <br><br><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/extras\/RU_Features_Sable.png?t=1658922379\" \/><br><br>• Исследуйте открытый мир, где на каждом шагу – следы древних цивилизаций.<br><br>• Карабкайтесь, прыгайте, скользите – используйте все возможности, чтобы покорить этот удивительный мир.<br><br>• Находите или получайте детали для своего байка и модифицируйте его, чтобы справляться с возникающими на пути препятствиями.<br> <br>• Помогайте встреченным на пути кланам и одиноким кочевникам.<br><br>• Окунитесь в приключение и помогите героине понять, кто она. А затем – используйте широкий выбор масок, костюмов и прочих аксессуаров, чтобы продемонстрировать это всему миру…<br><br>• Решайте головоломки и получайте награды, чтобы продолжить свой путь по безжалостной пустыне.",
+      "about_the_game": "<img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/extras\/1SableGIF.gif?t=1658922379\" \/><br><br><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/extras\/RU_About_Sable.png?t=1658922379\" \/><br><br>Отправляйтесь в незабываемое путешествие вместе с Сэйбл, скользите через бескрайние пустыни и завораживающие пейзажи, осматривайте остовы космических кораблей и открывайте для себя чудеса древних цивилизаций.<br><br>Исследуйте пустыню, оседлав верный ховербайк, взбирайтесь на занесенные песком монументальные руины и встречайтесь с другими кочевниками, раскрывайте давно забытые тайны и помогите героине выяснить, кто же она на самом деле.<br><br>Уникальный стиль рисовки и саундтрек от Japanese Breakfast создают неповторимую атмосферу игры, в которой можно не торопясь исследовать огромный мир Сэйбл. Множество чудес этого мира только и ждут, когда вы их откроете. Не бойтесь сделать первый шаг.<br> <br><br><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/extras\/RU_Features_Sable.png?t=1658922379\" \/><br><br>• Исследуйте открытый мир, где на каждом шагу – следы древних цивилизаций.<br><br>• Карабкайтесь, прыгайте, скользите – используйте все возможности, чтобы покорить этот удивительный мир.<br><br>• Находите или получайте детали для своего байка и модифицируйте его, чтобы справляться с возникающими на пути препятствиями.<br> <br>• Помогайте встреченным на пути кланам и одиноким кочевникам.<br><br>• Окунитесь в приключение и помогите героине понять, кто она. А затем – используйте широкий выбор масок, костюмов и прочих аксессуаров, чтобы продемонстрировать это всему миру…<br><br>• Решайте головоломки и получайте награды, чтобы продолжить свой путь по безжалостной пустыне.",
+      "short_description": "Отправляйтесь в незабываемое священное путешествие вместе с Сэйбл, скользите через бескрайние пустыни и завораживающие пейзажи, осматривайте остовы космических кораблей и открывайте для себя чудеса древних цивилизаций.",
+      "supported_languages": "английский, французский, немецкий, испанский, бр. португальский, китайский (упр.)",
+      "reviews": "“A stunning debut from developer Shedworks”<br \/>\r\nPC Gamer<br \/>\r\n<br \/>\r\n“For those who love to explore, I can’t recommend Sable enough. Every element – beautiful graphics, compelling traversal, and player-driven plot – works together to ensure I simply lose myself in the world.”<br \/>\r\nGame Informer<br \/>\r\n<br \/>\r\n“Sable’s unique art style, memorable characters and quests, and engaging open-ended formula are going to stick with me for a long time.”<br \/>\r\nIGN<br \/>\r\n",
+      "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/header.jpg?t=1658922379",
+      "website": "http:\/\/sablegame.com",
       "pc_requirements": {
-        "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> Windows (7,8,10) 64-bit<br><\/li><li><strong>Processor:<\/strong> Intel Core i5<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA GeForce GTX 650 (2GB) or better<br><\/li><li><strong>DirectX:<\/strong> Version 11<br><\/li><li><strong>Storage:<\/strong> 2 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> Preferably a transmitter radio is wanted for best flying experience. Graphic settings are changeable to suit lower end devices.<\/li><\/ul>",
-        "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> Windows (7,8,10) 64-bit<br><\/li><li><strong>Processor:<\/strong> Intel Core i5 6500 or better<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA GeForce GTX 970 or better<\/li><\/ul>"
+        "minimum": "<strong>Минимальные:<\/strong><br><ul class=\"bb_ul\"><li>Требуются 64-разрядные процессор и операционная система<br><\/li><li><strong>ОС:<\/strong> Windows 10<br><\/li><li><strong>Процессор:<\/strong> AMD Ryzen™ 5 1400\/ Intel i3-6100<br><\/li><li><strong>Оперативная память:<\/strong> 8 GB ОЗУ<br><\/li><li><strong>Видеокарта:<\/strong> GTX 750Ti\/HD 6970<br><\/li><li><strong>DirectX:<\/strong> Версии 11<br><\/li><li><strong>Место на диске:<\/strong> 3 GB<br><\/li><li><strong>Дополнительно:<\/strong> Use of controller recommended<\/li><\/ul>",
+        "recommended": "<strong>Рекомендованные:<\/strong><br><ul class=\"bb_ul\"><li>Требуются 64-разрядные процессор и операционная система<br><\/li><li><strong>ОС:<\/strong> Windows 10<br><\/li><li><strong>Процессор:<\/strong> AMD Ryzen™ 5 2600X \/ Intel i5-9600K<br><\/li><li><strong>Оперативная память:<\/strong> 16 GB ОЗУ<br><\/li><li><strong>Видеокарта:<\/strong> GTX 1050 Ti\/R9 285<br><\/li><li><strong>DirectX:<\/strong> Версии 11<br><\/li><li><strong>Место на диске:<\/strong> 3 GB<br><\/li><li><strong>Дополнительно:<\/strong> Use of controller recommended<\/li><\/ul>"
       },
       "mac_requirements": {
-        "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> OSX 10.12<br><\/li><li><strong>Processor:<\/strong> 3.5Ghz<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> 2x2048MB<br><\/li><li><strong>Storage:<\/strong> 2 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> Preferably a transmitter radio is wanted for best flying experience. Graphic settings are changeable to suit lower end devices.<\/li><\/ul>",
-        "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> OSX 10.12 or newer<br><\/li><li><strong>Processor:<\/strong> 3.8Ghz or better<br><\/li><li><strong>Memory:<\/strong> 16 GB RAM<br><\/li><li><strong>Storage:<\/strong> 2 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> Preferably a transmitter radio is wanted for best flying experience. Graphic settings are changeable to suit lower end devices.<\/li><\/ul>"
+        "minimum": "<strong>Минимальные:<\/strong><br><ul class=\"bb_ul\"><li>Требуются 64-разрядные процессор и операционная система<br><\/li><li><strong>ОС:<\/strong> 10.8 Mountain Lion<\/li><\/ul>",
+        "recommended": "<strong>Рекомендованные:<\/strong><br><ul class=\"bb_ul\"><li>Требуются 64-разрядные процессор и операционная система<br><\/li><li><strong>ОС:<\/strong> 10.12 Sierra<\/li><\/ul>"
       },
       "linux_requirements": {
-        "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li><strong>Processor:<\/strong> Intel Core i5<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA GeForce GTX 650 (2GB)<br><\/li><li><strong>Storage:<\/strong> 2 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> Preferably a transmitter radio is wanted for best flying experience. Graphic settings are changeable to suit lower end devices.<\/li><\/ul>",
-        "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li><strong>Processor:<\/strong> Intel Core i5 6500 or better<br><\/li><li><strong>Memory:<\/strong> 16 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA GeForce GTX 970 or better<br><\/li><li><strong>Storage:<\/strong> 2 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> Preferably a transmitter radio is wanted for best flying experience. Graphic settings are changeable to suit lower end devices.<\/li><\/ul>"
+        "minimum": "<strong>Минимальные:<\/strong><br><ul class=\"bb_ul\"><li>Требуются 64-разрядные процессор и операционная система<\/li><\/ul>",
+        "recommended": "<strong>Рекомендованные:<\/strong><br><ul class=\"bb_ul\"><li>Требуются 64-разрядные процессор и операционная система<\/li><\/ul>"
       },
-      "developers": [ "ORQA, INC." ],
-      "publishers": [ "ORQA, INC." ],
-      "package_groups": [],
+      "legal_notice": "© Copyright 2022 Shedworks Digital Limited. Developed by Shedworks Digital Limited. Published by Raw Fury AB. All Rights Reserved.",
+      "developers": [ "Shedworks" ],
+      "publishers": [ "Raw Fury" ],
+      "price_overview": {
+        "currency": "RUB",
+        "initial": 49500,
+        "final": 19800,
+        "discount_percent": 60,
+        "initial_formatted": "495 pуб.",
+        "final_formatted": "198 pуб."
+      },
+      "packages": [ 223377 ],
+      "package_groups": [
+        {
+          "name": "default",
+          "title": "Купить Sable",
+          "description": "",
+          "selection_text": "Выберите способ покупки",
+          "save_text": "",
+          "display_type": 0,
+          "is_recurring_subscription": "false",
+          "subs": [
+            {
+              "packageid": 223377,
+              "percent_savings_text": ": -60%",
+              "percent_savings": 0,
+              "option_text": "Sable - <span class=\"discount_original_price\">495 pуб.<\/span> 198 pуб.",
+              "option_description": "",
+              "can_get_free_license": "0",
+              "is_free_license": false,
+              "price_in_cents_with_discount": 19800
+            }
+          ]
+        }
+      ],
       "platforms": {
         "windows": true,
-        "mac": true,
-        "linux": true
+        "mac": false,
+        "linux": false
+      },
+      "metacritic": {
+        "score": 76,
+        "url": "https:\/\/www.metacritic.com\/game\/pc\/sable?ftag=MCD-06-10aaa1f"
       },
       "categories": [
         {
           "id": 2,
-          "description": "Single-player"
+          "description": "Для одного игрока"
         },
         {
-          "id": 18,
-          "description": "Partial Controller Support"
+          "id": 22,
+          "description": "Достижения Steam"
+        },
+        {
+          "id": 28,
+          "description": "Контроллер (полностью)"
+        },
+        {
+          "id": 23,
+          "description": "Steam Cloud"
         }
       ],
       "genres": [
         {
           "id": "25",
-          "description": "Adventure"
+          "description": "Приключенческие игры"
         },
         {
-          "id": "4",
-          "description": "Casual"
+          "id": "23",
+          "description": "Инди"
         },
         {
-          "id": "37",
-          "description": "Free to Play"
-        },
-        {
-          "id": "9",
-          "description": "Racing"
-        },
-        {
-          "id": "28",
-          "description": "Simulation"
-        },
-        {
-          "id": "18",
-          "description": "Sports"
+          "id": "3",
+          "description": "Ролевые игры"
         }
       ],
       "screenshots": [
         {
           "id": 0,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_01ddde8feaa96663af807a6bf69445a27ce160e9.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_01ddde8feaa96663af807a6bf69445a27ce160e9.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_f7cf5d40340dfcfc534daff63be314fdbb9e6817.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_f7cf5d40340dfcfc534daff63be314fdbb9e6817.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 1,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_d30cca558365fa78000403b2ddc8e41f1896f431.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_d30cca558365fa78000403b2ddc8e41f1896f431.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_dbe1b07f58393b56c20e9ac031442e1e161fa989.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_dbe1b07f58393b56c20e9ac031442e1e161fa989.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 2,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_40d1e1ef8fdc0124d2e52cef30283f4d52fae22f.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_40d1e1ef8fdc0124d2e52cef30283f4d52fae22f.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_cad83dc56ce2d4e690df7d31eac8346db25baa9d.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_cad83dc56ce2d4e690df7d31eac8346db25baa9d.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 3,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_273c90c33c1fb7b91149c973fc46e30e487fe331.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_273c90c33c1fb7b91149c973fc46e30e487fe331.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_2a01e59f6610eb3fab65d17bc16f09430009db42.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_2a01e59f6610eb3fab65d17bc16f09430009db42.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 4,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_73ee7be2999b48b68164fda63709ff95b8810e54.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_73ee7be2999b48b68164fda63709ff95b8810e54.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_b8cac63ad21d78bbce72255fa607b1a27d3b5228.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_b8cac63ad21d78bbce72255fa607b1a27d3b5228.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 5,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_276b286cb97be1acc6afa0d8c1abc744233291d5.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_276b286cb97be1acc6afa0d8c1abc744233291d5.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_bb39016e03201f087cf07f6d15cb364577952f00.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_bb39016e03201f087cf07f6d15cb364577952f00.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 6,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_c3b791f5b0014dd9a27ed5e253f715066809b2d8.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_c3b791f5b0014dd9a27ed5e253f715066809b2d8.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_6132344e1a086e984169123445d637fef3b71a73.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_6132344e1a086e984169123445d637fef3b71a73.1920x1080.jpg?t=1658922379"
         },
         {
           "id": 7,
-          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_de4d4080f9196ea84faa2f4b55c2398371833ee2.600x338.jpg?t=1653393360",
-          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/ss_de4d4080f9196ea84faa2f4b55c2398371833ee2.1920x1080.jpg?t=1653393360"
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_e13b29d28b0342943b3ba93d49ddbb86c22d3678.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_e13b29d28b0342943b3ba93d49ddbb86c22d3678.1920x1080.jpg?t=1658922379"
+        },
+        {
+          "id": 8,
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_42cda8baa193043bba36e4dd57f965973e41b5e3.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_42cda8baa193043bba36e4dd57f965973e41b5e3.1920x1080.jpg?t=1658922379"
+        },
+        {
+          "id": 9,
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_efb5438e53ed5463bc89076cc99a3290dc55db85.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_efb5438e53ed5463bc89076cc99a3290dc55db85.1920x1080.jpg?t=1658922379"
+        },
+        {
+          "id": 10,
+          "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_933ecaca56119bedc696cdf364eed4e7b6b86165.600x338.jpg?t=1658922379",
+          "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/ss_933ecaca56119bedc696cdf364eed4e7b6b86165.1920x1080.jpg?t=1658922379"
         }
       ],
       "movies": [
         {
-          "id": 256843213,
-          "name": "Abandoned Factory Map Trailer",
-          "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256843213\/movie.293x165.jpg?t=1626440682",
+          "id": 256852595,
+          "name": "Sable Launch Trailer",
+          "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256852595\/movie.293x165.jpg?t=1632397783",
           "webm": {
-            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256843213\/movie480_vp9.webm?t=1626440682",
-            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256843213\/movie_max_vp9.webm?t=1626440682"
+            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256852595\/movie480_vp9.webm?t=1632397783",
+            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256852595\/movie_max_vp9.webm?t=1632397783"
           },
           "mp4": {
-            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256843213\/movie480.mp4?t=1626440682",
-            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256843213\/movie_max.mp4?t=1626440682"
+            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256852595\/movie480.mp4?t=1632397783",
+            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256852595\/movie_max.mp4?t=1632397783"
           },
           "highlight": true
         },
         {
-          "id": 256784275,
-          "name": "SkyDive Gameplay #1",
-          "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256784275\/movie.293x165.jpg?t=1588618005",
+          "id": 256838749,
+          "name": "Sable Date Announce Trailer",
+          "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256838749\/movie.293x165.jpg?t=1623650430",
           "webm": {
-            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256784275\/movie480_vp9.webm?t=1588618005",
-            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256784275\/movie_max_vp9.webm?t=1588618005"
+            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256838749\/movie480_vp9.webm?t=1623650430",
+            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256838749\/movie_max_vp9.webm?t=1623650430"
           },
           "mp4": {
-            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256784275\/movie480.mp4?t=1588618005",
-            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256784275\/movie_max.mp4?t=1588618005"
+            "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256838749\/movie480.mp4?t=1623650430",
+            "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256838749\/movie_max.mp4?t=1623650430"
           },
           "highlight": true
         }
       ],
+      "recommendations": { "total": 2381 },
       "achievements": {
-        "total": 4,
+        "total": 53,
         "highlighted": [
           {
-            "name": "Red Valley Egg Hunter",
-            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1278060\/361f1ddc5e2024a0ac27a74ceb0f10d5d796d629.jpg"
+            "name": "Just The Two of Us",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/ce30f9fce7cc9889279f1c80d1123e45935f7df8.jpg"
           },
           {
-            "name": "Construction Arena Egg Hunter",
-            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1278060\/e5859631a2b911074746197cce3b8a9691095956.jpg"
+            "name": "The Gliding",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/fc590482b2695e31f963de3a42322c90db5b9067.jpg"
           },
           {
-            "name": "Abandoned Factory Egg Hunter",
-            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1278060\/a0e44e599a4235501f19492038d6b59cf2fde4a6.jpg"
+            "name": "Chum Expert",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/e3584a64ca8a28e167a772d3a7cde96217ef933b.jpg"
           },
           {
-            "name": "Eggomaniac",
-            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1278060\/780ba72a86bee2134f9f7b22317bccb0d804930d.jpg"
+            "name": "The Quick and the Curious",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/aa5258951eacf8d0ac645f54025b181078c61ec1.jpg"
+          },
+          {
+            "name": "Amateur Historian",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/83a2310c1d2d1490d84201f87ae93316b4691e7f.jpg"
+          },
+          {
+            "name": "The Machinist Mask",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/500199b79a3aac2ebe69bbf3944afa81de51e923.jpg"
+          },
+          {
+            "name": "The Beetle Mask",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/7de0e860edf78db86048f3a5ca12cb56e1097943.jpg"
+          },
+          {
+            "name": "The Climber Mask",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/d607765bb0a3bd05859b27df429037d03190e5b1.jpg"
+          },
+          {
+            "name": "The Entertainer Mask",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/9ee2b9e8663f175117cd18bed5a1d8760ec9b0f0.jpg"
+          },
+          {
+            "name": "The Guard Mask",
+            "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/757310\/ada1841c5c8b34294b91bc03d2fa9f5c5196e5a9.jpg"
           }
         ]
       },
       "release_date": {
         "coming_soon": false,
-        "date": "31 May, 2021"
+        "date": "23 сен. 2021"
       },
       "support_info": {
-        "url": "https:\/\/www.orqafpv.com\/",
-        "email": "support@orqafpv.com"
+        "url": "https:\/\/rawfury.atlassian.net\/servicedesk\/customer\/portal\/1",
+        "email": "support@rawfury.com"
       },
-      "background": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/page_bg_generated_v6b.jpg?t=1653393360",
-      "background_raw": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1278060\/page_bg_generated.jpg?t=1653393360",
+      "background": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/page_bg_generated_v6b.jpg?t=1658922379",
+      "background_raw": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/757310\/page.bg.jpg?t=1658922379",
       "content_descriptors": {
         "ids": [],
         "notes": null

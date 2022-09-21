@@ -1,9 +1,9 @@
+using Microsoft.Maui.Controls.Platform;
+
 namespace SteamKeysApp.Pages;
 
 public partial class GameDetailsPage : ContentPage
 {
-	public Game Game { get; set; }
-
     private GameDetailsViewModel viewModel => BindingContext as GameDetailsViewModel;
 
     public GameDetailsPage(GameDetailsViewModel viewModel)
@@ -17,9 +17,4 @@ public partial class GameDetailsPage : ContentPage
 		base.OnAppearing();
         await viewModel.InitializeAsync();
     }
-
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
-	{
-		base.OnNavigatedTo(args);
-	}
 }

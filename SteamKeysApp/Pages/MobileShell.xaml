@@ -3,10 +3,15 @@
     x:Class="SteamKeysApp.Pages.MobileShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SteamKeysApp.Controls"
+    xmlns:models="clr-namespace:SteamKeysApp.Models"
     xmlns:pages="clr-namespace:SteamKeysApp.Pages"
-    xmlns:root="clr-namespace:SteamKeysApp"
+    xmlns:res="clr-namespace:SteamKeysApp.Resources.Strings"
     xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
-    x:DataType="viewModels:ShellViewModel">
+    xmlns:views="clr-namespace:SteamKeysApp.Views"
+    x:DataType="viewModels:ShellViewModel"
+    FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource ShellBgLight},
+                                            Dark={StaticResource ShellBgDark}}">
 
     <TabBar>
         <Tab Title="{Binding GamesCatalog.Title}" Icon="{Binding GamesCatalog.Icon}">
@@ -20,7 +25,7 @@
         <Tab Title="{Binding Info.Title}" Icon="{Binding Info.Icon}">
             <ShellContent ContentTemplate="{DataTemplate pages:InfoPage}" />
         </Tab>
-        
+
         <Tab Title="{Binding Profile.Title}" Icon="{Binding Profile.Icon}">
             <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
         </Tab>

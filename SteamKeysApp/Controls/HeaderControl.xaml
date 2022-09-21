@@ -13,29 +13,20 @@
                     <Grid RowDefinitions="auto, auto">
                         <SearchBar
                             x:Name="searchBar"
-                            HorizontalOptions="End"
+                            IsTextPredictionEnabled="True"
+                            Placeholder="{x:Static res:AppResource.Semantic_Description_Tap_Search}"
                             SearchCommand="{Binding SearchCommand, Source={x:Reference selfMediaElementView}}"
-                            SemanticProperties.Description="{x:Static res:AppResource.Semantic_Description_Tap_Search}"
                             Text="{Binding TextToSearch, Source={x:Reference selfMediaElementView}}"
                             WidthRequest="360" />
                     </Grid>
                 </On>
 
-                <On Platform="Android,iOS">
-                    <Grid Margin="16,12" ColumnDefinitions="auto, *">
+                <!--<On Platform="Android,iOS">
+                    <Grid ColumnDefinitions="auto, *">
                         <Image
-                            HeightRequest="34"
-                            HorizontalOptions="End"
-                            Source="{AppThemeBinding Light=logo_header_horizontal.png,
-                                                     Dark=logo_color_horizontal_darkmode.png}"
-                            VerticalOptions="Center"
-                            WidthRequest="125" />
-                        <Image
-                            Grid.Column="1"
                             HeightRequest="20"
                             HorizontalOptions="End"
-                            Source="{AppThemeBinding Light=search.png,
-                                                     Dark=search_dark.png}"
+                            Source="{AppThemeBinding Light=search.png, Dark=search_dark.png}"
                             VerticalOptions="Center"
                             WidthRequest="20">
 
@@ -44,7 +35,7 @@
                             </Image.GestureRecognizers>
                         </Image>
                     </Grid>
-                </On>
+                </On>-->
             </OnPlatform>
         </ContentView>
     </ContentView.Content>

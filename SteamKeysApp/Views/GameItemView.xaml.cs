@@ -5,38 +5,12 @@ namespace SteamKeysApp.Views;
 
 public partial class GameItemView
 {
-    public static readonly BindableProperty SubscriptionCommandProperty =
-        BindableProperty.Create(
-            nameof(SubscriptionCommand),
-            typeof(ICommand),
-            typeof(GameItemView),
-            default(string));
-
-    public static readonly BindableProperty SubscriptionCommandParameterProperty =
-        BindableProperty.Create(
-            nameof(SubscriptionCommandParameter),
-            typeof(GameItemView),
-            typeof(GameItemView),
-            default(GameItemView));
-
     public static readonly BindableProperty IsLoadingProperty =
         BindableProperty.Create(
             nameof(IsLoading),
             typeof(bool),
             typeof(GameItemView),
             true);
-
-    public ICommand SubscriptionCommand
-    {
-        get { return (ICommand)GetValue(SubscriptionCommandProperty); }
-        set { SetValue(SubscriptionCommandProperty, value); }
-    }
-
-    public GameItemView SubscriptionCommandParameter
-    {
-        get { return (GameItemView)GetValue(SubscriptionCommandParameterProperty); }
-        set { SetValue(SubscriptionCommandParameterProperty, value); }
-    }
 
     public bool IsLoading
     {
@@ -56,5 +30,14 @@ public partial class GameItemView
             await Task.Delay(2000);
             IsLoading = false;
         });
+    }
+
+    private async void Animate(object sender, EventArgs e)
+    {
+        ImageButton b = (ImageButton)sender;
+
+        await b.ScaleTo(2.0, 300, Easing.BounceIn);
+        b.Source = "starred.png"; // = !
+        await b.ScaleTo(1.0, 300, Easing.BounceOut);
     }
 }

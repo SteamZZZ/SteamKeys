@@ -10,23 +10,33 @@
     xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
     xmlns:views="clr-namespace:SteamKeysApp.Views"
     x:DataType="viewModels:FavoritesPageViewModel"
-    Style="{StaticResource MainSectionStyle}">
+    Style="{StaticResource DefaultPage}">
 
-    <Grid Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}">
+    <Grid ColumnDefinitions="*,Auto" RowDefinitions="70, *">
+
+        <ActivityIndicator
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HeightRequest="60"
+            HorizontalOptions="Center"
+            IsRunning="True"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="Center"
+            WidthRequest="60"
+            ZIndex="1000"
+            Color="{StaticResource Primary}" />
+
+        <Label
+            Grid.Column="0"
+            Style="{StaticResource MainLabel}"
+            Text="{Static res:AppResource.Favorites}" />
 
         <CollectionView
+            x:Name="gamesCollectionView"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
             Margin="10"
-            Background="{AppThemeBinding Light={StaticResource Gray100},
-                                         Dark={StaticResource Gray900}}"
             ItemsSource="{Binding LikedGames}">
-
-            <CollectionView.Header>
-                <Label
-                        Margin="14,20,0,0"
-                        HorizontalOptions="Start"
-                        Style="{StaticResource H5LabelStyle}"
-                        Text="{Static res:AppResource.Favorites}" />
-            </CollectionView.Header>
 
             <CollectionView.ItemsLayout>
                 <GridItemsLayout
@@ -40,31 +50,31 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <views:GameItemView SubscriptionCommand="{Binding SubscribeCommand, Source={RelativeSource AncestorType={x:Type viewModels:GamesCatalogPageViewModel}}}" SubscriptionCommandParameter="{Binding}" />
+                    <views:GameItemView />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
             <CollectionView.EmptyView>
-                <Grid Padding="{OnIdiom Desktop=200, Default=50}" RowDefinitions="*, auto">
-                    <Image
-                        HorizontalOptions="Center"
-                        Source="nodata1.png"
-                        VerticalOptions="Center">
-                        <Image.Shadow>
-                            <Shadow
-                                Brush="#000000"
-                                Opacity="0.8"
-                                Radius="40"
-                                Offset="20,20" />
-                        </Image.Shadow>
-                    </Image>
+                <ContentView>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
-                    <Label
-                        Grid.Row="1"
-                        HorizontalTextAlignment="Center"
-                        Style="{StaticResource BodySLabelStyle}"
-                        Text="{x:Static res:AppResource.Semantic_Description_No_Favorites}" />
-                </Grid>
+                        <Image HeightRequest="200" Source="nodata.png">
+                            <Image.Shadow>
+                                <Shadow
+                                    Brush="{StaticResource Secondary}"
+                                    Opacity="0.8"
+                                    Radius="40"
+                                    Offset="20,20" />
+                            </Image.Shadow>
+                        </Image>
+
+                        <Label
+                            HorizontalOptions="Fill"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource BodySLabelStyle}"
+                            Text="{x:Static res:AppResource.Semantic_Description_No_Favorites}" />
+                    </StackLayout>
+                </ContentView>
             </CollectionView.EmptyView>
 
         </CollectionView>

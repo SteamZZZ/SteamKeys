@@ -1,8 +1,12 @@
-﻿namespace SteamKeysApp.Models;
+﻿using Newtonsoft.Json;
+
+namespace SteamKeysApp.Models;
 
 public class Store
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Link { get; set; }
+    [JsonProperty("OSL_SITE_NAME")]  public string Name { get; set; }  
+    [JsonProperty("OSL_PRICE"), JsonConverter(typeof(NullToZeroConverter))] public double Price { get; set; }   
+    [JsonProperty("OSL_REF")]  public string Link { get; set; }
+
+    public override string ToString() => $"{Name}: {Price}";
 }

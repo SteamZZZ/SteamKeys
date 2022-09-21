@@ -2,9 +2,11 @@ namespace SteamKeysApp.Pages;
 
 public partial class SettingsPage : ContentPage
 {
-	public SettingsPage()
+    SettingsPageViewModel vm => BindingContext as SettingsPageViewModel;
+
+    public SettingsPage(SettingsPageViewModel vm)
 	{
 		InitializeComponent();
-		BindingContext = new SettingsPageViewModel();
+		BindingContext = vm;
 	}
 }

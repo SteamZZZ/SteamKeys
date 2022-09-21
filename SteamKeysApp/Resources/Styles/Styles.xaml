@@ -2,41 +2,19 @@
 <?xaml-comp compile="true" ?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Style x:Key="MainSectionStyle" TargetType="Page">
-        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+    <Style x:Key="DefaultPage" TargetType="Page">
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource BgLight}, Dark={StaticResource BgDark}}" />
         <Setter Property="Shell.NavBarIsVisible" Value="False" />
-    </Style>
-
-    <Style
-        x:Key="DetailPageStyle"
-        BasedOn="{StaticResource MainSectionStyle}"
-        TargetType="Page">
-        <Setter Property="Shell.NavBarIsVisible" Value="{OnPlatform Android=true, iOS=true, UWP=false, MacCatalyst=true}" />
     </Style>
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>
 
-    <Style TargetType="IndicatorView">
-        <Setter Property="IndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
-        <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray100}}" />
-    </Style>
-
-    <Style TargetType="Border">
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
-        <Setter Property="StrokeShape" Value="Rectangle" />
-        <Setter Property="StrokeThickness" Value="1" />
-    </Style>
-
-    <Style TargetType="BoxView">
-        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
-    </Style>
-
     <Style TargetType="Button">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="SFProDisplayRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="8" />
         <Setter Property="Padding" Value="14,10" />
@@ -266,7 +244,7 @@
     <Style TargetType="Shadow">
         <Setter Property="Radius" Value="15" />
         <Setter Property="Opacity" Value="0.5" />
-        <Setter Property="Brush" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="Brush" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
         <Setter Property="Offset" Value="10,10" />
     </Style>
 
@@ -448,13 +426,23 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray100}}" />
     </Style>
 
-    <!--<Style TargetType="Label">
-        <Setter Property="FontFamily" Value="SFProDisplayRegular" />
-        <Setter Property="FontSize" Value="17" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray100}}" />
-    </Style>-->
+    <Style
+        x:Key="MainLabel"
+        BasedOn="{StaticResource H5LabelStyle}"
+        TargetType="Label">
+        <Setter Property="Margin" Value="{OnIdiom Desktop='20,30,10,0', Phone='10,20,0,0'}" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+    </Style>
 
     <!--#endregion-->
 
+    <Style x:Key="Separator" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="6" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Color" Value="{StaticResource Primary}" />
+        <Setter Property="Margin" Value="0, 5, 0, 5" />
+        <Setter Property="Opacity" Value="1.0" />
+    </Style>
 
 </ResourceDictionary>

@@ -3,27 +3,57 @@
 public partial class GameItemViewModel : BaseViewModel
 {
     public Game Game { get; set; }
+    readonly GamesService GamesService;
+    readonly ProfileService _profileService;
 
-    [ObservableProperty]
-    bool isSubscribed;
+    [ObservableProperty] string name;
+    [ObservableProperty] string image;
 
-    public string Name => Game.Name;
-    public string Image => Game.Image;
-    //public bool IsAvaliable => Game.IsAvaliable;
-    //public float PriceDollar => Game.PriceDollar;
-    //public float PriceRu => Game.PriceRu;
-    //public float PriceKz => Game.PriceKz;
-    //public float PriceTr => Game.PriceTr;
+    [ObservableProperty] bool isFree;
+    [ObservableProperty] Color color;
+    [ObservableProperty] bool isInStore;
 
-    public string CheapestStore => Game.CheapestStore;
-    public float LowestPrice => Game.LowestPrice;
+    [ObservableProperty] string priceRu;
+    [ObservableProperty] string lowestPrice;
+    [ObservableProperty] bool isAvaliable;
 
-    public GameItemViewModel(Game game, bool isSubscribed)
+    public GameItemViewModel(Game game, GamesService gs, ProfileService ps)
     {
         Game = game;
-        IsSubscribed = isSubscribed;
+        GamesService = gs;
+        _profileService = ps;
+
+        Name = Game.Name;
+        Image = Game.Image;
+
+        IsFree = Game.PriceRu == 0 ? true : false;
+        Color = IsFree ? Colors.Green : Colors.Blue;
+        PriceRu = IsFree ? "Бесплатно" : $"{Game.PriceRu}₽";
+
+        isInStore = Game.StoreLowestPrice != 0;
+        LowestPrice = $"{Game.StoreLowestPrice}";
+        IsAvaliable = Game.IsAvaliable;
     }
 
     [RelayCommand]
-    Task NavigateToDetail() => Shell.Current.GoToAsync($"{nameof(GameDetailsPage)}?Id={Game.SteamId}");
+    async Task ToFavorite()
+    {
+        await GamesService.AddToFavorites(_profileService.UserId, Game.SteamId);
+    }
+
+    [RelayCommand]
+    async Task GoToGameDetailsPage(Game game)
+    {
+        IsBusy = true;
+
+        if (game is null)
+            return;
+
+        await Shell.Current.GoToAsync($"{nameof(GameDetailsPage)}", true, new Dictionary<string, object>
+            {
+                { "Game", game }
+            });
+
+        IsBusy = false;
+    }
 }

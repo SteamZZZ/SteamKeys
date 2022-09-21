@@ -1,117 +1,74 @@
-﻿namespace SteamKeysApp.ViewModels;
+﻿using MvvmHelpers;
+
+namespace SteamKeysApp.ViewModels;
 
 public partial class GamesCatalogPageViewModel : BaseViewModel
 {
     [ObservableProperty]
-    string text;
-
+    ObservableRangeCollection<GameItemViewModel> allGames = new();
     [ObservableProperty]
-    bool isRefreshing;
+    ObservableRangeCollection<GameItemViewModel> searchedGames = new();
 
-    [ObservableProperty]
-    public List<GameItemViewModel> games;
+    [ObservableProperty] bool isRefreshing;
+    [ObservableProperty] string text;
+
+    private int _itemsToLoad = 40;
 
     readonly GamesService gamesService;
-    readonly SubscriptionsService subscriptionsService;
+    readonly ProfileService profileService;
 
-    public GamesCatalogPageViewModel(GamesService gs, SubscriptionsService ss)
+    public GamesCatalogPageViewModel(GamesService gs, ProfileService ls)
     {
         gamesService = gs;
-        subscriptionsService = ss;
+        profileService = ls;
 
-        TryParseSteam.ParserManager pm = new TryParseSteam.ParserManager();
-        pm.Get
+        Task.Run(() => LoadMoreGames()); // catalog init
     }
 
-    public async Task InitializeAsync()
+    [RelayCommand]
+    public async Task LoadMoreGames()
     {
-        var games = await gamesService.GetGames();
-        Games = LoadGames(games);
+        IsRefreshing = true;
+
+        var games = await gamesService.LoadGames(AllGames.Count + 1, _itemsToLoad);
+        foreach (var g in games)
+        {
+            var gameVM = new GameItemViewModel(g, gamesService, profileService);
+            AllGames.Add(gameVM);
+        }
+
+        IsRefreshing = false;
     }
 
+    [RelayCommand]
+    public async Task LoadSearchedGames() // Delay
+    {
+        IsRefreshing = true;
+
+        SearchedGames.Clear();
+
+        if (!string.IsNullOrEmpty(text))
+        {
+            var games = await gamesService.SearchGamesAsync(text);
+
+            if (games != null)
+            {
+                foreach (var g in games)
+                {
+                    var gameVM = new GameItemViewModel(g, gamesService, profileService);
+                    SearchedGames.Add(gameVM);
+                }
+            }
+        }
+
+        IsRefreshing = false;
+    }
 
     //[RelayCommand]
-    //async Task GetGamesAsync()
+    //async Task Subscribe(GameItemViewModel vm)
     //{
-    //    if (IsBusy)
-    //        return;
-
-    //    try
-    //    {
-    //        //if (connectivity.NetworkAccess != NetworkAccess.Internet)
-    //        //{
-    //        //    await Shell.Current.DisplayAlert("No connectivity!",
-    //        //        $"Please check internet and try again.", "OK");
-    //        //    return;
-    //        //}
-
-    //        IsBusy = true;
-    //        var games = await gamesService.GetGames();
-
-    //        if (Games.Count != 0)
-    //            Games.Clear();
-
-    //        foreach (var game in games)
-    //            Games.Add(game);
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        Debug.WriteLine($"Unable to get games: {ex.Message}");
-    //        await Shell.Current.DisplayAlert("Error", $"Unable to get games: {ex.Message}", "OK");
-    //    }
-    //    finally
-    //    {
-    //        IsBusy = false;
-    //        IsRefreshing = false;
-    //    }
+    //    await subscriptionsService.UnSubscribeFromShowAsync(vm.Game);
+    //    OnPropertyChanged(nameof(vm.IsSubscribed));
     //}
-
-
-    [RelayCommand]
-    async Task Subscribe(GameItemViewModel vm)
-    {
-        await subscriptionsService.UnSubscribeFromShowAsync(vm.Game);
-        OnPropertyChanged(nameof(vm.IsSubscribed));
-    }
-
-
-    [RelayCommand]
-    async void Search()
-    {
-        var games = await gamesService.SearchGamesAsync(Text);
-        Games = LoadGames(games);
-    }
-
-
-    List<GameItemViewModel> LoadGames(IEnumerable<Game> games)
-    {
-        var gamesList = new List<GameItemViewModel>();
-
-        if (games == null)
-        {
-            return gamesList;
-        }
-
-        foreach (var game in games)
-        {
-            var gameVM = new GameItemViewModel(game, subscriptionsService.IsSubscribed(game.SteamId));
-            gamesList.Add(gameVM);
-        }
-
-        return gamesList;
-    }
-
-
-    [RelayCommand]
-    async Task GoToDetailsAsync(Game game)
-    {
-        if (game is null)
-            return;
-
-        await Shell.Current.GoToAsync($"{nameof(GameDetailsPage)}", true, new Dictionary<string, object>
-            {
-                { "Game", game }
-            });
-    }
 }
 

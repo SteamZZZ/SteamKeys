@@ -1,55 +1,674 @@
 [
-   {
-        "SteamId": 2076600,
-        "Name": "MonsterTamer"    },
-    {
-        "SteamId": 2076660,
-        "Name": "Voyager 2"    },
-    {
-        "SteamId": 2076720,
-        "Name": "Prostitute Simulator"    },
-    {
-        "SteamId": 2076730,
-        "Name": "Mud Way"    },
-    {
-        "SteamId": 2076740,
-        "Name": "My Stepbro is a Femboy"    },
-    {
-        "SteamId": 2076760,
-        "Name": "Beasts Rampage Demo"    },
-    {
-        "SteamId": 2076790,
-        "Name": "RPG Maker MZ - Futuristic Cities: Robot Expansion"    },
-    {
-        "SteamId": 2076800,
-        "Name": "Hanyo"    },
-    {
-        "SteamId": 2076810,
-        "Name": "Further Still: Survivors"    },
-    {
-        "SteamId": 2076840,
-        "Name": "Utomah"    },
-    {
-        "SteamId": 2076850,
-        "Name": "Keyboard Warrior: Dreamstate"    },
-    {
-        "SteamId": 2076890,
-        "Name": "Rapid Retort"    },
-    {
-        "SteamId": 2076910,
-        "Name": "The Last Metal Shooter"    },
-    {
-        "SteamId": 2076920,
-        "Name": "Our Hero! Last"    },
-    {
-        "SteamId": 2076950,
-        "Name": "Waifu Klondike Solitaire"    },
-    {
-        "SteamId": 2076960,
-        "Name": "Dave Dave Dave Playtest"    
-    },
-    {
-        "SteamId": 2077020,
-        "Name": "GirlPuzzle"    
-    }
+  {
+    "GL_STEAM_ID": 492030,
+    "GL_NAME": "Wyatt Derp - Western Rock Music Player",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 492040,
+    "GL_NAME": "Wyatt Derp 2 - Western Country Music Player",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 492050,
+    "GL_NAME": "Dungeons Of Kragmor - Wizard Rock Music Player",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 492060,
+    "GL_NAME": "Starship Novastrike - Space House Music Player",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1965490,
+    "GL_NAME": "Mist Monkey: wanderer",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 7.19,
+    "GL_PRICE_RU": 175.0,
+    "GL_PRICE_KZ": 1440.0,
+    "GL_PRICE_TR": 13.95,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1106340,
+    "GL_NAME": "Legend Bowl",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 24.99,
+    "GL_PRICE_RU": 465.0,
+    "GL_PRICE_KZ": 3300.0,
+    "GL_PRICE_TR": 40.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1331420,
+    "GL_NAME": "Rogue Arrows",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 9.99,
+    "GL_PRICE_RU": 259.0,
+    "GL_PRICE_KZ": 1850.0,
+    "GL_PRICE_TR": 18.5,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 221260,
+    "GL_NAME": "Little Inferno",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 14.99,
+    "GL_PRICE_RU": 360.0,
+    "GL_PRICE_KZ": 2400.0,
+    "GL_PRICE_TR": 25.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": "SteamKey",
+        "OSL_PRICE": 149.0,
+        "OSL_REF": "https://steamkey.com/little-inferno"
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 336380,
+    "GL_NAME": "Catmouth Island",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.99,
+    "GL_PRICE_RU": 29.0,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": 2.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1154830,
+    "GL_NAME": "Scathe",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 24.99,
+    "GL_PRICE_RU": 599.0,
+    "GL_PRICE_KZ": 3900.0,
+    "GL_PRICE_TR": 57.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 268850,
+    "GL_NAME": "EVGA Precision X1",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 460040,
+    "GL_NAME": "Empires Dedicated Server",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1851760,
+    "GL_NAME": "Tomorrow's Past",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1366850,
+    "GL_NAME": "Stuntfest - World Tour",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2026980,
+    "GL_NAME": "Project RBG",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2116670,
+    "GL_NAME": "Corndog",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 1.99,
+    "GL_PRICE_RU": 61.0,
+    "GL_PRICE_KZ": 450.0,
+    "GL_PRICE_TR": 4.2,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2022610,
+    "GL_NAME": "CRETE",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1472660,
+    "GL_NAME": "No Place Like Home",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 19.99,
+    "GL_PRICE_RU": 435.0,
+    "GL_PRICE_KZ": 2650.0,
+    "GL_PRICE_TR": 32.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1533960,
+    "GL_NAME": "Liars Village",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 6.99,
+    "GL_PRICE_RU": 175.0,
+    "GL_PRICE_KZ": 1400.0,
+    "GL_PRICE_TR": 13.5,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1950460,
+    "GL_NAME": "My Trainer is a Futanari",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.99,
+    "GL_PRICE_RU": 30.0,
+    "GL_PRICE_KZ": 250.0,
+    "GL_PRICE_TR": 2.1,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1985660,
+    "GL_NAME": "Spectral Showdown",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2020520,
+    "GL_NAME": "风色幻想5:赤月战争",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 5.99,
+    "GL_PRICE_RU": 306.0,
+    "GL_PRICE_KZ": 2100.0,
+    "GL_PRICE_TR": 82.5,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2059760,
+    "GL_NAME": "Elden Gunfire 2",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 6.29,
+    "GL_PRICE_RU": 143.0,
+    "GL_PRICE_KZ": 1225.0,
+    "GL_PRICE_TR": 11.55,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2064590,
+    "GL_NAME": "Pathfinder: Wrath of the Righteous – The Treasure of the Midnight Isles",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 12.99,
+    "GL_PRICE_RU": 369.0,
+    "GL_PRICE_KZ": 2300.0,
+    "GL_PRICE_TR": 51.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2076740,
+    "GL_NAME": "My Stepbro is a Femboy",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.99,
+    "GL_PRICE_RU": 30.0,
+    "GL_PRICE_KZ": 250.0,
+    "GL_PRICE_TR": 2.1,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2080070,
+    "GL_NAME": "Avocado Puzzle Quest",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 10.99,
+    "GL_PRICE_RU": 89.0,
+    "GL_PRICE_KZ": 990.0,
+    "GL_PRICE_TR": 19.5,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 2104780,
+    "GL_NAME": "Spooky Mansion Manager",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 9.99,
+    "GL_PRICE_RU": 350.0,
+    "GL_PRICE_KZ": 2250.0,
+    "GL_PRICE_TR": 149.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1227160,
+    "GL_NAME": "MENTAL",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 29.99,
+    "GL_PRICE_RU": 515.0,
+    "GL_PRICE_KZ": 3900.0,
+    "GL_PRICE_TR": 50.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 935490,
+    "GL_NAME": "AreaZ",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 17.99,
+    "GL_PRICE_RU": 399.0,
+    "GL_PRICE_KZ": 2600.0,
+    "GL_PRICE_TR": 28.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1270580,
+    "GL_NAME": "Mind Over Magic",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 1659410,
+    "GL_NAME": "Dungeon Lad",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 9.99,
+    "GL_PRICE_RU": 259.0,
+    "GL_PRICE_KZ": 1850.0,
+    "GL_PRICE_TR": 18.5,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369320,
+    "GL_NAME": "EVE Online: 900 Aurum",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369321,
+    "GL_NAME": "EVE Online: 2000 Aurum",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369322,
+    "GL_NAME": "EVE Online: 5150 Aurum",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369324,
+    "GL_NAME": "EVE Online: 10750 Aurum",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369325,
+    "GL_NAME": "EVE Online: 23000 Aurum",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369350,
+    "GL_NAME": "In Exilium - OST",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 0.0,
+    "GL_PRICE_RU": null,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": null,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369360,
+    "GL_NAME": "Car Washer: Summer of the Ninja",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 4.99,
+    "GL_PRICE_RU": 129.0,
+    "GL_PRICE_KZ": 1050.0,
+    "GL_PRICE_TR": 10.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369370,
+    "GL_NAME": "Crossfire: Dungeons",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 3.99,
+    "GL_PRICE_RU": 99.0,
+    "GL_PRICE_KZ": 850.0,
+    "GL_PRICE_TR": 8.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369420,
+    "GL_NAME": "9 Clues 2: The Ward",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 9.99,
+    "GL_PRICE_RU": 349.0,
+    "GL_PRICE_KZ": 1850.0,
+    "GL_PRICE_TR": 18.0,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369440,
+    "GL_NAME": "Immortal: Unchained",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 10.99,
+    "GL_PRICE_RU": 269.0,
+    "GL_PRICE_KZ": 1950.0,
+    "GL_PRICE_TR": 19.5,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  },
+  {
+    "GL_STEAM_ID": 369450,
+    "GL_NAME": "Guns and Goblins",
+    "GL_AVAILABILITY": null,
+    "GL_PRICE": 1.69,
+    "GL_PRICE_RU": 50.0,
+    "GL_PRICE_KZ": null,
+    "GL_PRICE_TR": 3.4,
+    "dbo.OTHER_SITE_LIST": [
+      {
+        "OSL_SITE_NAME": null,
+        "OSL_PRICE": null,
+        "OSL_REF": null
+      }
+    ]
+  }
 ]

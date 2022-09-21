@@ -2,9 +2,17 @@ namespace SteamKeysApp.Pages;
 
 public partial class FavoritesPage : ContentPage
 {
-	public FavoritesPage()
-	{
-		InitializeComponent();
-        BindingContext = new FavoritesPageViewModel();
+    FavoritesPageViewModel vm => BindingContext as FavoritesPageViewModel;
+
+    public FavoritesPage(FavoritesPageViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
     }
+
+    protected override async void OnAppearing()
+	{
+		base.OnAppearing();
+        await vm.LoadLikedGames();
+	}
 }

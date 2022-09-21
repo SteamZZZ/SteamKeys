@@ -9,7 +9,8 @@ public static class ServicesExtensions
         //builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
 
         builder.Services.AddSingleton<GamesService>();
-        builder.Services.AddSingleton<SubscriptionsService>();
+        builder.Services.AddSingleton<ProfileService>();
+        builder.Services.AddSingleton<CurrencyService>();
 
         return builder;
     }

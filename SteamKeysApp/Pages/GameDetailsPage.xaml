@@ -3,177 +3,135 @@
     x:Class="SteamKeysApp.Pages.GameDetailsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SteamKeysApp.Controls"
     xmlns:models="clr-namespace:SteamKeysApp.Models"
     xmlns:pages="clr-namespace:SteamKeysApp.Pages"
+    xmlns:res="clr-namespace:SteamKeysApp.Resources.Strings"
     xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
-    Title="{Binding GameInfo.Data.Name}"
+    xmlns:views="clr-namespace:SteamKeysApp.Views"
     x:DataType="viewModels:GameDetailsViewModel"
-    Style="{StaticResource DetailPageStyle}">
+    Style="{StaticResource DefaultPage}">
 
-    <Grid Background="{AppThemeBinding Light={StaticResource Grey1}, Dark={StaticResource Grey9}}">
+    <Grid RowDefinitions="Auto,Auto">
 
-        <VerticalStackLayout Spacing="10">
-            <Label Text="{Binding GameInfo.Data.DetailedDescription}" />
-            <Image Source="{Binding GameInfo.Data.BackgroundRaw}" />
-        </VerticalStackLayout>
+        <Label
+            Grid.Row="0"
+            Style="{StaticResource MainLabel}"
+            Text="{Binding Name}"
+            TextColor="{StaticResource Primary}"
+            ZIndex="100" />
 
+        <Image
+            Aspect="AspectFill"
+            Source="{Binding Background}"
+            ZIndex="-100" />
 
-        <!--<CollectionView
-            Margin="{OnIdiom Phone='10,0',
-                             Default='10,50,10,0'}"
-            ItemsSource="{Binding Episodes}"
-            SelectionMode="None">
+        <HorizontalStackLayout Margin="20,80,0,80" Spacing="40">
 
-            <CollectionView.Header>
-                <Grid
-                    Padding="{OnIdiom Default=30,
-                                      Phone=22}"
-                    ColumnDefinitions="auto, *"
-                    ColumnSpacing="{OnIdiom Default=22,
-                                            Phone=10}"
-                    RowDefinitions="auto,auto,auto,auto"
-                    RowSpacing="{OnIdiom Default=10,
-                                         Phone=6}">
+            <!--  Left  -->
+            <VerticalStackLayout MaximumWidthRequest="500" Spacing="40">
 
-                    <Image
-                        Grid.Row="0"
-                        Grid.RowSpan="{OnIdiom Default=3,
-                                               Phone=2}"
-                        Grid.Column="0"
-                        Aspect="AspectFit"
-                        HeightRequest="{OnIdiom Default=230,
-                                                Phone=156}"
-                        Source="{Binding Show.Image, FallbackValue=default_podcast_image.png}"
-                        WidthRequest="{OnIdiom Default=230,
-                                               Phone=156}" />
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    StrokeShape="RoundRectangle 20">
+                    <Image Source="{Binding Image}" />
+                </Border>
 
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Start"
-                        Style="{OnIdiom Default={StaticResource H4LabelStyle},
-                                        Phone={StaticResource H6LabelStyle}}"
-                        Text="{Binding Show.Title}" />
+                <HorizontalStackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    MaximumWidthRequest="500"
+                    Spacing="30">
 
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Style="{StaticResource BodyMLabelStyle}"
-                        Text="{Binding Show.Author}"
-                        TextColor="{AppThemeBinding Light={StaticResource Grey7},
-                                                    Dark={StaticResource Grey4}}" />
-
-                    <Label
-                        Grid.Row="{OnIdiom Default=2,
-                                           Phone=3}"
-                        Grid.Column="{OnIdiom Default=1,
-                                              Phone=0}"
-                        Grid.ColumnSpan="{OnIdiom Default=1,
-                                                  Phone=2}"
-                        Style="{StaticResource BodyMLabelStyle}"
-                        Text="{Binding Show.Description}"
-                        TextColor="{AppThemeBinding Light={StaticResource Dark},
-                                                    Dark={StaticResource Grey1}}" />
-
-                    <Button
-                        Grid.Row="{OnIdiom Default=3,
-                                           Phone=2}"
-                        Grid.Column="{OnIdiom Default=1,
-                                              Phone=0}"
-                        Grid.ColumnSpan="{OnIdiom Default=1,
-                                                  Phone=2}"
-                        BackgroundColor="{StaticResource Primary}"
-                        Command="{Binding SubscribeCommand}"
-                        HeightRequest="44"
-                        Text="{x:Static res:AppResource.Subscribe}">
-                        <Button.Triggers>
-                            <DataTrigger
-                                Binding="{Binding Show.IsSubscribed}"
-                                TargetType="Button"
-                                Value="true">
-                                <Setter Property="Text" Value="{x:Static res:AppResource.Subscribed}" />
-                            </DataTrigger>
-                        </Button.Triggers>
-                    </Button>
-
-                </Grid>
-            </CollectionView.Header>
-
-        -->
-        <!--<CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Game">
-                    <Grid
-                        Margin="0,6"
-                        Padding="22,0"
-                        ColumnDefinitions="auto,*"
-                        ColumnSpacing="10"
-                        RowDefinitions="56, auto">
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:ShowDetailViewModel}}, Path=TapEpisodeCommand}" CommandParameter="{Binding}" />
-                        </Grid.GestureRecognizers>
-                        <ImageButton
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Aspect="AspectFill"
-                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:ShowDetailViewModel}}, Path=PlayEpisodeCommand}"
-                            CommandParameter="{Binding}"
-                            HeightRequest="{OnIdiom Default=38,
-                                                    Phone=44}"
-                            SemanticProperties.Description="{x:Static res:AppResource.Semantic_Description_Tap_Play_Episode}"
-                            Source="player_play.png"
-                            VerticalOptions="Center"
-                            WidthRequest="{OnIdiom Default=38,
-                                                   Phone=44}" />
-
+                    <VerticalStackLayout Spacing="5" WidthRequest="70">
+                        <Border StrokeShape="RoundRectangle 90">
+                            <Image HeightRequest="40" Source="ru.png" />
+                        </Border>
                         <Label
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            Style="{StaticResource BodySLabelStyle}"
-                            Text="{Binding Duration, Converter={StaticResource DurationConverter}}" />
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Style="{StaticResource BodySLabelStyle}"
-                            Text="{Binding Published, StringFormat='{0:MMM dd, yyyy}'}" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalOptions="FillAndExpand"
-                            Style="{StaticResource LinkLLabelStyle}"
-                            Text="{Binding Title}"
-                            VerticalOptions="Center" />
-                        <ImageButton
-                            Grid.RowSpan="2"
-                            Grid.Column="1"
-                            Aspect="AspectFill"
-                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:ShowDetailViewModel}}, Path=AddToListenLaterCommand}"
-                            CommandParameter="{Binding}"
-                            HeightRequest="28"
-                            HorizontalOptions="End"
-                            SemanticProperties.Description="{x:Static res:AppResource.Semantic_Description_Tap_Listen_Later}"
-                            Source="clockpink.png"
-                            VerticalOptions="Center"
-                            WidthRequest="28">
-                            <ImageButton.IsVisible>
-                                <OnPlatform x:TypeArguments="x:Boolean">
-                                    <On Platform="Android, iOS">false</On>
-                                    <On Platform="UWP, MacCatalyst">true</On>
-                                </OnPlatform>
-                            </ImageButton.IsVisible>
-                            <ImageButton.Triggers>
-                                <DataTrigger
-                                    Binding="{Binding IsInListenLater}"
-                                    TargetType="ImageButton"
-                                    Value="true">
-                                    <Setter Property="Source" Value="listenlaterfilled.png" />
-                                </DataTrigger>
-                            </ImageButton.Triggers>
-                        </ImageButton>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>-->
-        <!--
+                            HorizontalOptions="Center"
+                            Style="{StaticResource BodyXLLabelStyle}"
+                            Text="{Binding PriceRu}" />
+                    </VerticalStackLayout>
 
-        </CollectionView>-->
+                    <VerticalStackLayout Spacing="5" WidthRequest="70">
+                        <Border StrokeShape="RoundRectangle 90">
+                            <Image HeightRequest="40" Source="um.png" />
+                        </Border>
+                        <Label
+                            HorizontalOptions="Center"
+                            Style="{StaticResource BodyXLLabelStyle}"
+                            Text="{Binding PriceUm}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="5" WidthRequest="70">
+                        <Border StrokeShape="RoundRectangle 90">
+                            <Image HeightRequest="40" Source="kz.png" />
+                        </Border>
+                        <Label
+                            HorizontalOptions="Center"
+                            Style="{StaticResource BodyXLLabelStyle}"
+                            Text="{Binding PriceKz}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="5" WidthRequest="70">
+                        <Border StrokeShape="RoundRectangle 90">
+                            <Image HeightRequest="40" Source="tr.png" />
+                        </Border>
+                        <Label
+                            HorizontalOptions="Center"
+                            Style="{StaticResource BodyXLLabelStyle}"
+                            Text="{Binding PriceTr}" />
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+
+                <Label Style="{StaticResource BodyXLLabelStyle}" Text="Stores" />
+                <CollectionView ItemsSource="{Binding Stores}" />
+
+                <Label Text="{Binding Link}" />
+
+            </VerticalStackLayout>
+
+
+            <!--  Right  -->
+            <VerticalStackLayout Spacing="20">
+
+                <!--<CollectionView ItemsSource="{Binding Screenshots}">
+                -->
+                <!--<CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>-->
+                <!--<CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image
+                                HeightRequest="300"
+                                Source="{Binding .}"
+                                WidthRequest="300" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>-->
+                <!--
+                </CollectionView>-->
+
+                <Label Style="{StaticResource BodyXLLabelStyle}" Text="Description" />
+                <Label
+                    MaximumWidthRequest="1000"
+                    MinimumWidthRequest="500"
+                    Text="{Binding AboutTheGame}"
+                    TextType="Html" />
+
+                <Label Style="{StaticResource BodyXLLabelStyle}" Text="Categories" />
+                <CollectionView ItemsSource="{Binding Categories}" />
+
+                <Label Style="{StaticResource BodyXLLabelStyle}" Text="Genres" />
+                <CollectionView ItemsSource="{Binding Genres}" />
+
+                <Label Style="{StaticResource BodyXLLabelStyle}" Text="Developers" />
+                <CollectionView ItemsSource="{Binding Developers}" />
+
+            </VerticalStackLayout>
+
+
+        </HorizontalStackLayout>
+
     </Grid>
 </ContentPage>

@@ -61,6 +61,15 @@ namespace SteamKeysApp.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dark mode.
+        /// </summary>
+        internal static string Dark_Mode {
+            get {
+                return ResourceManager.GetString("Dark_Mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Favorites.
         /// </summary>
         internal static string Favorites {
@@ -70,7 +79,7 @@ namespace SteamKeysApp.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Games catalog.
+        ///   Looks up a localized string similar to Games.
         /// </summary>
         internal static string Games_Catalog {
             get {
@@ -120,6 +129,15 @@ namespace SteamKeysApp.Resources.Strings {
         internal static string Semantic_Description_Tap_Search {
             get {
                 return ResourceManager.GetString("Semantic_Description_Tap_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
     }

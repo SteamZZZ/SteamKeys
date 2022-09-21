@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace TryParseSteam
 {
-    
+
     public class ParserManager
     {
         bool ShowMessages = false;
         public ParserManager()
         {
-            
+
         }
         DataBaseManager mngr = new DataBaseManager();
 
@@ -47,8 +47,6 @@ namespace TryParseSteam
 
         public void Start()
         {
-
-
             Stopwatch sw = new Stopwatch();
             sw.Start();
 

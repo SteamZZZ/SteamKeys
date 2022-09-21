@@ -7,21 +7,25 @@
     xmlns:root="clr-namespace:SteamKeysApp"
     xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
     x:DataType="viewModels:ShellViewModel"
-    FlyoutBehavior="Locked"
-    Shell.NavBarIsVisible="False">
+    FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource ShellBgLight},
+                                            Dark={StaticResource ShellBgDark}}"
+    FlyoutBehavior="Locked">
 
     <Shell.FlyoutHeader>
         <Grid>
             <Image
-                HeightRequest="80"
-                HorizontalOptions="Center"
-                SemanticProperties.Description="SteamKeys application logo"
-                Source="{AppThemeBinding Light=logo_horizontal.png,
-                                         Dark=logo_horizontal_dark.png}"
-                VerticalOptions="Center"
-                WidthRequest="110" />
+                Margin="5,10,5,20"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                HeightRequest="90"
+                HorizontalOptions="Start"
+                Source="banner.png"
+                VerticalOptions="Start"
+                WidthRequest="610" />
         </Grid>
     </Shell.FlyoutHeader>
+
+    <!--<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">-->
 
     <FlyoutItem Title="{Binding GamesCatalog.Title}" Icon="{AppThemeBinding Light=games_catalog_page.png, Dark=games_catalog_page_dark.png}">
         <Tab>
@@ -47,20 +51,28 @@
         </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Title="{Binding Settings.Title}" Icon="{AppThemeBinding Light=settings.png, Dark=settings_dark.png}">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:SettingsPage}" />
+        </Tab>
+    </FlyoutItem>
+
+
     <Shell.ItemTemplate>
         <DataTemplate>
+
             <StackLayout Orientation="Horizontal">
+
                 <Image
                     Margin="6,10"
-                    HeightRequest="20"
+                    HeightRequest="18"
                     Source="{Binding Icon}"
-                    WidthRequest="20" />
-                <Label
-                    Margin="6,10"
-                    FontSize="Body"
-                    Text="{Binding Title}" />
+                    WidthRequest="18" />
+
+                <Label Margin="6,10" Text="{Binding Title}" />
+
             </StackLayout>
+
         </DataTemplate>
     </Shell.ItemTemplate>
-
 </Shell>

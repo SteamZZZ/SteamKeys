@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SteamKeysApp.Pages.SettingsPage"
-             Title="SettingsPage">
+<ContentPage
+    x:Class="SteamKeysApp.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SteamKeysApp.Controls"
+    xmlns:models="clr-namespace:SteamKeysApp.Models"
+    xmlns:pages="clr-namespace:SteamKeysApp.Pages"
+    xmlns:res="clr-namespace:SteamKeysApp.Resources.Strings"
+    xmlns:viewModels="clr-namespace:SteamKeysApp.ViewModels"
+    xmlns:views="clr-namespace:SteamKeysApp.Views"
+    x:DataType="viewModels:SettingsPageViewModel"
+    Style="{StaticResource DefaultPage}">
+
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Label Style="{StaticResource MainLabel}" Text="{Static res:AppResource.Settings}" />
+
+        <HorizontalStackLayout Margin="20,0,0,0">
+            <Switch
+                Grid.Row="4"
+                HorizontalOptions="Center"
+                IsToggled="{Binding IsDarkModeEnabled}" />
+            <Label
+                Grid.Row="4"
+                Grid.Column="1"
+                Style="{StaticResource BodySLabelStyle}"
+                Text="{x:Static res:AppResource.Dark_Mode}"
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

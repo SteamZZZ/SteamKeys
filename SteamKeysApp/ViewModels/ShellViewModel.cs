@@ -8,6 +8,7 @@ public partial class ShellViewModel : BaseViewModel
     public AppSection Favorites { get; set; }
     public AppSection Info { get; set; }
     public AppSection Profile { get; set; }
+    public AppSection Settings { get; set; }
 
     public ShellViewModel()
     {
@@ -15,5 +16,6 @@ public partial class ShellViewModel : BaseViewModel
         Favorites = new AppSection() { Title = AppResource.Favorites, Icon = "favorites_page.svg", IconDark = "favorites_page_dark.svg", TargetType = typeof(FavoritesPage) };
         Info = new AppSection() { Title = AppResource.Info, Icon = "info_page.svg", IconDark = "info_page_dark.svg", TargetType = typeof(InfoPage) };
         Profile = new AppSection() { Title = AppResource.Profile, Icon = "profile_page.svg", IconDark = "profile_page_dark.svg", TargetType = typeof(ProfilePage) };
+        Settings = new AppSection() { Title = AppResource.Settings, Icon = "settings.svg", IconDark = "settings_dark.svg", TargetType = typeof(SettingsPage) };
     }
 }

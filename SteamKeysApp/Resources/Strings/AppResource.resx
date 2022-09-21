@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Dark_Mode" xml:space="preserve">
+    <value>Dark mode</value>
+  </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favorites</value>
   </data>
   <data name="Games_Catalog" xml:space="preserve">
-    <value>Games catalog</value>
+    <value>Games</value>
   </data>
   <data name="Info" xml:space="preserve">
     <value>Info</value>
@@ -137,5 +140,8 @@
   </data>
   <data name="Semantic_Description_Tap_Search" xml:space="preserve">
     <value>Tap to search game</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
   </data>
 </root>
